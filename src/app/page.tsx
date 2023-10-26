@@ -1,5 +1,17 @@
-import '@styles/globals.scss';
+'use client';
+
+import '@styles/global.scss';
+
+import { Pages } from '@appTypes/enums';
+import { useRouter } from 'next/navigation';
+import { useLayoutEffect } from 'react';
 
 export default function Home() {
-  return <div className='test'>test</div>;
+  const router = useRouter();
+
+  useLayoutEffect(() => {
+    router.push(Pages.HOME);
+  });
+
+  return <div className='test'>Start page</div>;
 }

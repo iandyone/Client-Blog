@@ -1,0 +1,12 @@
+.button {
+  display: inline-flex;
+  padding: 16px 48px;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 133.333%;
+  color: $black;
+  transition: $transition;
+  @extend %hover;
+  @extend %active;
+}

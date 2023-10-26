@@ -20,12 +20,13 @@
     ],
     "paths": {
       "@components/*": ["./src/components/*"],
+      "@ui/*": ["./src/UI/*"],
       "@assets/*": ["./src/assets/*"],
       "@constants": ["./src/constants"],
       "@styles": ["./src/styles"],
-      "@utils/*": ["./src/utils/*"],
+      "@utils": ["./src/utils"],
       "@hooks/*": ["./src/hooks/*"],
-      "@store/*": ["./src/store/*"],
+      "@store": ["./src/store"],
       "@reducers/*": ["./src/store/reducers/*"],
       "@pages/*": ["./src/pages/*"],
       "@appTypes": ["./src/types"],
@@ -34,6 +35,8 @@
       "@services/*": ["./src/services/*"],
       "@config/*": ["./config/*"],
 
+      "@utils/*": ["./src/utils/*"],
+      "@store/*": ["./src/store/*"],
       "@appTypes/*": ["./src/types/*"],
       "@styles/*": ["./src/styles/*"],
       "@": ["./src*"]
