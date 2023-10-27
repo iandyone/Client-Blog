@@ -1,0 +1,13 @@
+import { IPost } from '@appTypes';
+import postPreview1 from '@public/posts/01.jpg';
+
+export const posts: IPost[] = [
+  {
+    author: 'John Doe',
+    date: 'May 23, 2022',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: postPreview1,
+  },
+];

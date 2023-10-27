@@ -22,7 +22,7 @@ export const Footer: FC = () => {
           <FooterNav />
         </div>
         <article className={content}>
-          <h2 className={`${title} ${sen}`}>{bannerText}</h2>
+          <h2 className={`${title} ${sen.className}`}>{bannerText}</h2>
           <Form />
         </article>
         <div className={copyright}>

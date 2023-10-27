@@ -37,6 +37,7 @@
       "@services/*": ["./src/services/*"],
       "@config/*": ["./config/*"],
 
+      "@constants/*": ["./src/constants/*"],
       "@utils/*": ["./src/utils/*"],
       "@store/*": ["./src/store/*"],
       "@appTypes/*": ["./src/types/*"],

@@ -7,9 +7,9 @@ import { IButtonProps } from './types';
 const { button, colored } = styles;
 const sen = Sen({ subsets: ['latin'] });
 
-export const Button: FC<IButtonProps> = ({ children, type = 'default' }) => {
+export const Button: FC<IButtonProps> = ({ children, className, type = 'default' }) => {
   const typeClass = type === 'default' ? '' : colored;
-  const className = `${button} ${sen.className} ${typeClass}`;
+  const buttonClassName = `${button} ${sen.className} ${typeClass} ${className}`;
 
-  return <button className={className}>{children}</button>;
+  return <button className={buttonClassName}>{children}</button>;
 };

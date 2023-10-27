@@ -1,0 +1,41 @@
+.wrapper {
+  background-color: $white;
+}
+
+.container {
+  @extend %container;
+}
+
+.image {
+  margin-bottom: 16px;
+}
+
+.body {
+  padding: 32px;
+  border: 1px solid rgba($color: $mediumGray, $alpha: 0.1);
+  @extend %flex-column;
+  row-gap: 16px;
+}
+.header {
+  @extend %title;
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.head {
+  @extend %title;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+.text {
+  @extend %text;
+  color: $mediumGray;
+}
+
+.button {
+  align-self: flex-start;
+}
