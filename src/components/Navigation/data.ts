@@ -1,10 +1,10 @@
 import { Pages } from '@appTypes/enums';
 
-const { HOME } = Pages;
+const { HOME, ABOUT, BLOG, CONTACT } = Pages;
 
 export const routes = [
   { title: 'Home', href: HOME },
-  { title: 'Blog', href: HOME },
-  { title: 'About Us', href: HOME },
-  { title: 'Contact Us', href: HOME },
+  { title: 'Blog', href: BLOG },
+  { title: 'About Us', href: ABOUT },
+  { title: 'Contact Us', href: CONTACT },
 ];

@@ -1,5 +1,9 @@
 export enum Pages {
   HOME = '/home',
+  POST = '/post',
+  BLOG = 'blog',
+  ABOUT = '/about-us',
+  CONTACT = '/contact-us',
 }
 
 export enum Viewports {

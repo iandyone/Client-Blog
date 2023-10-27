@@ -11,6 +11,7 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@styles': path.join(__dirname, 'src', 'styles'),
+      '@public': path.join(__dirname, 'public'),
       '@variables': path.join(__dirname, 'src', 'styles', 'variables.scss'),
       '@templates': path.join(__dirname, 'src', 'styles', 'templates.scss'),
     };

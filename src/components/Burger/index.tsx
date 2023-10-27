@@ -28,7 +28,6 @@ export const BurgerMenu: FC = () => {
         <span className={lineClassName} />
         <span className={lineClassName} />
       </div>
-      {/* {isMobile && <MobileMenu isMenuOpened={burger} />} */}
     </div>
   );
 };

@@ -1,11 +1,12 @@
-'use client';
-
 import { Navigation } from '@components/Navigation';
-import { useMobile } from '@hooks/window';
 import { FC } from 'react';
 
-export const FooterNav: FC = () => {
-  const isMobile = useMobile();
+import styles from './footerNav.module.scss';
 
-  return <>{!isMobile && <Navigation />}</>;
+export const FooterNav: FC = () => {
+  return (
+    <div className={styles.wrapper}>
+      <Navigation />
+    </div>
+  );
 };

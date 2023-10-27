@@ -3,6 +3,15 @@
   color: $white;
   min-height: 80px;
   @extend %flex-between;
+
+  @media (max-width: $TABLET) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    min-height: 60px;
+  }
 }
 
 .container {
@@ -28,13 +37,13 @@
   column-gap: 24px;
 
   @media (max-width: $TABLET) {
-    position: absolute;
-    z-index: 50;
+    position: fixed;
+    z-index: 45;
     right: 0;
-    bottom: 0;
-    top: 80px;
+    height: 100vh;
+    top: 0px;
     width: 350px;
-    padding: 20px 50px;
+    padding: 60px 50px 20px;
     align-items: flex-start;
     flex-direction: column;
     transition: $transition;
@@ -44,6 +53,7 @@
       width: 100%;
       padding: 20px;
       align-items: center;
+      padding: 100px 50px 20px;
     }
 
     &.active {

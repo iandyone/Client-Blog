@@ -6,7 +6,6 @@ import { Pages } from '@appTypes/enums';
 import { BurgerMenu } from '@components/Burger';
 import { Navigation } from '@components/Navigation';
 import { useSelectorTyped } from '@hooks/redux';
-import { useMobile } from '@hooks/window';
 import { Button } from '@ui/Button';
 import Link from 'next/link';
 import { FC, useMemo } from 'react';
@@ -19,7 +18,6 @@ const { headerLogoText, buttonText } = data;
 const { HOME } = Pages;
 
 export const Header: FC = () => {
-  const isMobile = useMobile();
   const { burger } = useSelectorTyped((store) => store.app);
   const navigationClassName = useMemo(() => (burger ? `${navigation} ${active}` : navigation), [burger]);
 
@@ -33,7 +31,7 @@ export const Header: FC = () => {
           <Navigation />
           <Button type='colored'>{buttonText}</Button>
         </div>
-        {isMobile && <BurgerMenu />}
+        <BurgerMenu />
       </div>
     </header>
   );

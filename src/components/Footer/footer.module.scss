@@ -2,6 +2,10 @@
   background-color: $black;
   padding: 52px 0;
   color: $white;
+
+  @media (max-width: $TABLET) {
+    padding: 40px 0;
+  }
 }
 
 .container {

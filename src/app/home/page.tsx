@@ -1,3 +1,4 @@
+import StepByStep from '@components/StepByStep';
 import { TAB_TITLE } from '@constants';
 import { Metadata } from 'next';
 
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <div>home page</div>;
+  return (
+    <>
+      <StepByStep />
+    </>
+  );
 }
