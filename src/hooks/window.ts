@@ -9,10 +9,11 @@ export const useMobile = () => {
       setWidth(window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  return width < Viewports.TABLET;
+  return width <= Viewports.TABLET;
 };

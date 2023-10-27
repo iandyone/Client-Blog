@@ -2,8 +2,7 @@
 
 import { useDispatchTyped, useSelectorTyped } from '@hooks/redux';
 import { toggleBuger } from '@reducers/app';
-import { setPageScroll } from '@utils';
-import { FC, MouseEvent, useEffect } from 'react';
+import { FC, MouseEvent } from 'react';
 
 import styles from './burger.module.scss';
 
@@ -21,10 +20,6 @@ export const BurgerMenu: FC = () => {
   function handlerOnClickMenu(e: MouseEvent<HTMLDivElement>) {
     e.stopPropagation();
   }
-
-  useEffect(() => {
-    setPageScroll(!burger);
-  }, [burger]);
 
   return (
     <div className={container} onClick={handlerOnClickMenu}>

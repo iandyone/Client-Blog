@@ -1,4 +1,3 @@
-import { Header } from '@components/Header';
 import { TAB_TITLE } from '@constants';
 import { Metadata } from 'next';
 
@@ -7,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div>home page</div>;
 }

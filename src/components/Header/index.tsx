@@ -4,16 +4,17 @@ import '@styles/global.scss';
 
 import { Pages } from '@appTypes/enums';
 import { BurgerMenu } from '@components/Burger';
+import { Navigation } from '@components/Navigation';
 import { useSelectorTyped } from '@hooks/redux';
 import { useMobile } from '@hooks/window';
 import { Button } from '@ui/Button';
 import Link from 'next/link';
 import { FC, useMemo } from 'react';
 
-import { data, routes } from './data';
+import { data } from './data';
 import styles from './header.module.scss';
 
-const { header, container, logo, navigation, menu, link, active } = styles;
+const { header, container, logo, navigation, active } = styles;
 const { headerLogoText, buttonText } = data;
 const { HOME } = Pages;
 
@@ -28,16 +29,10 @@ export const Header: FC = () => {
         <span className={logo}>
           <Link href={HOME}>{headerLogoText}</Link>
         </span>
-        <nav className={navigationClassName}>
-          <ul className={menu}>
-            {routes.map(({ title, href }) => (
-              <span className={link} key={title}>
-                <Link href={href}>{title}</Link>
-              </span>
-            ))}
-          </ul>
-          <Button>{buttonText}</Button>
-        </nav>
+        <div className={navigationClassName}>
+          <Navigation />
+          <Button type='colored'>{buttonText}</Button>
+        </div>
         {isMobile && <BurgerMenu />}
       </div>
     </header>

@@ -29,6 +29,7 @@
 
   @media (max-width: $TABLET) {
     position: absolute;
+    z-index: 50;
     right: 0;
     bottom: 0;
     top: 80px;
@@ -50,35 +51,5 @@
       transform: translateX(0);
       transition: $transition;
     }
-  }
-}
-
-.menu {
-  @extend %flex-between;
-  column-gap: 24px;
-
-  @media (max-width: $TABLET) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-    column-gap: 50px;
-  }
-
-  @media (max-width: $MOBILE) {
-    align-items: center;
-  }
-}
-
-.link {
-  font-size: 16px;
-  line-height: 175%;
-  transition: $transition;
-  @extend %hover;
-  @extend %active;
-
-  @media (max-width: $TABLET) {
-    font-size: 25px;
   }
 }
