@@ -6,12 +6,12 @@ import { CSSProperties, FC, memo } from 'react';
 import styles from './post.module.scss';
 import { IPostProps } from './types';
 
+const imageStyles: CSSProperties = { objectFit: 'cover', height: 'auto' };
 const { wrapper, head, text, image } = styles;
 const sen = Sen({ subsets: ['latin'] });
 
 const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, body = true }) => {
   const { preview, author, date, title, content } = post;
-  const imageStyles: CSSProperties = { objectFit: 'cover', height: 'auto' };
 
   return (
     <article className={`${wrapper} ${wrapperClassName}`}>

@@ -1,0 +1,50 @@
+.wrapper {
+  background-color: $white;
+  padding-bottom: 96px;
+
+  @media (max-width: $TABLET) {
+    padding-bottom: 40px;
+  }
+}
+
+.container {
+  @extend %container;
+  position: relative;
+}
+
+.body {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+  max-width: 706px;
+  padding: 80px;
+  row-gap: 32px;
+  @extend %flex-column;
+
+  @media (max-width: $TABLET) {
+    position: static;
+    padding: 40px 0 0 0;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 133%;
+  letter-spacing: -2px;
+
+  @media (max-width: $TABLET) {
+    font-size: 28px;
+  }
+}
+
+.button {
+  align-self: flex-start;
+}
+
+.image {
+  @media (max-width: $TABLET) {
+    display: none;
+  }
+}
