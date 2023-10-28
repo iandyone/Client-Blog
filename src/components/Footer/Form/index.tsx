@@ -9,7 +9,7 @@ import { ValidationError } from 'yup';
 import { data } from './data';
 import styles from './footerForm.module.scss';
 
-const { form, input, container, label, rejected, success } = styles;
+const { form, input, container, label, rejected, success, button } = styles;
 const { buttonText, placeholder, emailSuccessLabel, emailMessage, emailSender, errorMessage } = data;
 const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
 const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
@@ -95,7 +95,7 @@ export const Form: FC = () => {
           className={inputClassName}
         />
       </div>
-      <Button>{buttonText}</Button>
+      <Button className={button}>{buttonText}</Button>
     </form>
   );
 };

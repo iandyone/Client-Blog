@@ -15,7 +15,7 @@ export const posts: IPost[] = [
     id: 2,
     author: 'John Doe',
     date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    title: '8 Figma design systems that you can download for free today.',
     content:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: postPreview1,
@@ -24,7 +24,7 @@ export const posts: IPost[] = [
     id: 3,
     author: 'John Doe',
     date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    title: '8 Figma design systems that you can download for free today.',
     content:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: postPreview1,
@@ -33,7 +33,7 @@ export const posts: IPost[] = [
     id: 4,
     author: 'John Doe',
     date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    title: '8 Figma design systems that you can download for free today.',
     content:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: postPreview1,

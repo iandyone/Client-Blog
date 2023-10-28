@@ -8,7 +8,7 @@
 
   @media (max-width: $TABLET_MEDIUM) {
     flex-direction: column;
-    row-gap: 24px;
+    row-gap: 16px;
   }
 }
 
@@ -62,5 +62,16 @@
   }
   &.success {
     color: $green;
+  }
+}
+
+.button {
+  @media (max-width: $TABLET) {
+    align-self: center;
+  }
+
+  @media (max-width: $MOBILE) {
+    width: 100%;
+    justify-content: center;
   }
 }
