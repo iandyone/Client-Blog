@@ -46,6 +46,10 @@
   font-weight: 700;
   line-height: 133%;
   letter-spacing: -2px;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    font-size: 24px;
+  }
 }
 
 %text {

@@ -1,6 +1,7 @@
 export interface IPost extends ICredentials {
+  id: number;
   title: string;
-  content: string;
+  content?: string;
   preview: any;
 }
 

@@ -1,7 +1,6 @@
-import { FeaturedPost } from '@components/FeaturedPost';
+import { Overview } from '@components/Overview';
 import StepByStep from '@components/StepByStep';
 import { TAB_TITLE } from '@constants';
-import { posts } from '@constants/posts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <StepByStep />
-      <FeaturedPost post={posts[0]} />
+      <Overview />
     </>
   );
 }

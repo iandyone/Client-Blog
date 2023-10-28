@@ -1,13 +1,6 @@
 .wrapper {
   background-color: $white;
-}
-
-.container {
-  @extend %container;
-}
-
-.image {
-  margin-bottom: 16px;
+  width: 100%;
 }
 
 .body {
@@ -15,25 +8,20 @@
   border: 1px solid rgba($color: $mediumGray, $alpha: 0.1);
   @extend %flex-column;
   row-gap: 16px;
+
+  @media (max-width: $TABLET) {
+    padding: 20px;
+  }
+  @media (max-width: $MOBILE) {
+    padding: 0;
+    border: none;
+  }
 }
-.header {
+
+.title {
   @extend %title;
   font-size: 36px;
   margin-bottom: 32px;
-}
-
-.head {
-  @extend %title;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: -1px;
-}
-
-.text {
-  @extend %text;
-  color: $mediumGray;
 }
 
 .button {

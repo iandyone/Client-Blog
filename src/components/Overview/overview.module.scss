@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 128px 0;
+  background-color: $white;
+
+  @media (max-width: $TABLET) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  @extend %container;
+  @extend %flex-between;
+  align-items: flex-start;
+  gap: 32px;
+
+  @media (max-width: $TABLET) {
+    flex-direction: column;
+  }
+}
