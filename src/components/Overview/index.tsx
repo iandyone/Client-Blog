@@ -1,6 +1,6 @@
 import { AllPosts } from '@components/Overview/AllPosts';
 import { FeaturedPost } from '@components/Overview/FeaturedPost';
-import { posts } from '@constants/posts';
+import { posts } from '@constants/data';
 import { FC } from 'react';
 
 import styles from './overview.module.scss';

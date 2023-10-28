@@ -1,4 +1,5 @@
 import { AboutUs } from '@components/AboutUs';
+import { Categories } from '@components/Categories';
 import { Overview } from '@components/Overview';
 import StepByStep from '@components/StepByStep';
 import { TAB_TITLE } from '@constants';
@@ -14,6 +15,7 @@ export default function HomePage() {
       <StepByStep />
       <Overview />
       <AboutUs />
+      <Categories title='Choose A Catagory' />
     </>
   );
 }

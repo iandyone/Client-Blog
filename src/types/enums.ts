@@ -4,6 +4,10 @@ export enum Pages {
   BLOG = 'blog',
   ABOUT = '/about-us',
   CONTACT = '/contact-us',
+  BUSINESS = '/category/business',
+  STARTUP = '/category/startup',
+  ECONOMY = '/category/economy',
+  TECHNOLOGY = '/category/technology',
 }
 
 export enum Viewports {

@@ -1,0 +1,39 @@
+.wrapper {
+  @extend %flex-column;
+  border: 1px solid rgba($color: $mediumGray, $alpha: 0.3);
+  padding: 32px;
+  height: 100%;
+  transition: $transition;
+  @extend %active;
+
+  &:hover {
+    transition: $transition;
+    background-color: $yellow;
+  }
+
+  @media (max-width: $TABLET) {
+    padding: 20px;
+  }
+}
+
+.imageClass {
+  @extend %flex-center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background-color: $lightYellow;
+}
+
+.titleClass {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.text {
+  @extend %text;
+  color: $mediumGray;
+}

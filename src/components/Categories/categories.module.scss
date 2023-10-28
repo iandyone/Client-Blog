@@ -1,0 +1,36 @@
+.wrapper {
+  background-color: $white;
+  padding: 96px 0;
+
+  @media (max-width: $TABLET) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  @extend %container;
+  @extend %flex-column;
+  row-gap: 48px;
+}
+
+.header {
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 350px));
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  column-gap: 32px;
+
+  @media (max-width: $TABLET) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: $MOBILE) {
+    grid-template-columns: 1fr;
+  }
+}
