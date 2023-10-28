@@ -18,3 +18,17 @@ export interface ICategory {
   icon: any;
   href: Pages;
 }
+export interface ILink {
+  href: Pages;
+  icon: any;
+  alt: string;
+}
+
+export interface IUser {
+  id: number;
+  name: string;
+  position: string;
+  profile: string;
+  avatar: any;
+  links: ILink[];
+}

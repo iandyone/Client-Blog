@@ -1,10 +1,5 @@
 .wrapper {
-  background-color: $white;
-  padding-bottom: 96px;
-
-  @media (max-width: $TABLET) {
-    padding-bottom: 40px;
-  }
+  @extend %wrapper;
 }
 
 .container {

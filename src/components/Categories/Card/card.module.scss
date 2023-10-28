@@ -4,12 +4,8 @@
   padding: 32px;
   height: 100%;
   transition: $transition;
+  @include hoverCard($yellow);
   @extend %active;
-
-  &:hover {
-    transition: $transition;
-    background-color: $yellow;
-  }
 
   @media (max-width: $TABLET) {
     padding: 20px;

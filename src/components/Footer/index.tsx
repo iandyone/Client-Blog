@@ -1,17 +1,16 @@
+import { Links } from '@components/Links';
+import { links } from '@constants/data';
 import { Sen } from 'next/font/google';
-import Image from 'next/image';
-import Link from 'next/link';
 import { FC } from 'react';
 
-import { data, links } from './data';
+import { data } from './data';
 import styles from './footer.module.scss';
 import { FooterNav } from './FooterNav';
 import { Form } from './Form';
 
 const sen = Sen({ subsets: ['latin'] });
 const { headerLogoText, bannerText, address, email, index } = data;
-const { footer, container, header, logo, content, title, copyright, contacts, contact, media, social } =
-  styles;
+const { footer, container, header, logo, content, title, copyright, contacts, contact } = styles;
 
 export const Footer: FC = () => {
   return (
@@ -32,13 +31,7 @@ export const Footer: FC = () => {
               {email} {index}
             </p>
           </div>
-          <ul className={media}>
-            {links.map(({ icon, href, alt }) => (
-              <Link className={social} href={href} key={alt}>
-                <Image alt={alt} src={icon} />
-              </Link>
-            ))}
-          </ul>
+          <Links links={links} />
         </div>
       </div>
     </footer>
