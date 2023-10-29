@@ -4,6 +4,7 @@ export enum Pages {
   BLOG = 'blog',
   ABOUT = '/about-us',
   CONTACT = '/contact-us',
+  PRIVACY = './privacy-policy',
   BUSINESS = '/category/business',
   STARTUP = '/category/startup',
   ECONOMY = '/category/economy',

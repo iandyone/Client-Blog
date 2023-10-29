@@ -5,6 +5,7 @@ import { JoinUs } from '@components/JoinUs';
 import { Labels } from '@components/Labels';
 import { Overview } from '@components/Overview';
 import StepByStep from '@components/StepByStep';
+import { Testimonials } from '@components/Testimonials';
 import { WhyWeStarted } from '@components/WhyWeStarted';
 import { TAB_TITLE } from '@constants';
 import { users } from '@constants/data';
@@ -29,6 +30,7 @@ export default function HomePage() {
       <WhyWeStarted />
       <Authors users={userList} />
       <Labels />
+      <Testimonials />
       <JoinUs />
     </>
   );

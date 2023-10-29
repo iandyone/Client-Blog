@@ -37,3 +37,11 @@ export interface ILogo {
   id: number;
   icon: any;
 }
+
+export interface ITestimonials {
+  id: number;
+  title: string;
+  name: string;
+  location: string;
+  avatar: any;
+}

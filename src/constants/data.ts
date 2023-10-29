@@ -1,4 +1,4 @@
-import { ILink, ILogo, IPost, IUser } from '@appTypes';
+import { ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
 import postPreview1 from '@public/posts/01.jpg';
 import { ICategory } from '@appTypes';
 import businessIcon from '@public/homePage/business.svg';
@@ -20,6 +20,7 @@ import user5 from '@public/avatars/05.svg';
 import user6 from '@public/avatars/06.svg';
 import user7 from '@public/avatars/07.svg';
 import user8 from '@public/avatars/08.svg';
+import user9 from '@public/avatars/09.svg';
 
 import logo1 from '@public/logos/01.svg';
 import logo2 from '@public/logos/02.svg';
@@ -194,4 +195,15 @@ export const logos: ILogo[] = [
   { id: 4, icon: logo4 },
   { id: 5, icon: logo5 },
   { id: 6, icon: logo6 },
+];
+
+export const testimonials: ITestimonials[] = [
+  {
+    id: 1,
+    name: 'Jonathan Vallem',
+    location: 'New york, USA',
+    avatar: user9,
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
 ];

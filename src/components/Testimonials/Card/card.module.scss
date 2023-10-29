@@ -1,0 +1,47 @@
+.wrapper {
+  @extend %wrapper;
+  background-color: $lightYellow;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  @extend %flex-column;
+  justify-content: space-between;
+  row-gap: 120px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 60px;
+  }
+  @media (max-width: $MOBILE) {
+    row-gap: 30px;
+  }
+}
+
+.titleClass {
+  font-weight: 700;
+  letter-spacing: 0;
+
+  @media (max-width: $TABLET) {
+    font-size: 32px !important;
+  }
+  @media (max-width: $TABLET_SMALL) {
+    font-size: 28px !important;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.nameClass {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133%;
+}
+
+.locationClass {
+  @extend %text;
+}

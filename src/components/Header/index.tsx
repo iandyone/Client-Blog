@@ -28,7 +28,7 @@ export const Header: FC = () => {
           <Link href={HOME}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>
-          <Navigation />
+          <Navigation type='short' />
           <Button colored>{buttonText}</Button>
         </div>
         <BurgerMenu />

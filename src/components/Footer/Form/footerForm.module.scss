@@ -67,7 +67,7 @@
 
 .button {
   @media (max-width: $TABLET) {
-    align-self: center;
+    align-self: flex-end;
   }
 
   @media (max-width: $MOBILE) {
