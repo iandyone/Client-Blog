@@ -32,3 +32,8 @@ export interface IUser {
   avatar: any;
   links: ILink[];
 }
+
+export interface ILogo {
+  id: number;
+  icon: any;
+}

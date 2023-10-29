@@ -1,4 +1,4 @@
-import { ILink, IPost, IUser } from '@appTypes';
+import { ILink, ILogo, IPost, IUser } from '@appTypes';
 import postPreview1 from '@public/posts/01.jpg';
 import { ICategory } from '@appTypes';
 import businessIcon from '@public/homePage/business.svg';
@@ -12,8 +12,6 @@ import instagram from '@public/icons/instagram.svg';
 import linkedin from '@public/icons/linkedin.svg';
 import twitter from '@public/icons/twitter.svg';
 
-const { HOME } = Pages;
-
 import user1 from '@public/avatars/01.svg';
 import user2 from '@public/avatars/02.svg';
 import user3 from '@public/avatars/03.svg';
@@ -23,7 +21,15 @@ import user6 from '@public/avatars/06.svg';
 import user7 from '@public/avatars/07.svg';
 import user8 from '@public/avatars/08.svg';
 
+import logo1 from '@public/logos/01.svg';
+import logo2 from '@public/logos/02.svg';
+import logo3 from '@public/logos/03.svg';
+import logo4 from '@public/logos/04.svg';
+import logo5 from '@public/logos/05.svg';
+import logo6 from '@public/logos/06.svg';
+
 const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY } = Pages;
+const { HOME } = Pages;
 
 export const posts: IPost[] = [
   {
@@ -179,4 +185,13 @@ export const users: IUser[] = [
     profile: '/author/8',
     links,
   },
+];
+
+export const logos: ILogo[] = [
+  { id: 1, icon: logo1 },
+  { id: 2, icon: logo2 },
+  { id: 3, icon: logo3 },
+  { id: 4, icon: logo4 },
+  { id: 5, icon: logo5 },
+  { id: 6, icon: logo6 },
 ];
