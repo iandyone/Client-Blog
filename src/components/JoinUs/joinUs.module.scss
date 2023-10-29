@@ -1,0 +1,35 @@
+.wrapper {
+  @extend %wrapper;
+  padding: 128px 0;
+
+  @media (max-width: $TABLET) {
+    padding: 48px 0;
+  }
+}
+
+.container {
+  @extend %container;
+  @extend %flex-center;
+}
+
+.bodyClass {
+  @extend %flex-center;
+  max-width: 420px;
+}
+
+.titleClass {
+  @extend %title;
+  text-align: center;
+  margin-bottom: 16px;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    font-size: 36px;
+  }
+}
+
+.content {
+  @extend %text;
+  color: $mediumGray;
+  text-align: center;
+  margin-bottom: 32px;
+}

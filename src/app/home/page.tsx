@@ -1,6 +1,7 @@
 import { AboutUs } from '@components/AboutUs';
 import { Authors } from '@components/Authors';
 import { Categories } from '@components/Categories';
+import { JoinUs } from '@components/JoinUs';
 import { Labels } from '@components/Labels';
 import { Overview } from '@components/Overview';
 import StepByStep from '@components/StepByStep';
@@ -28,6 +29,7 @@ export default function HomePage() {
       <WhyWeStarted />
       <Authors users={userList} />
       <Labels />
+      <JoinUs />
     </>
   );
 }

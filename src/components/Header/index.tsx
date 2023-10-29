@@ -29,7 +29,7 @@ export const Header: FC = () => {
         </span>
         <div className={navigationClassName}>
           <Navigation />
-          <Button type='colored'>{buttonText}</Button>
+          <Button colored>{buttonText}</Button>
         </div>
         <BurgerMenu />
       </div>
