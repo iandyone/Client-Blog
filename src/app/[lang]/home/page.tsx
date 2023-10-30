@@ -1,3 +1,4 @@
+import { IPageProps } from '@appTypes';
 import { AboutUs } from '@components/AboutUs';
 import { Authors } from '@components/Authors';
 import { Categories } from '@components/Categories';
@@ -12,15 +13,13 @@ import { users } from '@constants/data';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
 
-import { IHomePageProps } from './types';
-
 const userList = users.slice(0, 4);
 
 export const metadata: Metadata = {
   title: `${TAB_TITLE} | Home`,
 };
 
-export default async function HomePage({ params: { lang } }: IHomePageProps) {
+export default async function HomePage({ params: { lang } }: IPageProps) {
   const {
     stepByStep,
     overview,
@@ -31,7 +30,7 @@ export default async function HomePage({ params: { lang } }: IHomePageProps) {
     labelsHome,
     testimonials,
     joinUs,
-  } = await getDictionary(lang);
+  } = await getDictionary(lang, 'home');
 
   return (
     <>

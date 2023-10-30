@@ -1,4 +1,4 @@
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 import { Button } from '@ui/Button';
 import { Post } from '@ui/Post';
 import { Title } from '@ui/Title';
@@ -16,7 +16,7 @@ const FeaturedPostComponent: FC<IFeaturedPostProps> = ({ post, buttonText, title
       <Title className={title}>{titleText}</Title>
       <div className={body}>
         <Post post={post} />
-        <Link href={Pages.POST}>
+        <Link href={Routes.POST}>
           <Button className={button}>{buttonText}</Button>
         </Link>
       </div>

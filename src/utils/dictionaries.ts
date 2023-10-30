@@ -1,10 +1,7 @@
 import 'server-only';
 
-import { Language } from '@appTypes/types';
+import { Language, page } from '@appTypes/types';
 
-const dictionaries = {
-  en: () => import('@public/dictionaries/en.json').then((module) => module.default),
-  ru: () => import('@public/dictionaries/ru.json').then((module) => module.default),
-};
-
-export const getDictionary = (locale: Language) => dictionaries[locale]();
+export function getDictionary(locale: Language, page: page) {
+  return import(`@public/images/dictionaries/${locale}/${page}.json`).then((module) => module.default);
+}

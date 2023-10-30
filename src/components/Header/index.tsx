@@ -2,7 +2,7 @@
 
 import '@styles/global.scss';
 
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 import { BurgerMenu } from '@components/Burger';
 import { Navigation } from '@components/Navigation';
 import { useSelectorTyped } from '@hooks/redux';
@@ -14,7 +14,7 @@ import styles from './header.module.scss';
 import { IHeaderProps } from './types';
 
 const { header, container, logo, navigation, active } = styles;
-const { HOME } = Pages;
+const { HOME } = Routes;
 
 export const Header: FC<IHeaderProps> = ({ data }) => {
   const { headerLogoText, buttonText } = data;

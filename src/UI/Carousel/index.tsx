@@ -1,7 +1,7 @@
 'use client';
 
-import prevSlide from '@public/icons/arrowLeft.svg';
-import nextSlide from '@public/icons/arrowRight.svg';
+import prevSlide from '@public/images/icons/arrowLeft.svg';
+import nextSlide from '@public/images/icons/arrowRight.svg';
 import Image from 'next/image';
 import { Children, cloneElement, FC, useEffect, useRef, useState } from 'react';
 
