@@ -61,3 +61,18 @@ export interface IPageProps {
 export interface IPageLayoutProps extends IPageProps {
   children: ReactElement;
 }
+
+export interface IPreview {
+  label?: string;
+  labelMarked?: string;
+  header?: string;
+  title?: string;
+  body?: string;
+  credentials?: ICredentials;
+  colored?: boolean;
+  classNames?: {
+    wrapperClassName?: string;
+    titleClassName?: string;
+    bodyClassName?: string;
+  };
+}
