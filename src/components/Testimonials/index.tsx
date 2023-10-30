@@ -4,15 +4,15 @@ import { Preview } from '@ui/Preview';
 import { FC } from 'react';
 
 import { Card } from './Card';
-import { data } from './data';
 import styles from './testimonials.module.scss';
+import { ITestimonialsProps } from './types';
 
 const { wrapper, container, testimonialsClass, previewWrapper, previewTitle, previewBody, slider, carousel } =
   styles;
 
-const { body, label, titie } = data;
+export const Testimonials: FC<ITestimonialsProps> = ({ data }) => {
+  const { body, label, titie } = data;
 
-export const Testimonials: FC = () => {
   const previewClassNames = {
     wrapperClassName: previewWrapper,
     titleClassName: previewTitle,

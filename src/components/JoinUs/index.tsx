@@ -1,14 +1,14 @@
 import { Button } from '@ui/Button';
 import { FC } from 'react';
 
-import { data } from './data';
 import styles from './joinUs.module.scss';
+import { IJoinUsData } from './types';
 
 const { wrapper, container, titleClass, content, bodyClass } = styles;
 
-const { body, buttonText, title } = data;
+export const JoinUs: FC<IJoinUsData> = ({ data }) => {
+  const { body, buttonText, title } = data;
 
-export const JoinUs: FC = () => {
   return (
     <section className={wrapper}>
       <div className={container}>

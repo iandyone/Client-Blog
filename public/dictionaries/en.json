@@ -1,0 +1,74 @@
+{
+  "stepByStep": {
+    "label": "POSTED ON",
+    "labelMarked": "STARTUP",
+    "title": "Step-by-step guide to choosing great font pairs",
+    "author": "James West",
+    "date": "May 23, 2022",
+    "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Read More >"
+  },
+  "overview": {
+    "featuredPost": {
+      "titleText": "Featured Post",
+      "buttonText": "Read More >"
+    },
+    "allPosts": {
+      "titleText": "All Posts",
+      "lintText": "View All"
+    }
+  },
+  "aboutUs": {
+    "aboutLabel": "ABOUT US",
+    "aboutTitle": "We are a community of content writers who share their learnings",
+    "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "missionLabel": "Our mision",
+    "missionTitle": "Creating valuable content for creatives all around the world",
+    "missionBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "buttonText": "Read more >"
+  },
+  "categoriesHome": {
+    "title": "Choose A Catagory"
+  },
+  "whyWeStarted": {
+    "labelText": "Why we started ",
+    "titleText": "It started out as a simple idea and evolved into our passion",
+    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "buttonText": "Discover our story >"
+  },
+  "authorsHome": {
+    "title": "List of Authors"
+  },
+  "labelsHome": {
+    "title": "We are"
+  },
+  "testimonials": {
+    "label": "TESTIMONIALs",
+    "titie": "What people say about our blog",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
+  "joinUs": {
+    "title": "Join our team to be a part of our story",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join Now"
+  },
+  "header": {
+    "headerLogoText": "Modsen Client Blog",
+    "buttonText": "Video about us"
+  },
+  "footer": {
+    "headerLogoText": "Modsen Client Blog",
+    "bannerText": "Subscribe to our news letter to get latest updates and news",
+    "address": "Finstreet 118 2561 Fintown",
+    "email": "Hello@finsweet.com ",
+    "index": "020 7993 2905",
+    "form": {
+      "buttonText": "Subscribe",
+      "placeholder": "Enter Your Email",
+      "emailSuccessLabel": "You have been successfully subscribed!",
+      "errorMessage": "Email was nod delivered",
+      "emailMessage": "This email was sended by Modsen Blog",
+      "emailSender": "Modsen Blog"
+    }
+  }
+}
