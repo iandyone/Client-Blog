@@ -6,11 +6,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CSSProperties, FC } from 'react';
 
-import { data } from './data';
+import { IWhyWeStartedProps } from './types';
 import styles from './wws.module.scss';
 
 const { wrapper, container, body, title, button, image } = styles;
-const { bodyText, buttonText, labelText, titleText } = data;
+
 const classNames = {
   titleClassName: title,
 };
@@ -21,7 +21,9 @@ const imageStyles: CSSProperties = {
   maxWidth: '950px',
 };
 
-export const WhyWeStarted: FC = () => {
+export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
+  const { bodyText, buttonText, labelText, titleText } = data;
+
   return (
     <section className={wrapper}>
       <div className={container}>

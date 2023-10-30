@@ -10,14 +10,14 @@ import { Button } from '@ui/Button';
 import Link from 'next/link';
 import { FC, useMemo } from 'react';
 
-import { data } from './data';
 import styles from './header.module.scss';
+import { IHeaderProps } from './types';
 
 const { header, container, logo, navigation, active } = styles;
-const { headerLogoText, buttonText } = data;
 const { HOME } = Pages;
 
-export const Header: FC = () => {
+export const Header: FC<IHeaderProps> = ({ data }) => {
+  const { headerLogoText, buttonText } = data;
   const { burger } = useSelectorTyped((store) => store.app);
   const navigationClassName = useMemo(() => (burger ? `${navigation} ${active}` : navigation), [burger]);
 

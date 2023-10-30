@@ -5,14 +5,12 @@ import { Title } from '@ui/Title';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 
-import { data } from './data';
 import styles from './fp.module.scss';
 import { IFeaturedPostProps } from './types';
 
 const { wrapper, body, title, button } = styles;
-const { buttonText, titleText } = data;
 
-const FeaturedPostComponent: FC<IFeaturedPostProps> = ({ post }) => {
+const FeaturedPostComponent: FC<IFeaturedPostProps> = ({ post, buttonText, titleText }) => {
   return (
     <article className={wrapper}>
       <Title className={title}>{titleText}</Title>

@@ -3,13 +3,13 @@ import { Button } from '@ui/Button';
 import { Preview } from '@ui/Preview';
 import Link from 'next/link';
 
-import { data } from './data';
 import styles from './sbs.module.scss';
+import { IStepByStepProps } from './types';
 
 const { wrapper, container, content } = styles;
-const { author, buttonText, date, body, label, labelMarked, title } = data;
 
-export default function StepByStep() {
+export default function StepByStep({ data }: IStepByStepProps) {
+  const { author, buttonText, date, body, label, labelMarked, title } = data;
   return (
     <section className={wrapper}>
       <div className={container}>

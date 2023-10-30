@@ -1,5 +1,9 @@
+import { getDictionary } from '@utils/dictionaries';
 import { Pages } from './enums';
 
+export interface IPageData {
+  data: Promise<ReturnType<typeof getDictionary>>;
+}
 export interface IPost extends ICredentials {
   id: number;
   title: string;
