@@ -1,0 +1,74 @@
+{
+  "stepByStep": {
+    "label": "ОПУБЛИКОВАНО",
+    "labelMarked": "СТАРТАП",
+    "title": "Пошаговое руководство по выбору отличных пар шрифтов",
+    "author": "Джеймс Уэст",
+    "date": "23 мая 2022 года",
+    "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Читать далее >"
+  },
+  "overview": {
+    "featuredPost": {
+      "titleText": "Избранный пост",
+      "buttonText": "Читать далее >"
+    },
+    "allPosts": {
+      "titleText": "Все посты",
+      "lintText": "Посмотреть все"
+    }
+  },
+  "aboutUs": {
+    "aboutLabel": "О НАС",
+    "aboutTitle": "Мы - сообщество авторов контента, делящихся своими знаниями",
+    "aboutBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "missionLabel": "Наша миссия",
+    "missionTitle": "Создание ценного контента для творческих людей по всему миру",
+    "missionBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "buttonText": "Читать далее >"
+  },
+  "categoriesHome": {
+    "title": "Выберите категорию"
+  },
+  "whyWeStarted": {
+    "labelText": "Почему мы начали",
+    "titleText": "Это началось с простой идеи и выросло в нашу страсть",
+    "bodyText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    "buttonText": "Узнайте нашу историю >"
+  },
+  "authorsHome": {
+    "title": "Список авторов"
+  },
+  "labelsHome": {
+    "title": "Кто мы"
+  },
+  "testimonials": {
+    "label": "ОТЗЫВЫ",
+    "titie": "Что люди говорят о нашем блоге",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
+  "joinUs": {
+    "title": "Присоединяйтесь к нашей команде и станьте частью нашей истории",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Присоединиться сейчас"
+  },
+  "header": {
+    "headerLogoText": "Блог клиента Modsen",
+    "buttonText": "Видео о нас"
+  },
+  "footer": {
+    "headerLogoText": "Блог клиента Modsen",
+    "bannerText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+    "address": "Finstreet 118 2561 Fintown",
+    "email": "Hello@finsweet.com",
+    "index": "020 7993 2905",
+    "form": {
+      "buttonText": "Подписаться",
+      "placeholder": "Введите ваш адрес электронной почты",
+      "emailSuccessLabel": "Вы успешно подписались!",
+      "errorMessage": "Письмо не доставлено",
+      "emailMessage": "Это письмо было отправлено блогом Modsen",
+      "emailSender": "Блог Modsen"
+    }
+  }
+}

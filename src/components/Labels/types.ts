@@ -1,4 +1,4 @@
-export interface ICategoriesProps {
+export interface ILabelsProps {
   data: {
     title: string;
   };

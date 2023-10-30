@@ -2,14 +2,14 @@ import { logos } from '@constants/data';
 import Image from 'next/image';
 import { FC } from 'react';
 
-import { data } from './data';
 import styles from './labels.module.scss';
+import { ILabelsProps } from './types';
 
 const { wrapper, container, titleClass, list } = styles;
 
-const { title } = data;
+export const Labels: FC<ILabelsProps> = ({ data }) => {
+  const { title } = data;
 
-export const Labels: FC = () => {
   return (
     <section className={wrapper}>
       <div className={container}>
