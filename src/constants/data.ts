@@ -1,36 +1,35 @@
 import { ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
-import postPreview1 from '@public/posts/01.jpg';
+import postPreview1 from '@public/images/posts/01.jpg';
 import { ICategory } from '@appTypes';
-import businessIcon from '@public/homePage/business.svg';
-import economyIcon from '@public/homePage/economy.svg';
-import startupIcon from '@public/homePage/startup.svg';
-import technologyIcon from '@public/homePage/technology.svg';
-import { Pages } from '@appTypes/enums';
+import businessIcon from '@public/images/homePage/business.svg';
+import economyIcon from '@public/images/homePage/economy.svg';
+import startupIcon from '@public/images/homePage/startup.svg';
+import technologyIcon from '@public/images/homePage/technology.svg';
+import { Routes } from '@appTypes/enums';
 
-import facebook from '@public/icons/facebook.svg';
-import instagram from '@public/icons/instagram.svg';
-import linkedin from '@public/icons/linkedin.svg';
-import twitter from '@public/icons/twitter.svg';
+import facebook from '@public/images/icons/facebook.svg';
+import instagram from '@public/images/icons/instagram.svg';
+import linkedin from '@public/images/icons/linkedin.svg';
+import twitter from '@public/images/icons/twitter.svg';
 
-import user1 from '@public/avatars/01.svg';
-import user2 from '@public/avatars/02.svg';
-import user3 from '@public/avatars/03.svg';
-import user4 from '@public/avatars/04.svg';
-import user5 from '@public/avatars/05.svg';
-import user6 from '@public/avatars/06.svg';
-import user7 from '@public/avatars/07.svg';
-import user8 from '@public/avatars/08.svg';
-import user9 from '@public/avatars/09.svg';
+import user1 from '@public/images/avatars/01.svg';
+import user2 from '@public/images/avatars/02.svg';
+import user3 from '@public/images/avatars/03.svg';
+import user4 from '@public/images/avatars/04.svg';
+import user5 from '@public/images/avatars/05.svg';
+import user6 from '@public/images/avatars/06.svg';
+import user7 from '@public/images/avatars/07.svg';
+import user8 from '@public/images/avatars/08.svg';
+import user9 from '@public/images/avatars/09.svg';
 
-import logo1 from '@public/logos/01.svg';
-import logo2 from '@public/logos/02.svg';
-import logo3 from '@public/logos/03.svg';
-import logo4 from '@public/logos/04.svg';
-import logo5 from '@public/logos/05.svg';
-import logo6 from '@public/logos/06.svg';
+import logo1 from '@public/images/logos/01.svg';
+import logo2 from '@public/images/logos/02.svg';
+import logo3 from '@public/images/logos/03.svg';
+import logo4 from '@public/images/logos/04.svg';
+import logo5 from '@public/images/logos/05.svg';
+import logo6 from '@public/images/logos/06.svg';
 
-const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY } = Pages;
-const { HOME } = Pages;
+const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME } = Routes;
 
 export const posts: IPost[] = [
   {

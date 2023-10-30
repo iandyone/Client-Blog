@@ -1,5 +1,5 @@
-import { Pages } from '@appTypes/enums';
-import bgImage from '@public/homePage/peoples.jpg';
+import { Routes } from '@appTypes/enums';
+import bgImage from '@public/images/homePage/peoples.jpg';
 import { Button } from '@ui/Button';
 import { Preview } from '@ui/Preview';
 import Image from 'next/image';
@@ -30,7 +30,7 @@ export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
         <Image src={bgImage} alt={'why we started image'} style={imageStyles} className={image} />
         <div className={body}>
           <Preview label={labelText} title={titleText} body={bodyText} classNames={classNames} />
-          <Link href={Pages.ABOUT}>
+          <Link href={Routes.ABOUT}>
             <Button className={button}>{buttonText}</Button>
           </Link>
         </div>

@@ -1,5 +1,7 @@
 import { getDictionary } from '@utils/dictionaries';
-import { Pages } from './enums';
+import { Routes } from './enums';
+import { Language } from './types';
+import { ReactElement } from 'react';
 
 export interface IPageData {
   data: Promise<ReturnType<typeof getDictionary>>;
@@ -20,10 +22,10 @@ export interface ICategory {
   title: string;
   body: string;
   icon: any;
-  href: Pages;
+  href: Routes;
 }
 export interface ILink {
-  href: Pages;
+  href: Routes;
   icon: any;
   alt: string;
 }
@@ -48,4 +50,14 @@ export interface ITestimonials {
   name: string;
   location: string;
   avatar: any;
+}
+
+export interface IPageProps {
+  params: {
+    lang: Language;
+  };
+}
+
+export interface IPageLayoutProps extends IPageProps {
+  children: ReactElement;
 }

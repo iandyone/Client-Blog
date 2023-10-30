@@ -1,4 +1,4 @@
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 import { Button } from '@ui/Button';
 import { Preview } from '@ui/Preview';
 import Link from 'next/link';
@@ -22,7 +22,7 @@ export default function StepByStep({ data }: IStepByStepProps) {
             credentials={{ date, author }}
             colored
           />
-          <Link href={Pages.POST}>
+          <Link href={Routes.POST}>
             <Button>{buttonText}</Button>
           </Link>
         </div>

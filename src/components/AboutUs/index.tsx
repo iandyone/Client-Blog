@@ -1,4 +1,4 @@
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 import { Preview } from '@ui/Preview';
 import { Sen } from 'next/font/google';
 import Link from 'next/link';
@@ -24,7 +24,7 @@ export const AboutUs: FC<IAboutUsProps> = ({ data }) => {
       <div className={container}>
         <article className={about}>
           <Preview label={aboutLabel} title={aboutTitle} body={aboutBody} classNames={classNames.about} />
-          <Link href={Pages.ABOUT} className={`${link} ${sen.className}`}>
+          <Link href={Routes.ABOUT} className={`${link} ${sen.className}`}>
             {buttonText}
           </Link>
         </article>

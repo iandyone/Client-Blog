@@ -1,4 +1,4 @@
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 import { Post } from '@ui/Post';
 import { Title } from '@ui/Title';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ const AllPostsCompoennt: FC<IAllPostsProps> = ({ posts, lintText, titleText }) =
     <article className={wrapper}>
       <div className={header}>
         <Title>{titleText}</Title>
-        <Link href={Pages.BLOG} className={link}>
+        <Link href={Routes.BLOG} className={link}>
           {lintText}
         </Link>
       </div>

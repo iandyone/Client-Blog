@@ -3,8 +3,8 @@
   position: relative;
   color: $white;
   background:
-    url('~@public/homePage/overlay.png') center/cover no-repeat,
-    url('~@public/homePage/stepByStepBg.jpg') center/cover no-repeat;
+    url('~@public/images/homePage/overlay.png') center/cover no-repeat,
+    url('~@public/images/homePage/stepByStepBg.jpg') center/cover no-repeat;
 
   @media (max-width: $TABLET) {
     padding: 120px 0;

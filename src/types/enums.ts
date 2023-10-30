@@ -1,14 +1,14 @@
-export enum Pages {
-  HOME = '/home',
-  POST = '/post',
+export enum Routes {
+  HOME = 'home',
+  POST = 'post',
   BLOG = 'blog',
-  ABOUT = '/about-us',
-  CONTACT = '/contact-us',
-  PRIVACY = './privacy-policy',
-  BUSINESS = '/category/business',
-  STARTUP = '/category/startup',
-  ECONOMY = '/category/economy',
-  TECHNOLOGY = '/category/technology',
+  ABOUT = 'about-us',
+  CONTACT = 'contact-us',
+  PRIVACY = '.privacy-policy',
+  BUSINESS = 'category/business',
+  STARTUP = 'category/startup',
+  ECONOMY = 'category/economy',
+  TECHNOLOGY = 'category/technology',
 }
 
 export enum Viewports {

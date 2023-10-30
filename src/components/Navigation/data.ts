@@ -1,6 +1,6 @@
-import { Pages } from '@appTypes/enums';
+import { Routes } from '@appTypes/enums';
 
-const { HOME, ABOUT, BLOG, CONTACT, PRIVACY } = Pages;
+const { HOME, ABOUT, BLOG, CONTACT, PRIVACY } = Routes;
 
 export const routes = [
   { title: 'Home', href: HOME },
