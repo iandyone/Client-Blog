@@ -1,0 +1,29 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+  @extend %flex-column;
+  row-gap: 48px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 20px;
+  }
+}
+
+.titleClass {
+  text-align: center;
+}
+
+.usersClass {
+  @extend %grid;
+  @media (max-width: $DESKTOP_MEDIUM) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  @media (max-width: $TABLET_SMALL) {
+    grid-template-columns: 1fr;
+  }
+}

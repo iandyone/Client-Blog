@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: $white;
+}
+
+.header {
+  @extend %flex-between;
+  margin-bottom: 32px;
+
+  @media (max-width: $TABLET) {
+    margin-bottom: 10px;
+  }
+}
+
+.link {
+  @extend %hover;
+  @extend %active;
+  @extend %text;
+  color: $purple;
+  transition: $transition;
+  font-weight: 500;
+}
+
+.list {
+  @extend %flex-column;
+}
+
+.postItem {
+  padding: 32px 25px 32px 25px;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $lightYellow;
+    transition: $transition;
+  }
+
+  @media (max-width: $TABLET_MEDIUM) {
+    padding: 20px 0;
+  }
+}

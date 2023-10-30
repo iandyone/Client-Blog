@@ -1,0 +1,77 @@
+.form {
+  @extend %flex-between;
+  column-gap: 24px;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  row-gap: 8px;
+}
+
+.input {
+  flex: 1 1 auto;
+  height: 56px;
+  border: 1px solid $darkGray;
+  flex-shrink: 0;
+  padding: 14px 10px 14px 25px;
+  border: 1px solid $darkGray;
+  background-color: transparent;
+  color: $white;
+  font-size: 16px;
+  line-height: 175%;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    transition: $transition;
+    border: 1px solid $white;
+  }
+
+  &.rejected {
+    border: 1px solid $red;
+    transition: $transition;
+  }
+  &.success {
+    border: 1px solid $green;
+    transition: $transition;
+  }
+
+  @media (max-width: $TABLET_MEDIUM) {
+    width: 100%;
+  }
+}
+
+.label {
+  color: $red;
+  font-size: 14px;
+
+  &.rejected {
+    color: $red;
+  }
+  &.success {
+    color: $green;
+  }
+}
+
+.button {
+  @media (max-width: $TABLET) {
+    align-self: flex-end;
+  }
+
+  @media (max-width: $MOBILE) {
+    width: 100%;
+    justify-content: center;
+  }
+}

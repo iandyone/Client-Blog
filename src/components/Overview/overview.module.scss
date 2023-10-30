@@ -1,0 +1,14 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+  @extend %flex-between;
+  align-items: flex-start;
+  gap: 32px;
+
+  @media (max-width: $TABLET) {
+    flex-direction: column;
+  }
+}

@@ -4,11 +4,12 @@
     "es2021": true
   },
   "extends": [
-    "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "next/core-web-vitals",
+    "next",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -19,6 +20,7 @@
   "plugins": ["@typescript-eslint", "react", "simple-import-sort", "import"],
   "rules": {
     "linebreak-style": "off",
+    "@typescript-eslint/no-var-requires": "off",
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "no-trailing-spaces": "error",
@@ -28,11 +30,16 @@
     "no-multiple-empty-lines": "error",
     "no-console": "warn",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "simple-import-sort/imports": "warn",
     "simple-import-sort/exports": "warn",
     "import/first": "warn",
     "import/newline-after-import": "warn",
-    "import/no-duplicates": "error"
+    "import/no-duplicates": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }
+    ]
   }
 }
