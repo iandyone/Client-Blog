@@ -8,11 +8,12 @@ import { ICategoriesProps } from './types';
 
 const { wrapper, container, header, list } = styles;
 
-const CategoriesComponent: FC<ICategoriesProps> = ({ title, titleClass }) => {
+const CategoriesComponent: FC<ICategoriesProps> = ({ data }) => {
+  const { title } = data;
   return (
     <section className={wrapper}>
       <div className={container}>
-        <Title className={`${header} ${titleClass}`}>{title}</Title>
+        <Title className={header}>{title}</Title>
         <ul className={list}>
           {categories.map((category) => (
             <Card {...category} key={category.title} />

@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { FC, memo } from 'react';
 
 import styles from './authors.module.scss';
-import { data } from './data';
 import { IAuthorsProps } from './types';
 import { User } from './User';
 
-const { title } = data;
 const { wrapper, container, titleClass, usersClass } = styles;
 
-const AuthorsComponent: FC<IAuthorsProps> = ({ users }) => {
+const AuthorsComponent: FC<IAuthorsProps> = ({ users, data }) => {
+  const { title } = data;
+
   return (
     <section className={wrapper}>
       <div className={container}>

@@ -5,13 +5,11 @@ import Link from 'next/link';
 import { FC, memo, useMemo } from 'react';
 
 import styles from './allPosts.module.scss';
-import { data } from './data';
 import { IAllPostsProps } from './types';
 
-const { titleText, lintText } = data;
 const { wrapper, header, link, list, postItem } = styles;
 
-const AllPostsCompoennt: FC<IAllPostsProps> = ({ posts }) => {
+const AllPostsCompoennt: FC<IAllPostsProps> = ({ posts, lintText, titleText }) => {
   const postList = useMemo(() => posts.slice(0, 4), [posts]);
 
   return (

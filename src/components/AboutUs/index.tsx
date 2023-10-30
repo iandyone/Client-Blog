@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import styles from './au.module.scss';
-import { data } from './data';
+import { IAboutUsProps } from './types';
 
 const sen = Sen({ subsets: ['latin'] });
 const { wrapper, container, about, mission, aboutTitleClass, link } = styles;
-const { aboutLabel, aboutTitle, aboutBody, missionLabel, missionTitle, missionBody, buttonText } = data;
 
-export const AboutUs: FC = () => {
+export const AboutUs: FC<IAboutUsProps> = ({ data }) => {
+  const { aboutLabel, aboutTitle, aboutBody, missionLabel, missionTitle, missionBody, buttonText } = data;
+
   const classNames = {
     about: {
       titleClassName: aboutTitleClass,

@@ -3,16 +3,16 @@ import { links } from '@constants/data';
 import { Sen } from 'next/font/google';
 import { FC } from 'react';
 
-import { data } from './data';
 import styles from './footer.module.scss';
 import { FooterNav } from './FooterNav';
 import { Form } from './Form';
+import { IFooterProps } from './types';
 
 const sen = Sen({ subsets: ['latin'] });
-const { headerLogoText, bannerText, address, email, index } = data;
 const { footer, container, header, logo, content, title, copyright, contacts, contact } = styles;
 
-export const Footer: FC = () => {
+export const Footer: FC<IFooterProps> = ({ data }) => {
+  const { headerLogoText, bannerText, address, email, index, form } = data;
   return (
     <footer className={footer}>
       <div className={container}>
@@ -22,7 +22,7 @@ export const Footer: FC = () => {
         </div>
         <article className={content}>
           <h2 className={`${title} ${sen.className}`}>{bannerText}</h2>
-          <Form />
+          <Form {...form} />
         </article>
         <div className={copyright}>
           <div className={contacts}>

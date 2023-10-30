@@ -6,16 +6,22 @@ import { Button } from '@ui/Button';
 import { ChangeEvent, FC, FormEvent, useEffect, useMemo, useState } from 'react';
 import { ValidationError } from 'yup';
 
-import { data } from './data';
 import styles from './footerForm.module.scss';
+import { IFooterFormProps } from './types';
 
 const { form, input, container, label, rejected, success, button } = styles;
-const { buttonText, placeholder, emailSuccessLabel, emailMessage, emailSender, errorMessage } = data;
 const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
 const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
 const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
 
-export const Form: FC = () => {
+export const Form: FC<IFooterFormProps> = ({
+  buttonText,
+  placeholder,
+  emailSuccessLabel,
+  emailMessage,
+  emailSender,
+  errorMessage,
+}) => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
   const [emailSucess, setEmailSucess] = useState(null);
