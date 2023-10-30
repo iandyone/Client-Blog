@@ -13,15 +13,38 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "strictNullChecks": false,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@public/*": ["./public/*"],
+      "@components/*": ["./src/components/*"],
+      "@ui/*": ["./src/UI/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@constants": ["./src/constants"],
+      "@styles": ["./src/styles"],
+      "@utils": ["./src/utils"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@store": ["./src/store"],
+      "@reducers/*": ["./src/store/reducers/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@appTypes": ["./src/types"],
+      "@observers/*": ["./src/observers/*"],
+      "@decorators/*": ["./src/decorators/*"],
+      "@services/*": ["./src/services/*"],
+      "@config/*": ["./config/*"],
+
+      "@constants/*": ["./src/constants/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@store/*": ["./src/store/*"],
+      "@appTypes/*": ["./src/types/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@": ["./src*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js"],
   "exclude": ["node_modules"]
 }

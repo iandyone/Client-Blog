@@ -1,0 +1,34 @@
+.wrapper {
+  @extend %flex-center;
+  justify-content: flex-start;
+  background-color: $lightGray;
+  transition: $transition;
+  padding: 40px 28px;
+
+  @include hoverCard($lightYellow);
+  @extend %active;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    padding: 20px;
+  }
+}
+
+.avatarClass {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.titleClass {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.positionClass {
+  margin-bottom: 20px;
+}
+.linksClass {
+  column-gap: 16px;
+}

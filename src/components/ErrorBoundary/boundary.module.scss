@@ -1,0 +1,17 @@
+@import '@styles/variables.scss';
+@import '@styles/templates.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  row-gap: 20px;
+  color: $black;
+}
+.title {
+  font-size: 20px;
+}
+
+.text {
+  font-size: 18px;
+}
