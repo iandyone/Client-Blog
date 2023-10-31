@@ -7,13 +7,13 @@ import { getDictionary } from '@utils/dictionaries';
 
 export default async function HomeLayout({ children, params }: IPageLayoutProps) {
   const { lang } = params;
-  const { header, footer } = await getDictionary(lang, 'pageLayout');
+  const { header, footer, navigation } = await getDictionary(lang, 'pageLayout');
 
   return (
     <>
-      <Header data={header} />
+      <Header data={header} navigation={navigation} />
       <main>{children}</main>
-      <Footer data={footer} />
+      <Footer data={footer} navigation={navigation} />
     </>
   );
 }

@@ -76,3 +76,11 @@ export interface IPreview {
     bodyClassName?: string;
   };
 }
+
+export interface INavigation {
+  home: string;
+  blog: string;
+  about: string;
+  contact: string;
+  privacy: string;
+}
