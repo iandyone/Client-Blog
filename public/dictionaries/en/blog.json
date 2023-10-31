@@ -16,6 +16,8 @@
     "buttonText": "Join Now"
   },
   "blog": {
-    "title": "All Posts"
+    "title": "All Posts",
+    "next": "Next >",
+    "prev": "< Prev"
   }
 }

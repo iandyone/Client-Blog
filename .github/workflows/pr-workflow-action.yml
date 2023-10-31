@@ -1,4 +1,4 @@
-name: Date Picker Workflow
+name: Client Blog Workflow
 on:
   push:
     branches: ['development', 'master']

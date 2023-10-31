@@ -9,13 +9,13 @@ import { IBlogProps } from './types';
 const { wrapper, container, titleClass } = styles;
 
 const BlogComponent: FC<IBlogProps> = ({ data }) => {
-  const { title } = data;
+  const { title, next, prev } = data;
 
   return (
     <section className={wrapper}>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
-        <Digest digests={digest} />
+        <Digest digests={digest} controls={true} data={{ next, prev }} />
       </div>
     </section>
   );
