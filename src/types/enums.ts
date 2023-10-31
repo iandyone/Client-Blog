@@ -4,7 +4,7 @@ export enum Routes {
   BLOG = 'blog',
   ABOUT = 'about-us',
   CONTACT = 'contact-us',
-  PRIVACY = '.privacy-policy',
+  PRIVACY = 'privacy',
   BUSINESS = 'category/business',
   STARTUP = 'category/startup',
   ECONOMY = 'category/economy',
