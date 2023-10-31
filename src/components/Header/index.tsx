@@ -13,13 +13,16 @@ import { FC, useMemo } from 'react';
 import styles from './header.module.scss';
 import { IHeaderProps } from './types';
 
-const { header, container, logo, navigation, active } = styles;
+const { header, container, logo, navigationClass, active } = styles;
 const { HOME } = Routes;
 
-export const Header: FC<IHeaderProps> = ({ data }) => {
+export const Header: FC<IHeaderProps> = ({ data, navigation }) => {
   const { headerLogoText, buttonText } = data;
   const { burger } = useSelectorTyped((store) => store.app);
-  const navigationClassName = useMemo(() => (burger ? `${navigation} ${active}` : navigation), [burger]);
+  const navigationClassName = useMemo(
+    () => (burger ? `${navigationClass} ${active}` : navigationClass),
+    [burger],
+  );
 
   return (
     <header className={header}>
@@ -28,7 +31,7 @@ export const Header: FC<IHeaderProps> = ({ data }) => {
           <Link href={HOME}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>
-          <Navigation type='short' />
+          <Navigation type='short' data={navigation} />
           <Button colored>{buttonText}</Button>
         </div>
         <BurgerMenu />

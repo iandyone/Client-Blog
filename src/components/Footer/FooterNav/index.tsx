@@ -1,12 +1,15 @@
 import { Navigation } from '@components/Navigation';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import styles from './footerNav.module.scss';
+import { IFooterNavProps } from './types';
 
-export const FooterNav: FC = () => {
+const FooterNavComponent: FC<IFooterNavProps> = ({ navigation }) => {
   return (
     <div className={styles.wrapper}>
-      <Navigation />
+      <Navigation data={navigation} />
     </div>
   );
 };
+
+export const FooterNav = memo(FooterNavComponent);

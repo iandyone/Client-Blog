@@ -1,14 +1,14 @@
+import { IPreview } from '@appTypes';
 import { Credentials } from '@ui/Credentials';
 import { Sen } from 'next/font/google';
 import { FC, memo } from 'react';
 
 import styles from './preview.module.scss';
-import { IPreviewProps } from './types';
 
 const sen = Sen({ subsets: ['latin'] });
 const { wrapper, labelClass, headerClass, bodyClass, titleClass } = styles;
 
-const PreviewComponent: FC<IPreviewProps> = ({
+const PreviewComponent: FC<IPreview> = ({
   label,
   labelMarked,
   header,
@@ -18,19 +18,19 @@ const PreviewComponent: FC<IPreviewProps> = ({
   colored,
   classNames = {},
 }) => {
-  const { wrapperClassName, titleClassName, bodyClassName } = classNames;
+  const { wrapperClassName, titleClassName, bodyClassName, labelClassName } = classNames;
 
   return (
-    <article className={`${wrapper} ${wrapperClassName}`}>
+    <article className={`${wrapperClassName} ${wrapper} `}>
       {label && (
-        <p className={labelClass}>
+        <p className={`${labelClassName} ${labelClass}`}>
           {label} <span>{labelMarked}</span>
         </p>
       )}
-      {header && <h1 className={`${headerClass} ${sen.className}`}>{header}</h1>}
-      {title && <h2 className={`${titleClass} ${sen.className} ${titleClassName}`}>{title}</h2>}
+      {header && <h1 className={`${titleClassName} ${headerClass} ${sen.className}`}>{header}</h1>}
+      {title && <h2 className={`${titleClassName} ${titleClass} ${sen.className} `}>{title}</h2>}
       {credentials && <Credentials {...credentials} colored={colored} />}
-      {body && <p className={`${bodyClass} ${bodyClassName}`}>{body}</p>}
+      {body && <p className={`${bodyClassName} ${bodyClass} `}>{body}</p>}
     </article>
   );
 };

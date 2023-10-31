@@ -17,5 +17,12 @@
       "emailMessage": "This email was sended by Modsen Blog",
       "emailSender": "Modsen Blog"
     }
+  },
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy"
   }
 }

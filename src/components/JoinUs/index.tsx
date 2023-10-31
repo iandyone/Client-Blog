@@ -1,4 +1,6 @@
+import { Routes } from '@appTypes/enums';
 import { Button } from '@ui/Button';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import styles from './joinUs.module.scss';
@@ -15,7 +17,9 @@ export const JoinUs: FC<IJoinUsData> = ({ data }) => {
         <div className={bodyClass}>
           <h3 className={titleClass}>{title}</h3>
           <p className={content}>{body}</p>
-          <Button>{buttonText}</Button>
+          <Link href={Routes.CONTACT}>
+            <Button>{buttonText}</Button>
+          </Link>
         </div>
       </div>
     </section>
