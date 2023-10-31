@@ -1,5 +1,10 @@
 .wrapper {
-  @extend %wrapper;
+  @extend %flex-column;
+  row-gap: 70px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 40px;
+  }
 }
 
 .container {
@@ -52,4 +57,28 @@
 
 .labelClass {
   color: $purple;
+}
+
+.controlsClass {
+  @extend %flex-center;
+  flex-direction: row;
+  column-gap: 18px;
+}
+
+.buttonClass {
+  background-color: transparent;
+  color: $black;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133%;
+  transition: $transition;
+
+  @extend %hover;
+  @extend %active;
+
+  &.disabled {
+    color: $mediumGray;
+    transition: $transition;
+  }
 }
