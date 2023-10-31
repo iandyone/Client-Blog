@@ -2,7 +2,7 @@ export interface IStepByStepProps {
   data: {
     label: string;
     labelMarked: string;
-    title: string;
+    header: string;
     author: string;
     date: string;
     body: string;

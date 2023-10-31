@@ -1,6 +1,6 @@
 import { IPreview } from '@appTypes';
 
 export interface IMainContantProps extends IPreview {
-  buttonText: string;
+  buttonText?: string;
   className?: string;
 }
