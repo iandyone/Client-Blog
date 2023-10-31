@@ -1,0 +1,21 @@
+{
+  "stepByStep": {
+    "label": "Featured Post",
+    "title": "Step-by-step guide to choosing great font pairs",
+    "author": "James Doe",
+    "date": "May 23, 2022",
+    "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Read More >"
+  },
+  "categoriesHome": {
+    "title": "Choose A Catagory"
+  },
+  "joinUs": {
+    "title": "Join our team to be a part of our story",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join Now"
+  },
+  "blog": {
+    "title": "All Posts"
+  }
+}

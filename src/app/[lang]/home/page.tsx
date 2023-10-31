@@ -5,7 +5,7 @@ import { Categories } from '@components/Categories';
 import { JoinUs } from '@components/JoinUs';
 import { Labels } from '@components/Labels';
 import { Overview } from '@components/Overview';
-import StepByStep from '@components/StepByStep';
+import { StepByStepHome } from '@components/StepByStepHome';
 import { Testimonials } from '@components/Testimonials';
 import { WhyWeStarted } from '@components/WhyWeStarted';
 import { TAB_TITLE } from '@constants';
@@ -34,7 +34,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
 
   return (
     <>
-      <StepByStep data={stepByStep} />
+      <StepByStepHome data={stepByStep} />
       <Overview data={overview} />
       <AboutUs data={aboutUs} />
       <Categories data={categoriesHome} />

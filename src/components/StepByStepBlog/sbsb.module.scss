@@ -1,0 +1,50 @@
+.wrapper {
+  @extend %wrapper;
+  background-color: $lavender;
+
+  @media (max-width: $TABLET) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: $MOBILE) {
+    padding-top: 40px;
+  }
+}
+
+.container {
+  @extend %container;
+  @extend %flex-between;
+  gap: 20px;
+  align-items: center;
+
+  @media (max-width: $TABLET) {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+.content {
+  row-gap: 32px;
+  max-width: 625px;
+  flex: 1 1 100%;
+}
+
+.imageContainer {
+  flex: 1 1 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.image {
+  width: 100%;
+  max-width: 516px;
+  object-fit: cover;
+  height: auto;
+  @media (max-width: $TABLET) {
+    max-width: none;
+  }
+}
+
+.titleClass {
+  font-size: 36px !important;
+}

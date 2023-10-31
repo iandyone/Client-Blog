@@ -11,14 +11,14 @@ import { IFooterProps } from './types';
 const sen = Sen({ subsets: ['latin'] });
 const { footer, container, header, logo, content, title, copyright, contacts, contact } = styles;
 
-export const Footer: FC<IFooterProps> = ({ data }) => {
+export const Footer: FC<IFooterProps> = ({ data, navigation }) => {
   const { headerLogoText, bannerText, address, email, index, form } = data;
   return (
     <footer className={footer}>
       <div className={container}>
         <div className={header}>
           <h3 className={logo}>{headerLogoText}</h3>
-          <FooterNav />
+          <FooterNav navigation={navigation} />
         </div>
         <article className={content}>
           <h2 className={`${title} ${sen.className}`}>{bannerText}</h2>

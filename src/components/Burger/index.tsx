@@ -2,6 +2,7 @@
 
 import { useDispatchTyped, useSelectorTyped } from '@hooks/redux';
 import { toggleBuger } from '@reducers/app';
+import { setPageScroll } from '@utils';
 import { FC, MouseEvent } from 'react';
 
 import styles from './burger.module.scss';
@@ -14,6 +15,7 @@ export const BurgerMenu: FC = () => {
   const dispatch = useDispatchTyped();
 
   function handlerOnClickButton() {
+    setPageScroll(burger);
     dispatch(toggleBuger(!burger));
   }
 

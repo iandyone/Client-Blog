@@ -1,10 +1,10 @@
 {
   "header": {
-    "headerLogoText": "Блог клиента Modsen",
+    "headerLogoText": "Modsen Блог",
     "buttonText": "Видео о нас"
   },
   "footer": {
-    "headerLogoText": "Блог клиента Modsen",
+    "headerLogoText": "Modsen Блог",
     "bannerText": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
     "address": "Finstreet 118 2561 Fintown",
     "email": "Hello@finsweet.com",
@@ -15,7 +15,14 @@
       "emailSuccessLabel": "Вы успешно подписались!",
       "errorMessage": "Письмо не доставлено",
       "emailMessage": "Это письмо было отправлено блогом Modsen",
-      "emailSender": "Блог Modsen"
+      "emailSender": "Modsen Блог"
     }
+  },
+  "navigation": {
+    "home": "Главная",
+    "blog": "Блог",
+    "about": "О Нас",
+    "contact": "Контакты",
+    "privacy": "Политика конфиденциальности"
   }
 }

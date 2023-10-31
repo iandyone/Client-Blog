@@ -1,3 +1,5 @@
+import { INavigation } from '@appTypes';
+
 import { IFooterFormProps } from './Form/types';
 
 export interface IFooterProps {
@@ -9,4 +11,5 @@ export interface IFooterProps {
     index: string;
     form: IFooterFormProps;
   };
+  navigation: INavigation;
 }
