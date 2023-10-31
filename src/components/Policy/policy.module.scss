@@ -1,0 +1,42 @@
+.wrapper {
+  @extend %wrapper;
+  padding: 96px 0;
+
+  @media (max-width: $TABLET) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  @extend %container;
+  @extend %flex-center;
+  row-gap: 32px;
+}
+
+.content {
+  @extend %flex-column;
+  max-width: 768px;
+  row-gap: 24px;
+}
+
+.titleClass {
+  font-size: 48px;
+
+  @media (max-width: $TABLET) {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.subtitleClass {
+  font-size: 36px;
+
+  @media (max-width: $TABLET) {
+    text-align: center;
+  }
+}
+
+.textClass {
+  color: $darkGray;
+  @extend %text;
+}
