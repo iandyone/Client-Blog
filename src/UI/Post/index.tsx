@@ -16,7 +16,7 @@ const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, b
   return (
     <article className={`${wrapper} ${wrapperClassName}`}>
       {media && <Image className={image} alt='post preview' src={preview} style={imageStyles} />}
-      <Credentials author={author} date={date} />
+      {date && author && <Credentials author={author} date={date} />}
       <h3 className={`${head} ${sen.className}`}>{title}</h3>
       {body && <p className={text}>{content}</p>}
     </article>

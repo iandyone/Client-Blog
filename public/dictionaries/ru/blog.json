@@ -14,5 +14,8 @@
     "title": "Присоединяйтесь к нашей команде и станьте частью нашей истории",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     "buttonText": "Присоединиться сейчас"
+  },
+  "blog": {
+    "title": "Дайжест"
   }
 }

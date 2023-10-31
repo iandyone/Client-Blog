@@ -1,4 +1,4 @@
-import { ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
+import { IDigest, ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
 import postPreview1 from '@public/images/posts/01.jpg';
 import { ICategory } from '@appTypes';
 import businessIcon from '@public/images/homePage/business.svg';
@@ -28,6 +28,12 @@ import logo3 from '@public/images/logos/03.svg';
 import logo4 from '@public/images/logos/04.svg';
 import logo5 from '@public/images/logos/05.svg';
 import logo6 from '@public/images/logos/06.svg';
+
+import post2 from '@public/images/posts/02.jpg';
+import post3 from '@public/images/posts/03.jpg';
+import post4 from '@public/images/posts/04.jpg';
+import post5 from '@public/images/posts/05.jpg';
+import post6 from '@public/images/posts/06.jpg';
 
 const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME } = Routes;
 
@@ -204,5 +210,43 @@ export const testimonials: ITestimonials[] = [
     avatar: user9,
     title:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+];
+
+export const digest: IDigest[] = [
+  {
+    id: 1,
+    label: 'Startup',
+    title: 'Design tips for designers that cover everything you need',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
+  },
+  {
+    id: 2,
+    label: 'Startup',
+    title: 'How to build rapport with your web design clients',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post3,
+  },
+  {
+    id: 3,
+    label: 'Startup',
+    title: 'Logo design trends to avoid in 2022',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post4,
+  },
+  {
+    id: 4,
+    label: 'TECHNOLOGY',
+    title: '8 Figma design systems you can download for free today',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post5,
+  },
+  {
+    id: 5,
+    label: 'ECONOMY',
+    title: 'Font sizes in UI design: The complete guide to follow',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
   },
 ];

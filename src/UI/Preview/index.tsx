@@ -18,12 +18,12 @@ const PreviewComponent: FC<IPreview> = ({
   colored,
   classNames = {},
 }) => {
-  const { wrapperClassName, titleClassName, bodyClassName } = classNames;
+  const { wrapperClassName, titleClassName, bodyClassName, labelClassName } = classNames;
 
   return (
     <article className={`${wrapperClassName} ${wrapper} `}>
       {label && (
-        <p className={labelClass}>
+        <p className={`${labelClassName} ${labelClass}`}>
           {label} <span>{labelMarked}</span>
         </p>
       )}

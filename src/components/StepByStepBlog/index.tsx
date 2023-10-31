@@ -20,7 +20,7 @@ export const StepByStepBlogComponent: FC<IStepByStepBlogProps> = ({ data }) => {
       <div className={container}>
         <MainContent {...data} credentials={{ author, date }} className={content} classNames={classNames} />
         <div className={imageContainer}>
-          <Image className={image} src={preview} alt='preview' />
+          <Image className={image} src={preview} alt='preview' priority />
         </div>
       </div>
     </section>

@@ -19,21 +19,25 @@ const MainContentComponent: FC<IMainContantProps> = ({
   title,
   className,
   colored,
+  header,
 }) => {
   return (
     <div className={`${className} ${wrapper}`}>
       <Preview
         body={body}
-        header={title}
+        header={header}
+        title={title}
         label={label}
         labelMarked={labelMarked}
         credentials={credentials}
         classNames={classNames}
         colored={colored}
       />
-      <Link href={Routes.POST}>
-        <Button>{buttonText}</Button>
-      </Link>
+      {buttonText && (
+        <Link href={Routes.POST}>
+          <Button>{buttonText}</Button>
+        </Link>
+      )}
     </div>
   );
 };
