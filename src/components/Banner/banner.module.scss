@@ -2,6 +2,7 @@
   @extend %wrapper;
   padding: 80px 0;
   background-color: $lavender;
+
   @media (max-width: $TABLET) {
     padding-top: 140px;
   }
@@ -22,6 +23,10 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 133%;
+
+  @media (max-width: $TABLET) {
+    font-size: 36px;
+  }
 
   @media (max-width: $MOBILE) {
     font-size: 32px;

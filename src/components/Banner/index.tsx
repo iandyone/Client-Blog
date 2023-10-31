@@ -1,12 +1,12 @@
 import { Title } from '@ui/Title';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import styles from './banner.module.scss';
 import { IBannerProps } from './types';
 
 const { wrapper, container, titleClass, textClass } = styles;
 
-export const Banner: FC<IBannerProps> = ({ data }) => {
+const BanneComponent: FC<IBannerProps> = ({ data }) => {
   const { text, title } = data;
 
   return (
@@ -18,3 +18,5 @@ export const Banner: FC<IBannerProps> = ({ data }) => {
     </section>
   );
 };
+
+export const Banner = memo(BanneComponent);
