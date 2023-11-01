@@ -10,7 +10,7 @@
   justify-content: space-between;
   row-gap: 120px;
 
-  @media (max-width: $TABLET) {
+  @media (max-width: $DESKTOP_MEDIUM) {
     row-gap: 60px;
   }
   @media (max-width: $MOBILE) {
