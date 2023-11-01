@@ -10,7 +10,7 @@
   justify-content: space-between;
   row-gap: 120px;
 
-  @media (max-width: $TABLET) {
+  @media (max-width: $DESKTOP_MEDIUM) {
     row-gap: 60px;
   }
   @media (max-width: $MOBILE) {
@@ -28,20 +28,4 @@
   @media (max-width: $TABLET_SMALL) {
     font-size: 28px !important;
   }
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  column-gap: 16px;
-}
-
-.nameClass {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 133%;
-}
-
-.locationClass {
-  @extend %text;
 }
