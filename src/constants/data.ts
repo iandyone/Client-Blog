@@ -34,7 +34,7 @@ import post3 from '@public/images/posts/03.jpg';
 import post4 from '@public/images/posts/04.jpg';
 import post5 from '@public/images/posts/05.jpg';
 
-const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME } = Routes;
+const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME, AUTHOR } = Routes;
 
 export const posts: IPost[] = [
   {
@@ -131,7 +131,7 @@ export const users: IUser[] = [
     name: 'Floyd Miles',
     position: 'Content Writer @Company',
     avatar: user1,
-    profile: '/author/1',
+    profile: AUTHOR,
     links,
   },
   {
@@ -139,7 +139,7 @@ export const users: IUser[] = [
     name: 'Dianne Russell',
     position: 'Content Writer @Company',
     avatar: user2,
-    profile: '/author/2',
+    profile: AUTHOR,
     links,
   },
   {
@@ -147,7 +147,7 @@ export const users: IUser[] = [
     name: 'Jenny Wilson',
     position: 'Content Writer @Company',
     avatar: user3,
-    profile: '/author/3',
+    profile: AUTHOR,
     links,
   },
   {
@@ -155,7 +155,7 @@ export const users: IUser[] = [
     name: 'Leslie Alexander',
     position: 'Content Writer @Company',
     avatar: user4,
-    profile: '/author/8',
+    profile: AUTHOR,
     links,
   },
   {
@@ -163,7 +163,7 @@ export const users: IUser[] = [
     name: 'Guy Hawkins',
     position: 'Content Writer @Company',
     avatar: user5,
-    profile: '/author/5',
+    profile: AUTHOR,
     links,
   },
   {
@@ -171,7 +171,7 @@ export const users: IUser[] = [
     name: 'Eleanor Pena',
     position: 'Content Writer @Company',
     avatar: user6,
-    profile: '/author/6',
+    profile: AUTHOR,
     links,
   },
   {
@@ -179,7 +179,7 @@ export const users: IUser[] = [
     name: 'Robert Fox',
     position: 'Content Writer @Company',
     avatar: user7,
-    profile: '/author/7',
+    profile: AUTHOR,
     links,
   },
   {
@@ -187,7 +187,7 @@ export const users: IUser[] = [
     name: 'Jacob Jones',
     position: 'Content Writer @Company',
     avatar: user8,
-    profile: '/author/8',
+    profile: AUTHOR,
     links,
   },
 ];
