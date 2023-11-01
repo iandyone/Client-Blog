@@ -8,7 +8,7 @@ const { title } = styles;
 const sen = Sen({ subsets: ['latin'] });
 
 const TitleComponent: FC<ITitleProps> = ({ children, className }) => {
-  const titleClassName = `${title} ${sen.className} ${className}`;
+  const titleClassName = ` ${className} ${title} ${sen.className}`;
 
   return <h2 className={titleClassName}>{children}</h2>;
 };

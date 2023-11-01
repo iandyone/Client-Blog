@@ -7,7 +7,7 @@ import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `${TAB_TITLE} | Blog`,
+  title: `${TAB_TITLE} | Blog Post`,
 };
 
 export default async function BlogPage({ params: { lang } }: IPageProps) {
