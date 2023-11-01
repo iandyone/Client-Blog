@@ -3,13 +3,14 @@
 import { emailValidator } from '@constants';
 import emailjs from '@emailjs/browser';
 import { Button } from '@ui/Button';
-import { ChangeEvent, FC, FormEvent, useEffect, useMemo, useState } from 'react';
+import { Input } from '@ui/Input';
+import { ChangeEvent, FC, FormEvent, useEffect, useState } from 'react';
 import { ValidationError } from 'yup';
 
 import styles from './footerForm.module.scss';
 import { IFooterFormProps } from './types';
 
-const { form, input, container, label, rejected, success, button } = styles;
+const { form, container, button } = styles;
 const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
 const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
 const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
@@ -24,23 +25,12 @@ export const Form: FC<IFooterFormProps> = ({
 }) => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
-  const [emailSucess, setEmailSucess] = useState(null);
-  const inputClassName = useMemo(() => {
-    if (emailSucess) return `${input} ${success}`;
-    if (error) return `${input} ${rejected}`;
-    return input;
-  }, [error, emailSucess]);
-
-  const labelClassName = useMemo(() => {
-    if (emailSucess) return `${label} ${success}`;
-    if (error) return `${label} ${rejected}`;
-    return label;
-  }, [error, emailSucess]);
+  const [emailSuccess, setemailSuccess] = useState(null);
 
   function handlerOnChange(e: ChangeEvent<HTMLInputElement>) {
     const value = e.target.value;
     setError(null);
-    setEmailSucess(null);
+    setemailSuccess(null);
     setEmail(value);
   }
 
@@ -76,7 +66,7 @@ export const Form: FC<IFooterFormProps> = ({
 
     if (isEmailValid) {
       await sendEmail(email);
-      setEmailSucess(emailSuccessLabel);
+      setemailSuccess(emailSuccessLabel);
     }
   }
 
@@ -87,18 +77,14 @@ export const Form: FC<IFooterFormProps> = ({
   return (
     <form className={form} onSubmit={handlerOnSubmit}>
       <div className={container}>
-        {(error || emailSucess) && (
-          <label htmlFor='email' className={labelClassName}>
-            {emailSucess ?? error}
-          </label>
-        )}
-        <input
-          name='email'
-          type='email'
-          value={email}
-          onChange={handlerOnChange}
+        <Input
+          handlerChange={handlerOnChange}
+          labelError={error}
+          labelSuccess={emailSuccess}
+          name='subscribtion'
           placeholder={placeholder}
-          className={inputClassName}
+          value={email}
+          type='email'
         />
       </div>
       <Button className={button}>{buttonText}</Button>

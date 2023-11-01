@@ -1,0 +1,32 @@
+.wrapper {
+  @extend %flex-column;
+  row-gap: 16px;
+}
+
+.inputClass,
+.textareaClass {
+  color: $black;
+  padding: 24px;
+  border-radius: 2px;
+  border: 1px solid $mediumGray;
+  transition: $transition;
+  height: auto;
+
+  color: $black;
+  @extend %text;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $purple;
+  }
+}
+
+.textareaClass {
+  resize: none;
+  min-height: 96px;
+}
+
+.buttonClass {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,72 @@
+.wrapper {
+  @extend %wrapper;
+  padding: 128px 70px;
+}
+
+.container {
+  @extend %container;
+  @extend %flex-column;
+  overflow: hidden;
+
+  max-width: 768px;
+}
+
+.header {
+  @extend %flex-center;
+  margin-bottom: 64px;
+}
+
+.labelClass {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 125%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.titleClass {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.subtitleClass {
+  color: $mediumGray;
+  text-align: center;
+  @extend %text;
+}
+
+.bannerClass {
+  padding: 48px 64px;
+  background-color: $purple;
+  display: flex;
+  column-gap: 42px;
+  margin-bottom: 32px;
+}
+
+.bannerContent {
+  @extend %flex-column;
+  display: flex;
+  width: 100%;
+}
+
+.bannerHeader {
+  color: $white;
+  font-size: 14px;
+  opacity: 0.6;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 16px;
+}
+
+.bannerTitle {
+  color: $white !important;
+  font-size: 20px !important;
+  letter-spacing: 0 !important;
+}
+
+.bannerText {
+  color: $white;
+  @extend %text;
+}

@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "label": "Contact us",
+    "title": "Let’s Start a Conversation",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "banner": {
+      "header1": "Working hours",
+      "header2": "Contact Us",
+      "days": "Monday To Friday",
+      "time": "9:00 AM to 8:00 PM",
+      "index": "020 7993 2905",
+      "message": "Our Support Team is available 24/7",
+      "email": "hello@finsweet.com"
+    },
+    "form": {
+      "namePlaceholder": "Full Name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Message",
+      "button": "Send Message"
+    }
+  }
+}
