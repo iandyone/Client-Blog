@@ -12,7 +12,6 @@ const { wrapper, container, testimonialsClass, previewWrapper, previewTitle, pre
 
 export const Testimonials: FC<ITestimonialsProps> = ({ data }) => {
   const { body, label, titie } = data;
-
   const previewClassNames = {
     wrapperClassName: previewWrapper,
     titleClassName: previewTitle,
