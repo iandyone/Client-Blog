@@ -5,9 +5,9 @@ import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { getDictionary } from '@utils/dictionaries';
 
-export default async function HomeLayout({ children, params }: IPageLayoutProps) {
+export default async function PageLayout({ children, params }: IPageLayoutProps) {
   const { lang } = params;
-  const { header, footer, navigation } = await getDictionary(lang, 'pageLayout');
+  const { header, footer, navigation } = await getDictionary(lang, 'layout');
 
   return (
     <>
