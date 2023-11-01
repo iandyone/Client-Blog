@@ -14,9 +14,6 @@
 
   @media (max-width: $DESKTOP_MEDIUM) {
     flex-direction: column;
-  }
-
-  @media (max-width: $TABLET) {
     row-gap: 40px;
   }
 }
@@ -26,7 +23,12 @@
   @extend %flex-center;
   justify-content: flex-start;
   padding: 80px;
+  align-self: center;
 
+  @media (max-width: $DESKTOP_MEDIUM) {
+    padding: 0 80px;
+    align-self: auto;
+  }
   @media (max-width: $TABLET) {
     padding: 0;
   }
@@ -61,6 +63,10 @@
 }
 .carousel {
   padding: 80px;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    padding: 0 80px;
+  }
 
   @media (max-width: $TABLET) {
     padding: 0;
