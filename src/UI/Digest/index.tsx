@@ -22,14 +22,16 @@ const {
   controlsClass,
   buttonClass,
   disabled,
+  columnClass,
 } = styles;
 const POSTS_PER_PAGE = 5;
 
 const DigestConponent: FC<IDigestProps> = ({
   digests,
-  containerClass,
+
   data = { next: '', prev: '' },
   controls = false,
+  column = false,
 }) => {
   const [page, setPage] = useState(1);
   const { next, prev } = data;
@@ -71,11 +73,11 @@ const DigestConponent: FC<IDigestProps> = ({
   }, [page, getPosts]);
 
   return (
-    <div className={`${containerClass} ${wrapper}`}>
-      <ul className={container}>
+    <div className={wrapper}>
+      <ul className={`${column && columnClass} ${container}`}>
         {posts.map(({ preview, body, label, title, id }) => (
-          <Link className={digestClass} href={`${Routes.POST}/${id}`} key={id}>
-            <div className={imageContainer}>
+          <Link className={`${column && columnClass} ${digestClass}`} href={`${Routes.POST}/${id}`} key={id}>
+            <div className={`${column && columnClass} ${imageContainer}`}>
               <Image className={image} src={preview} alt={label} />
             </div>
             <div className={content}>

@@ -1,7 +1,7 @@
 import 'server-only';
 
-import { Language, page } from '@appTypes/types';
+import { Language, Translation } from '@appTypes/types';
 
-export function getDictionary(locale: Language, page: page) {
-  return import(`@public/images/dictionaries/${locale}/${page}.json`).then((module) => module.default);
+export function getDictionary(locale: Language, translation: Translation) {
+  return import(`@public/images/dictionaries/${locale}/${translation}.json`).then((module) => module.default);
 }

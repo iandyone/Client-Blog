@@ -1,6 +1,7 @@
 export enum Routes {
   HOME = 'home',
   POST = 'post',
+  BLOG_POST = 'blog-post',
   BLOG = 'blog',
   ABOUT = 'about-us',
   CONTACT = 'contact-us',

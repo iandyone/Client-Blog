@@ -45,8 +45,8 @@ export interface ILogo {
 }
 
 export interface ITestimonials {
-  id: number;
-  title: string;
+  id?: number;
+  title?: string;
   name: string;
   location: string;
   avatar: any;
