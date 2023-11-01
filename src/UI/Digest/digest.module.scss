@@ -15,8 +15,10 @@
     gap: 40px;
   }
 
-  @media (max-width: $TABLET_MEDIUM) {
-    gap: 20px;
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-direction: row;
+    }
   }
 }
 
@@ -26,9 +28,17 @@
   align-items: center;
 
   @media (max-width: $TABLET_MEDIUM) {
-    gap: 50px;
+    gap: 20px;
     flex-direction: column;
     align-items: normal;
+  }
+
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-direction: column;
+      align-items: normal;
+      gap: 20px;
+    }
   }
 }
 
@@ -43,6 +53,17 @@
   @media (max-width: $TABLET_MEDIUM) {
     flex-basis: auto;
   }
+
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-basis: auto;
+      min-height: 160px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
 }
 
 .image {
@@ -51,7 +72,7 @@
   height: auto;
 
   @media (max-width: $TABLET_MEDIUM) {
-    object-fit: contain;
+    max-height: 300px;
   }
 }
 
