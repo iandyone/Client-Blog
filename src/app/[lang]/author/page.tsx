@@ -1,5 +1,6 @@
 import { IPageProps } from '@appTypes';
 import { Author } from '@components/Author';
+import { AuthorPosts } from '@components/AuthorPosts';
 import { TAB_TITLE } from '@constants';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
@@ -9,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default async function AuthorPage({ params: { lang } }: IPageProps) {
-  const { author } = await getDictionary(lang, 'author');
+  const { author, posts } = await getDictionary(lang, 'author');
 
   return (
     <>
       <Author data={author} />
+      <AuthorPosts data={posts} />
     </>
   );
 }

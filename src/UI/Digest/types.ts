@@ -4,7 +4,7 @@ export interface IDigestProps {
   containerClass?: string;
   digests: IDigest[];
   controls?: boolean;
-  data: {
+  data?: {
     prev: string;
     next: string;
   };

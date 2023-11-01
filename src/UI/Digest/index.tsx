@@ -5,7 +5,7 @@ import { MainContent } from '@components/MainContent';
 import { digest } from '@constants/data';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC, memo, useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, memo, useCallback, useLayoutEffect, useMemo, useState } from 'react';
 
 import styles from './digest.module.scss';
 import { IDigestProps } from './types';
@@ -25,9 +25,14 @@ const {
 } = styles;
 const POSTS_PER_PAGE = 5;
 
-const DigestConponent: FC<IDigestProps> = ({ digests, containerClass, data, controls = false }) => {
-  const { next, prev } = data;
+const DigestConponent: FC<IDigestProps> = ({
+  digests,
+  containerClass,
+  data = { next: '', prev: '' },
+  controls = false,
+}) => {
   const [page, setPage] = useState(1);
+  const { next, prev } = data;
   const MIN_PAGE = 1;
   const MAX_PAGE = useMemo(() => Math.ceil(digest.length / POSTS_PER_PAGE), []);
 
@@ -61,7 +66,7 @@ const DigestConponent: FC<IDigestProps> = ({ digests, containerClass, data, cont
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setPosts(getPosts());
   }, [page, getPosts]);
 
@@ -79,7 +84,7 @@ const DigestConponent: FC<IDigestProps> = ({ digests, containerClass, data, cont
           </Link>
         ))}
       </ul>
-      {controls && (
+      {data && controls && (
         <div className={controlsClass}>
           <button className={`${buttonClass} ${page === MIN_PAGE && disabled}`} onClick={handlerOnPrevPage}>
             {prev}
