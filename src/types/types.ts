@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react';
+
 export type Language = 'en' | 'ru';
 
 export type Translation =
@@ -9,3 +11,10 @@ export type Translation =
   | 'privacy'
   | 'author'
   | 'blog-post';
+
+export type handlerChangeInput = (e: ChangeEvent<HTMLInputElement>) => void;
+export type handlerChangeTextatea = (e: ChangeEvent<HTMLTextAreaElement>) => void;
+
+export type handlerChange = handlerChangeInput | handlerChangeTextatea;
+
+export type handler = () => void;
