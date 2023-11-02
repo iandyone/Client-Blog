@@ -1,6 +1,7 @@
 .wrapper {
   @extend %flex-column;
   row-gap: 16px;
+  margin-bottom: 20px;
 }
 
 .inputClass,
