@@ -1,3 +1,4 @@
+import { handlerChangeInput, handlerChangeTextatea } from '@appTypes/types';
 import { FC, memo, useMemo } from 'react';
 
 import styles from './input.module.scss';
@@ -8,12 +9,15 @@ const { container, labelClass, inputClass, success, rejected } = styles;
 export const InputComponent: FC<IInputProps> = ({
   value,
   handlerChange,
+  handlerBlur,
   placeholder,
   labelError,
   labelSuccess,
   className,
+  requred,
   name,
   type,
+  textarea,
 }) => {
   const labelClassName = useMemo(() => {
     if (labelSuccess) return `${labelClass} ${success}`;
@@ -35,14 +39,29 @@ export const InputComponent: FC<IInputProps> = ({
             {labelSuccess ?? labelError}
           </label>
         )}
-        <input
-          name={name}
-          type={type}
-          value={value}
-          onChange={handlerChange}
-          placeholder={placeholder}
-          className={`${className} ${inputClassName}`}
-        />
+        {!textarea && (
+          <input
+            name={name}
+            type={type}
+            value={value}
+            onChange={handlerChange as handlerChangeInput}
+            onBlur={handlerBlur}
+            placeholder={placeholder}
+            className={`${className} ${inputClassName}`}
+            required={requred}
+          />
+        )}
+        {textarea && (
+          <textarea
+            name={name}
+            value={value}
+            onChange={handlerChange as handlerChangeTextatea}
+            onBlur={handlerBlur}
+            placeholder={placeholder}
+            className={`${className} ${inputClassName}`}
+            required={requred}
+          />
+        )}
       </div>
     </>
   );

@@ -12,4 +12,9 @@ export type Translation =
   | 'author'
   | 'blog-post';
 
-export type handlerChange = (e: ChangeEvent<HTMLInputElement>) => void;
+export type handlerChangeInput = (e: ChangeEvent<HTMLInputElement>) => void;
+export type handlerChangeTextatea = (e: ChangeEvent<HTMLTextAreaElement>) => void;
+
+export type handlerChange = handlerChangeInput | handlerChangeTextatea;
+
+export type handler = () => void;

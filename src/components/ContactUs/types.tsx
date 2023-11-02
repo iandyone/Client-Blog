@@ -1,3 +1,5 @@
+import { IFormProps } from './Form/types';
+
 export interface IContactUsPropds {
   data: {
     label: string;
@@ -12,11 +14,6 @@ export interface IContactUsPropds {
       message: string;
       email: string;
     };
-    form: {
-      namePlaceholder: string;
-      emailPlaceholder: string;
-      messagePlaceholder: string;
-      button: string;
-    };
+    form: IFormProps;
   };
 }

@@ -29,7 +29,7 @@ const ContactUsComponent: FC<IContactUsPropds> = ({ data }) => {
     <section className={wrapper}>
       <div className={container}>
         <article className={header}>
-          <Title className={`${labelClass}  ${inter}`}>{label}</Title>
+          <h4 className={`${labelClass}  ${inter}`}>{label}</h4>
           <Title className={titleClass}>{title}</Title>
           <p className={`${subtitleClass} ${inter}`}>{subtitle}</p>
         </article>

@@ -1,4 +1,4 @@
-import { handlerChange } from '@appTypes/types';
+import { handler, handlerChange } from '@appTypes/types';
 
 export interface IInputProps {
   value: string;
@@ -7,6 +7,9 @@ export interface IInputProps {
   labelError: string;
   name: string;
   handlerChange: handlerChange;
-  type: 'email' | 'text';
+  handlerBlur?: handler;
+  type?: 'email' | 'text';
   className?: string;
+  requred?: boolean;
+  textarea?: boolean;
 }
