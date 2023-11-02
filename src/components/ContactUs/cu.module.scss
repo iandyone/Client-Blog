@@ -1,6 +1,10 @@
 .wrapper {
   @extend %wrapper;
-  padding: 128px 70px;
+  padding: 128px 0px;
+
+  @media (max-width: $TABLET_SMALL) {
+    padding: 100px 0 40px 0;
+  }
 }
 
 .container {
@@ -14,6 +18,10 @@
 .header {
   @extend %flex-center;
   margin-bottom: 64px;
+
+  @media (max-width: $TABLET_SMALL) {
+    margin-bottom: 20px;
+  }
 }
 
 .labelClass {
@@ -29,6 +37,11 @@
   text-align: center;
   font-size: 48px;
   margin-bottom: 24px;
+
+  @media (max-width: $TABLET_SMALL) {
+    margin-bottom: 10px;
+    font-size: 28px !important;
+  }
 }
 
 .subtitleClass {
@@ -43,12 +56,27 @@
   display: flex;
   column-gap: 42px;
   margin-bottom: 32px;
+
+  @media (max-width: $TABLET_SMALL) {
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  @media (max-width: $MOBILE) {
+    row-gap: 20px;
+  }
 }
 
 .bannerContent {
   @extend %flex-column;
   display: flex;
   width: 100%;
+
+  @media (max-width: $TABLET_SMALL) {
+    align-items: center;
+  }
 }
 
 .bannerHeader {
@@ -64,9 +92,21 @@
   color: $white !important;
   font-size: 20px !important;
   letter-spacing: 0 !important;
+
+  @media (max-width: $MOBILE) {
+    font-size: 18px !important;
+  }
 }
 
 .bannerText {
   color: $white;
+  opacity: 0.6;
   @extend %text;
+
+  @media (max-width: $TABLET_SMALL) {
+    text-align: center;
+  }
+  @media (max-width: $MOBILE) {
+    font-size: 14px !important;
+  }
 }

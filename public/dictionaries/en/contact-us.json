@@ -16,7 +16,9 @@
       "namePlaceholder": "Full Name",
       "emailPlaceholder": "Your Email",
       "messagePlaceholder": "Message",
-      "button": "Send Message"
+      "button": "Send Message",
+      "successMessage": "Done!",
+      "sendingMessage": "Sending..."
     }
   }
 }
