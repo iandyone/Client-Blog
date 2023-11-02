@@ -4,6 +4,7 @@ import { FC, memo } from 'react';
 
 import styles from './cu.module.scss';
 import { Form } from './Form';
+import { Map } from './Map';
 import { IContactUsPropds } from './types';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['400', '900'] });
@@ -48,6 +49,7 @@ const ContactUsComponent: FC<IContactUsPropds> = ({ data }) => {
         </article>
         <Form {...form} />
       </div>
+      <Map />
     </section>
   );
 };
