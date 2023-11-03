@@ -1,11 +1,23 @@
 export interface IAboutUsProps {
   data: {
-    aboutLabel: string;
-    aboutTitle: string;
-    aboutBody: string;
-    missionLabel: string;
-    missionTitle: string;
-    missionBody: string;
-    buttonText: string;
+    label: string;
+    header: string;
+    description: string;
+    banner: {
+      blogsCounter: string;
+      blogsText: string;
+      viewsCounter: string;
+      viewsText: string;
+      usersCounter: string;
+      usersText: string;
+    };
+    content: {
+      label1: string;
+      label2: string;
+      title1: string;
+      title2: string;
+      text1: string;
+      text2: string;
+    };
   };
 }

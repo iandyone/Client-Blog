@@ -1,0 +1,31 @@
+{
+  "about": {
+    "label": "О НАС",
+    "header": "Мы - команда авторов контента, делящаяся своими знаниями",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "banner": {
+      "blogsCounter": "12+",
+      "blogsText": "Опубликованных блогов",
+      "viewsCounter": "18K+",
+      "viewsText": "Просмотров на Finsweet",
+      "usersCounter": "30K+",
+      "usersText": "Всего активных пользователей"
+    },
+    "content": {
+      "label1": "Наша миссия",
+      "label2": "Наше видение",
+      "title1": "Создание ценного контента для творческих людей по всему миру",
+      "title2": "Платформа, которая дает возможность развиваться индивидуумам",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+    }
+  },
+  "authors": {
+    "title": "Список авторов"
+  },
+  "joinUs": {
+    "title": "Присоединяйтесь к нашей команде и станьте частью нашей истории",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Присоединиться сейчас"
+  }
+}

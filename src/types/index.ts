@@ -70,12 +70,14 @@ export interface IPreview {
   header?: string;
   credentials?: ICredentials;
   colored?: boolean;
-  classNames?: {
-    wrapperClassName?: string;
-    titleClassName?: string;
-    bodyClassName?: string;
-    labelClassName?: string;
-  };
+  classNames?: IPreviewCLasses;
+}
+
+export interface IPreviewCLasses {
+  wrapperClassName?: string;
+  titleClassName?: string;
+  bodyClassName?: string;
+  labelClassName?: string;
 }
 
 export interface INavigation {
