@@ -6,7 +6,7 @@ export type Translation =
   | 'layout'
   | 'home'
   | 'blog'
-  | 'about'
+  | 'about-us'
   | 'contact-us'
   | 'privacy'
   | 'author'
