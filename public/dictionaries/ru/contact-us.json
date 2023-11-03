@@ -1,24 +1,24 @@
 {
   "contact": {
-    "label": "Contact us",
-    "title": "Let’s Start a Conversation",
+    "label": "Свяжитесь с нами",
+    "title": "Давайте обсудим",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
     "banner": {
-      "header1": "Working hours",
-      "header2": "Contact Us",
-      "days": "Monday To Friday",
-      "time": "9:00 AM to 8:00 PM",
+      "header1": "Часы работы",
+      "header2": "Свяжитесь с нами",
+      "days": "С Понедельника По Пятницу",
+      "time": "с 9:00 до 20:00",
       "index": "020 7993 2905",
-      "message": "Our Support Team is available 24/7",
+      "message": "Наша команда поддержки доступна 24/7",
       "email": "hello@finsweet.com"
     },
     "form": {
-      "namePlaceholder": "Full Name",
-      "emailPlaceholder": "Your Email",
-      "messagePlaceholder": "Message",
-      "button": "Send Message",
-      "successMessage": "Done",
-      "sendingMessage": "Sending..."
+      "namePlaceholder": "Полное имя",
+      "emailPlaceholder": "Ваш email",
+      "messagePlaceholder": "Текст сообщения",
+      "button": "Отправить",
+      "successMessage": "Готово!",
+      "sendingMessage": "Отправка..."
     }
   }
 }

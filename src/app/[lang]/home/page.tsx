@@ -1,5 +1,5 @@
 import { IPageProps } from '@appTypes';
-import { AboutUs } from '@components/AboutUs';
+import { AboutUsBanner } from '@components/AboutUsBanner';
 import { Authors } from '@components/Authors';
 import { Categories } from '@components/Categories';
 import { JoinUs } from '@components/JoinUs';
@@ -36,7 +36,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
     <>
       <StepByStepHome data={stepByStep} />
       <Overview data={overview} />
-      <AboutUs data={aboutUs} />
+      <AboutUsBanner data={aboutUs} />
       <Categories data={categoriesHome} />
       <WhyWeStarted data={whyWeStarted} />
       <Authors data={authorsHome} users={userList} />
