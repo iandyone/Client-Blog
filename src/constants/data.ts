@@ -36,45 +36,6 @@ import post5 from '@public/images/posts/05.jpg';
 
 const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME, AUTHOR } = Routes;
 
-export const posts: IPost[] = [
-  {
-    id: 1,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 2,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 3,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 4,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-];
-
 export const categories: ICategory[] = [
   {
     title: 'Business',
@@ -212,6 +173,89 @@ export const testimonials: ITestimonials[] = [
   },
 ];
 
+export const posts: IPost[] = [
+  {
+    id: 1,
+    author: users[0],
+    date: 'May 23, 2022',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 2,
+    author: users[1],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    labelIcon: startupIcon,
+    preview: postPreview1,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 3,
+    author: users[2],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 4,
+    author: users[3],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 5,
+    author: users[4],
+    date: 'May 23, 2022',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 6,
+    author: users[5],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 7,
+    author: users[6],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+  {
+    id: 8,
+    author: users[7],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview1,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+];
+
 export const digest: IDigest[] = [
   {
     id: 2,
@@ -219,6 +263,8 @@ export const digest: IDigest[] = [
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
+    author: users[0],
+    labelIcon: startupIcon,
   },
   {
     id: 3,
@@ -226,6 +272,8 @@ export const digest: IDigest[] = [
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
+    author: users[1],
+    labelIcon: startupIcon,
   },
   {
     id: 4,
@@ -233,6 +281,8 @@ export const digest: IDigest[] = [
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
+    author: users[2],
+    labelIcon: startupIcon,
   },
   {
     id: 5,
@@ -240,6 +290,8 @@ export const digest: IDigest[] = [
     title: '8 Figma design systems you can download for free today',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post5,
+    author: users[3],
+    labelIcon: technologyIcon,
   },
   {
     id: 6,
@@ -247,6 +299,8 @@ export const digest: IDigest[] = [
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
+    author: users[4],
+    labelIcon: economyIcon,
   },
   {
     id: 7,
@@ -254,14 +308,17 @@ export const digest: IDigest[] = [
     title: '8 Figma design systems you can download for free today',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post5,
+    author: users[5],
+    labelIcon: technologyIcon,
   },
-
   {
     id: 8,
     label: 'Startup',
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
+    author: users[6],
+    labelIcon: startupIcon,
   },
   {
     id: 9,
@@ -269,6 +326,8 @@ export const digest: IDigest[] = [
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
+    author: users[7],
+    labelIcon: economyIcon,
   },
   {
     id: 10,
@@ -276,12 +335,69 @@ export const digest: IDigest[] = [
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
+    author: users[7],
+    labelIcon: startupIcon,
   },
   {
     id: 11,
-    label: 'Startup',
+    label: 'TECHNOLOGY',
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
+    author: users[1],
+    labelIcon: technologyIcon,
+  },
+  {
+    id: 12,
+    label: 'ECONOMY',
+    title: 'How to build rapport with your web design clients',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post4,
+    author: users[2],
+    labelIcon: economyIcon,
+  },
+  {
+    id: 13,
+    label: 'ECONOMY',
+    title: 'Font sizes in UI design: The complete guide to follow',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
+    author: users[3],
+    labelIcon: economyIcon,
+  },
+  {
+    id: 14,
+    label: 'Startup',
+    title: 'Design tips for designers that cover everything you need',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post5,
+    author: users[4],
+    labelIcon: startupIcon,
+  },
+  {
+    id: 15,
+    label: 'TECHNOLOGY',
+    title: 'Logo design trends to avoid in 2022',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post3,
+    author: users[5],
+    labelIcon: technologyIcon,
   },
 ];
+
+export const mockDigest: IDigest = {
+  id: -1,
+  label: null,
+  title: null,
+  body: null,
+  preview: null,
+  author: {
+    id: -1,
+    avatar: null,
+    links: null,
+    name: null,
+    position: null,
+    profile: null,
+  },
+  labelIcon: null,
+};

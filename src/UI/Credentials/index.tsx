@@ -10,7 +10,7 @@ const CredentialsComponent: FC<ICredentialsProps> = ({ author, date, colored }) 
 
   return (
     <p className={credentialsClassName}>
-      By <span>{author}</span> | {date}
+      By <span>{author.name}</span> | {date}
     </p>
   );
 };

@@ -1,4 +1,4 @@
-import { IPreviewCLasses } from '@appTypes';
+import { IPreviewClasses } from '@appTypes';
 import { MainContent } from '@components/MainContent';
 import bannerImage from '@public/images/aboutPage/banner.jpg';
 import { Title } from '@ui/Title';
@@ -25,12 +25,12 @@ const {
   contentWrapper,
 } = styles;
 
-const headerPeviewClasses: IPreviewCLasses = {
+const headerPeviewClasses: IPreviewClasses = {
   titleClassName: headerTitle,
   wrapperClassName: previewWrapper,
 };
 
-const contentPeviewClasses: IPreviewCLasses = {
+const contentPeviewClasses: IPreviewClasses = {
   titleClassName: contentTitle,
   bodyClassName: contentText,
   wrapperClassName: contentWrapper,
@@ -66,7 +66,7 @@ const AboutUsComponent: FC<IAboutUsProps> = ({ data }) => {
           <div className={headerText}>{description}</div>
         </article>
         <article className={bannerClass}>
-          <Image className={bannerImageClass} src={bannerImage} alt='banner' />
+          <Image className={bannerImageClass} src={bannerImage} alt='banner' priority />
           <ul className={achievesContainer}>
             {achivesList &&
               achivesList.map(({ id, counter, text }) => (

@@ -1,4 +1,7 @@
+import { IDigest } from '@appTypes';
+
 export interface IBlogPostProps {
+  digest?: IDigest;
   data: {
     user: string;
     date: string;

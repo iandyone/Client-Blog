@@ -16,7 +16,7 @@ import { IHeaderProps } from './types';
 const { header, container, logo, navigationClass, active } = styles;
 const { HOME } = Routes;
 
-export const Header: FC<IHeaderProps> = ({ data, navigation }) => {
+export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
   const { headerLogoText, buttonText } = data;
   const { burger } = useSelectorTyped((store) => store.app);
   const navigationClassName = useMemo(
@@ -31,7 +31,7 @@ export const Header: FC<IHeaderProps> = ({ data, navigation }) => {
           <Link href={HOME}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>
-          <Navigation type='short' data={navigation} />
+          <Navigation type='short' data={navigation} lang={lang} />
           <Button colored>{buttonText}</Button>
         </div>
         <BurgerMenu />
