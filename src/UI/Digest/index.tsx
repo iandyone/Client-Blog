@@ -76,7 +76,10 @@ const DigestConponent: FC<IDigestProps> = ({
     <div className={wrapper}>
       <ul className={`${column && columnClass} ${container}`}>
         {posts.map(({ preview, body, label, title, id }) => (
-          <Link className={`${column && columnClass} ${digestClass}`} href={`${Routes.POST}/${id}`} key={id}>
+          <Link
+            className={`${column && columnClass} ${digestClass}`}
+            href={`${Routes.BLOG_POST}/${id}`}
+            key={id}>
             <div className={`${column && columnClass} ${imageContainer}`}>
               <Image className={image} src={preview} alt={label} />
             </div>

@@ -34,11 +34,9 @@ export const InputComponent: FC<IInputProps> = ({
   return (
     <>
       <div className={container}>
-        {(labelError || labelError) && (
-          <label htmlFor={name} className={labelClassName}>
-            {labelSuccess ?? labelError}
-          </label>
-        )}
+        <label htmlFor={name} className={labelClassName}>
+          {labelSuccess ?? labelError}
+        </label>
         {!textarea && (
           <input
             name={name}

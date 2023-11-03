@@ -4,10 +4,10 @@ import { FC, memo } from 'react';
 import styles from './footerNav.module.scss';
 import { IFooterNavProps } from './types';
 
-const FooterNavComponent: FC<IFooterNavProps> = ({ navigation }) => {
+const FooterNavComponent: FC<IFooterNavProps> = ({ navigation, lang }) => {
   return (
     <div className={styles.wrapper}>
-      <Navigation data={navigation} />
+      <Navigation data={navigation} lang={lang} />
     </div>
   );
 };

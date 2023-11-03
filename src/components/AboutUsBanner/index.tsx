@@ -1,3 +1,4 @@
+import { IPreviewClasses } from '@appTypes';
 import { Routes } from '@appTypes/enums';
 import { Preview } from '@ui/Preview';
 import { Sen } from 'next/font/google';
@@ -13,17 +14,15 @@ const { wrapper, container, about, mission, aboutTitleClass, link } = styles;
 const AboutUsBannerComponent: FC<IAboutUsBannerProps> = ({ data }) => {
   const { aboutLabel, aboutTitle, aboutBody, missionLabel, missionTitle, missionBody, buttonText } = data;
 
-  const classNames = {
-    about: {
-      titleClassName: aboutTitleClass,
-    },
+  const classNames: IPreviewClasses = {
+    titleClassName: aboutTitleClass,
   };
 
   return (
     <section className={wrapper}>
       <div className={container}>
         <article className={about}>
-          <Preview label={aboutLabel} title={aboutTitle} body={aboutBody} classNames={classNames.about} />
+          <Preview label={aboutLabel} title={aboutTitle} body={aboutBody} classNames={classNames} />
           <Link href={Routes.ABOUT} className={`${link} ${sen.className}`}>
             {buttonText}
           </Link>

@@ -1,6 +1,6 @@
 .wrapper {
   @extend %flex-column;
-  row-gap: 16px;
+  row-gap: 6px;
   margin-bottom: 20px;
 }
 
@@ -20,6 +20,10 @@
   &:focus {
     border: 1px solid $purple;
   }
+}
+
+.textareaClass {
+  margin-bottom: 16px;
 }
 
 .textareaClass {
