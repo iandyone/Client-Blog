@@ -8,15 +8,15 @@ import { IReadNextProps } from './types';
 
 const { wrapper, container, digestClass } = styles;
 
-const ReadNextComponent: FC<IReadNextProps> = ({ data }) => {
+const ReadNextComponent: FC<IReadNextProps> = ({ data, category }) => {
   const { title } = data;
-  const digestList = digest.slice(0, 3);
+  const temp = digest.filter(({ label }) => label === category).slice(0, 3);
 
   return (
     <section className={wrapper}>
       <div className={container}>
         <Title>{title}</Title>
-        <Digest containerClass={digestClass} digests={digestList} column />
+        <Digest containerClass={digestClass} digests={temp} column />
       </div>
     </section>
   );

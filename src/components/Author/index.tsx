@@ -1,6 +1,5 @@
 import { Links } from '@components/Links';
-import { links } from '@constants/data';
-import authorPreview from '@public/images/AuthorsPage/01.jpg';
+import { defaulUser, links } from '@constants/data';
 import { Decor } from '@ui/Decor';
 import { Title } from '@ui/Title';
 import Image from 'next/image';
@@ -11,15 +10,19 @@ import { IAuthorProps } from './types';
 
 const { wrapper, container, contentClass, titleClass, aboutText, linksClass, decor } = styles;
 
-const AuthorComponent: FC<IAuthorProps> = ({ data }) => {
+const AuthorComponent: FC<IAuthorProps> = ({ data, author }) => {
   const { title, about } = data;
+  const user = author ?? defaulUser;
+  const { name, avatar } = user;
+
+  const titleText = title.replace('{{name}}', name);
 
   return (
     <section className={wrapper}>
       <div className={container}>
-        <Image src={authorPreview} alt='author' priority />
+        <Image src={avatar} alt='author' priority />
         <div className={contentClass}>
-          <Title className={titleClass}>{title}</Title>
+          <Title className={titleClass}>{titleText}</Title>
           <p className={aboutText}>{about}</p>
           <Links links={links} className={linksClass} />
           <Decor className={decor} />

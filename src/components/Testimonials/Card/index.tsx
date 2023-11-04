@@ -12,7 +12,7 @@ export const CardComponent: FC<ITestimonials> = ({ avatar, location, name, title
     <article className={wrapper}>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
-        <User avatar={avatar} name={name} location={location} />
+        <User user={{ avatar, name, location }} />
       </div>
     </article>
   );

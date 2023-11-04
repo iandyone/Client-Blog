@@ -34,7 +34,7 @@ const MainContentComponent: FC<IMainContantProps> = ({
         colored={colored}
       />
       {buttonText && (
-        <Link href={Routes.BLOG_POST}>
+        <Link href={Routes.POST}>
           <Button>{buttonText}</Button>
         </Link>
       )}

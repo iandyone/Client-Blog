@@ -1,5 +1,5 @@
 import { getDictionary } from '@utils/dictionaries';
-import { Routes } from './enums';
+import { Category, Routes } from './enums';
 import { Language } from './types';
 import { ReactElement } from 'react';
 
@@ -11,10 +11,12 @@ export interface IPost extends ICredentials {
   title: string;
   content?: string;
   preview: any;
+  labelIcon?: any;
+  author: IUser;
 }
 
 export interface ICredentials {
-  author: string;
+  author: IUser | string;
   date: string;
 }
 
@@ -62,6 +64,13 @@ export interface IPageLayoutProps extends IPageProps {
   children: ReactElement;
 }
 
+export interface IPostData {
+  author: IUser;
+  title: string;
+  label: string;
+  labelIcon: any;
+}
+
 export interface IPreview {
   label?: string;
   title?: string;
@@ -70,10 +79,10 @@ export interface IPreview {
   header?: string;
   credentials?: ICredentials;
   colored?: boolean;
-  classNames?: IPreviewCLasses;
+  classNames?: IPreviewClasses;
 }
 
-export interface IPreviewCLasses {
+export interface IPreviewClasses {
   wrapperClassName?: string;
   titleClassName?: string;
   bodyClassName?: string;
@@ -90,8 +99,10 @@ export interface INavigation {
 
 export interface IDigest {
   id: number;
-  label?: string;
+  label?: Category;
   title?: string;
   body?: string;
   preview: any;
+  labelIcon?: any;
+  author: IUser;
 }

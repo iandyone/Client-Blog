@@ -8,14 +8,14 @@ import { INavigationProps } from './types';
 const { menu } = styles;
 const { HOME, ABOUT, BLOG, CONTACT, PRIVACY } = Routes;
 
-const NavigationComponent: FC<INavigationProps> = ({ data, type = 'full' }) => {
+const NavigationComponent: FC<INavigationProps> = ({ data, lang = 'en', type = 'full' }) => {
   const { home, blog, about, contact, privacy } = data;
   const routes = [
-    { title: home, href: HOME },
-    { title: blog, href: BLOG },
-    { title: about, href: ABOUT },
-    { title: contact, href: CONTACT },
-    { title: privacy, href: PRIVACY },
+    { title: home, href: `/${lang}/${HOME}` },
+    { title: blog, href: `/${lang}/${BLOG}` },
+    { title: about, href: `/${lang}/${ABOUT}` },
+    { title: contact, href: `/${lang}/${CONTACT}` },
+    { title: privacy, href: `/${lang}/${PRIVACY}` },
   ];
   const routesList = type === 'full' ? routes : routes.slice(0, 4);
 

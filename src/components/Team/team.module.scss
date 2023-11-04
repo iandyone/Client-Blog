@@ -59,6 +59,8 @@
   flex: 0 1 50%;
   width: 100%;
   object-fit: cover;
+  height: auto;
+  max-height: 480px;
 
   @media (max-width: $TABLET_SMALL) {
     max-height: 350px;
