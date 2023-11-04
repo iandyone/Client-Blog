@@ -7,10 +7,11 @@ const { credentials, styled } = styles;
 
 const CredentialsComponent: FC<ICredentialsProps> = ({ author, date, colored }) => {
   const credentialsClassName = useMemo(() => (colored ? `${credentials} ${styled}` : credentials), [colored]);
+  const name = typeof author === 'string' ? author : author.name;
 
   return (
     <p className={credentialsClassName}>
-      By <span>{author.name}</span> | {date}
+      By <span>{name}</span> | {date}
     </p>
   );
 };
