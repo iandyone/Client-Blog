@@ -39,7 +39,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
       <AboutUsBanner data={aboutUs} />
       <Categories data={categoriesHome} />
       <WhyWeStarted data={whyWeStarted} />
-      <Authors data={authorsHome} users={userList} />
+      <Authors data={authorsHome} users={userList} lang={lang} />
       <Labels data={labelsHome} />
       <Testimonials data={testimonials} />
       <JoinUs data={joinUs} />

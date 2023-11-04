@@ -1,11 +1,12 @@
 import { IDigest, ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
-import postPreview1 from '@public/images/posts/01.jpg';
 import { ICategory } from '@appTypes';
+import { Category, Routes } from '@appTypes/enums';
+import authorPreview from '@public/images/AuthorsPage/01.jpg';
+import postPreview from '@public/images/posts/01.jpg';
 import businessIcon from '@public/images/homePage/business.svg';
 import economyIcon from '@public/images/homePage/economy.svg';
 import startupIcon from '@public/images/homePage/startup.svg';
 import technologyIcon from '@public/images/homePage/technology.svg';
-import { Routes } from '@appTypes/enums';
 
 import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
@@ -35,45 +36,6 @@ import post4 from '@public/images/posts/04.jpg';
 import post5 from '@public/images/posts/05.jpg';
 
 const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME, AUTHOR } = Routes;
-
-export const posts: IPost[] = [
-  {
-    id: 1,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 2,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 3,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-  {
-    id: 4,
-    author: 'John Doe',
-    date: 'May 23, 2022',
-    title: '8 Figma design systems that you can download for free today.',
-    content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: postPreview1,
-  },
-];
 
 export const categories: ICategory[] = [
   {
@@ -212,76 +174,236 @@ export const testimonials: ITestimonials[] = [
   },
 ];
 
-export const digest: IDigest[] = [
+export const posts: IPost[] = [
+  {
+    id: 1,
+    author: users[0],
+    date: 'May 23, 2022',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
   {
     id: 2,
-    label: 'Startup',
-    title: 'Design tips for designers that cover everything you need',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post2,
+    author: users[1],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    labelIcon: startupIcon,
+    preview: postPreview,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 3,
-    label: 'Startup',
-    title: 'How to build rapport with your web design clients',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post3,
+    author: users[2],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 4,
-    label: 'Startup',
-    title: 'Logo design trends to avoid in 2022',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post4,
+    author: users[3],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 5,
-    label: 'TECHNOLOGY',
-    title: '8 Figma design systems you can download for free today',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post5,
+    author: users[4],
+    date: 'May 23, 2022',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 6,
-    label: 'ECONOMY',
-    title: 'Font sizes in UI design: The complete guide to follow',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post2,
+    author: users[5],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
   {
     id: 7,
-    label: 'TECHNOLOGY',
-    title: '8 Figma design systems you can download for free today',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    preview: post5,
+    author: users[6],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
   },
-
   {
     id: 8,
-    label: 'Startup',
+    author: users[7],
+    date: 'May 23, 2022',
+    title: '8 Figma design systems that you can download for free today.',
+    preview: postPreview,
+    labelIcon: startupIcon,
+    content:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+  },
+];
+
+export const digest: IDigest[] = [
+  {
+    id: 2,
+    label: Category.STARTUP,
+    title: 'Design tips for designers that cover everything you need',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
+    author: users[0],
+    labelIcon: startupIcon,
+  },
+  {
+    id: 3,
+    label: Category.BUSINESS,
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
+    author: users[1],
+    labelIcon: businessIcon,
   },
   {
-    id: 9,
-    label: 'ECONOMY',
+    id: 4,
+    label: Category.STARTUP,
+    title: 'Logo design trends to avoid in 2022',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post4,
+    author: users[2],
+    labelIcon: startupIcon,
+  },
+  {
+    id: 5,
+    label: Category.TECHNOLOGY,
+    title: '8 Figma design systems you can download for free today',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post5,
+    author: users[3],
+    labelIcon: technologyIcon,
+  },
+  {
+    id: 6,
+    label: Category.ECONOMY,
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
+    author: users[4],
+    labelIcon: economyIcon,
+  },
+  {
+    id: 7,
+    label: Category.TECHNOLOGY,
+    title: '8 Figma design systems you can download for free today',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post5,
+    author: users[5],
+    labelIcon: technologyIcon,
+  },
+  {
+    id: 8,
+    label: Category.TECHNOLOGY,
+    title: 'How to build rapport with your web design clients',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post3,
+    author: users[6],
+    labelIcon: technologyIcon,
+  },
+  {
+    id: 9,
+    label: Category.ECONOMY,
+    title: 'Font sizes in UI design: The complete guide to follow',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
+    author: users[7],
+    labelIcon: economyIcon,
   },
   {
     id: 10,
-    label: 'Startup',
+    label: Category.BUSINESS,
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
+    author: users[7],
+    labelIcon: businessIcon,
   },
   {
     id: 11,
-    label: 'Startup',
+    label: Category.TECHNOLOGY,
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
+    author: users[1],
+    labelIcon: technologyIcon,
+  },
+  {
+    id: 12,
+    label: Category.ECONOMY,
+    title: 'How to build rapport with your web design clients',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post4,
+    author: users[2],
+    labelIcon: economyIcon,
+  },
+  {
+    id: 13,
+    label: Category.BUSINESS,
+    title: 'Font sizes in UI design: The complete guide to follow',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post2,
+    author: users[3],
+    labelIcon: businessIcon,
+  },
+  {
+    id: 14,
+    label: Category.STARTUP,
+    title: 'Design tips for designers that cover everything you need',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post5,
+    author: users[4],
+    labelIcon: startupIcon,
+  },
+  {
+    id: 15,
+    label: Category.TECHNOLOGY,
+    title: 'Logo design trends to avoid in 2022',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    preview: post3,
+    author: users[5],
+    labelIcon: technologyIcon,
   },
 ];
+
+export const defaultDigest: IDigest = {
+  id: -1,
+  label: Category.STARTUP,
+  title: null,
+  body: null,
+  preview: null,
+  labelIcon: null,
+  author: {
+    id: -1,
+    avatar: null,
+    links: null,
+    name: 'Andrew Jonson',
+    position: null,
+    profile: null,
+  },
+};
+
+export const defaulUser = {
+  name: 'Andrew Jonson',
+  avatar: authorPreview,
+};

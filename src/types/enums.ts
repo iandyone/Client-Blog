@@ -1,7 +1,6 @@
 export enum Routes {
   HOME = 'home',
   POST = 'post',
-  BLOG_POST = 'blog-post',
   BLOG = 'blog',
   ABOUT = 'about-us',
   CONTACT = 'contact-us',
@@ -20,4 +19,11 @@ export enum Viewports {
   TABLET_MEDIUM = 768,
   TABLET_SMALL = 500,
   MOBILE = 480,
+}
+
+export enum Category {
+  STARTUP = 'Startup',
+  ECONOMY = 'Ecomomy',
+  TECHNOLOGY = 'Technology',
+  BUSINESS = 'Business',
 }

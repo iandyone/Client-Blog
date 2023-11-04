@@ -1,4 +1,7 @@
+import { IDigest } from '@appTypes';
+
 export interface IBlogPostProps {
+  digest?: IDigest;
   data: {
     user: string;
     date: string;
@@ -10,6 +13,9 @@ export interface IBlogPostProps {
       item1: string;
       item2: string;
       item3: string;
+    };
+    readNext: {
+      title: string;
     };
   };
 }

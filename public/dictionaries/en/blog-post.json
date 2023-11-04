@@ -10,10 +10,10 @@
       "item1": "Lorem ipsum dolor sit amet",
       "item2": "Non blandit massa enim nec scelerisque",
       "item3": "Neque egestas congue quisque egestas"
+    },
+    "readNext": {
+      "title": "What to read next"
     }
-  },
-  "readNext": {
-    "title": "What to read next"
   },
   "joinUs": {
     "title": "Join our team to be a part of our story",

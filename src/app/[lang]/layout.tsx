@@ -11,9 +11,9 @@ export default async function PageLayout({ children, params }: IPageLayoutProps)
 
   return (
     <>
-      <Header data={header} navigation={navigation} />
+      <Header data={header} navigation={navigation} lang={lang} />
       <main>{children}</main>
-      <Footer data={footer} navigation={navigation} />
+      <Footer data={footer} navigation={navigation} lang={lang} />
     </>
   );
 }

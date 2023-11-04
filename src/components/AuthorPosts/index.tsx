@@ -1,4 +1,3 @@
-import { digest } from '@constants/data';
 import { Digest } from '@ui/Digest';
 import { Title } from '@ui/Title';
 import { FC, memo } from 'react';
@@ -8,15 +7,14 @@ import { IAuthorPostsProps } from './types';
 
 const { wrapper, container, titleClass } = styles;
 
-export const AuthorPostsComponent: FC<IAuthorPostsProps> = ({ data }) => {
+export const AuthorPostsComponent: FC<IAuthorPostsProps> = ({ data, posts }) => {
   const { title } = data;
-  const authorPosts = digest.slice(0, 2);
 
   return (
     <section className={wrapper}>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
-        <Digest digests={authorPosts} />
+        <Digest digests={posts} />
       </div>
     </section>
   );
