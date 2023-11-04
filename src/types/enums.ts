@@ -21,3 +21,10 @@ export enum Viewports {
   TABLET_SMALL = 500,
   MOBILE = 480,
 }
+
+export enum Category {
+  STARTUP = 'Startup',
+  ECONOMY = 'Ecomomy',
+  TECHNOLOGY = 'Technology',
+  BUSINESS = 'Business',
+}

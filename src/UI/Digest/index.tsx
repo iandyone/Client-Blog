@@ -3,6 +3,7 @@
 import { Routes } from '@appTypes/enums';
 import { MainContent } from '@components/MainContent';
 import { digest } from '@constants/data';
+import { useSelectorTyped } from '@hooks/redux';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, memo, useCallback, useLayoutEffect, useMemo, useState } from 'react';
@@ -28,12 +29,12 @@ const POSTS_PER_PAGE = 5;
 
 const DigestConponent: FC<IDigestProps> = ({
   digests,
-
   data = { next: '', prev: '' },
   controls = false,
   column = false,
 }) => {
   const [page, setPage] = useState(1);
+  const { lang } = useSelectorTyped((store) => store.app);
   const { next, prev } = data;
   const MIN_PAGE = 1;
   const MAX_PAGE = useMemo(() => Math.ceil(digest.length / POSTS_PER_PAGE), []);
@@ -78,7 +79,7 @@ const DigestConponent: FC<IDigestProps> = ({
         {posts.map(({ preview, body, label, title, id }) => (
           <Link
             className={`${column && columnClass} ${digestClass}`}
-            href={`${Routes.BLOG_POST}/${id}`}
+            href={`/${lang}/${Routes.BLOG_POST}/${id}`}
             key={id}>
             <div className={`${column && columnClass} ${imageContainer}`}>
               <Image className={image} src={preview} alt={label} />

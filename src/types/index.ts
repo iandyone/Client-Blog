@@ -1,5 +1,5 @@
 import { getDictionary } from '@utils/dictionaries';
-import { Routes } from './enums';
+import { Category, Routes } from './enums';
 import { Language } from './types';
 import { ReactElement } from 'react';
 
@@ -99,7 +99,7 @@ export interface INavigation {
 
 export interface IDigest {
   id: number;
-  label?: string;
+  label?: Category;
   title?: string;
   body?: string;
   preview: any;

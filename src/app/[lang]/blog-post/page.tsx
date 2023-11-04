@@ -1,7 +1,6 @@
 import { IPageProps } from '@appTypes';
 import { BlogPost } from '@components/BlogPost';
 import { JoinUs } from '@components/JoinUs';
-import { ReadNext } from '@components/ReadNext';
 import { TAB_TITLE } from '@constants';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
@@ -15,8 +14,7 @@ export default async function BlogPage({ params: { lang } }: IPageProps) {
 
   return (
     <>
-      <BlogPost data={blog} />
-      <ReadNext data={readNext} />
+      <BlogPost data={blog} next={readNext} />
       <JoinUs data={joinUs} />
     </>
   );

@@ -15,4 +15,7 @@ export interface IBlogPostProps {
       item3: string;
     };
   };
+  next: {
+    title: string;
+  };
 }

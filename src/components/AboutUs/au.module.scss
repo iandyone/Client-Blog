@@ -150,14 +150,12 @@
   line-height: 175%;
 
   @media (max-width: $TABLET) {
-    // text-align: center;
     max-width: none;
   }
 }
 
 .contentWrapper {
   @media (max-width: $TABLET) {
-    // align-items: center;
     width: 100%;
   }
 }
