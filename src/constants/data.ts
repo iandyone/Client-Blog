@@ -5,7 +5,7 @@ import businessIcon from '@public/images/homePage/business.svg';
 import economyIcon from '@public/images/homePage/economy.svg';
 import startupIcon from '@public/images/homePage/startup.svg';
 import technologyIcon from '@public/images/homePage/technology.svg';
-import { Routes } from '@appTypes/enums';
+import { Category, Routes } from '@appTypes/enums';
 
 import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
@@ -259,7 +259,7 @@ export const posts: IPost[] = [
 export const digest: IDigest[] = [
   {
     id: 2,
-    label: 'Startup',
+    label: Category.STARTUP,
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
@@ -268,16 +268,16 @@ export const digest: IDigest[] = [
   },
   {
     id: 3,
-    label: 'Startup',
+    label: Category.BUSINESS,
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
     author: users[1],
-    labelIcon: startupIcon,
+    labelIcon: businessIcon,
   },
   {
     id: 4,
-    label: 'Startup',
+    label: Category.STARTUP,
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
@@ -286,7 +286,7 @@ export const digest: IDigest[] = [
   },
   {
     id: 5,
-    label: 'TECHNOLOGY',
+    label: Category.TECHNOLOGY,
     title: '8 Figma design systems you can download for free today',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post5,
@@ -295,7 +295,7 @@ export const digest: IDigest[] = [
   },
   {
     id: 6,
-    label: 'ECONOMY',
+    label: Category.ECONOMY,
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
@@ -304,7 +304,7 @@ export const digest: IDigest[] = [
   },
   {
     id: 7,
-    label: 'TECHNOLOGY',
+    label: Category.TECHNOLOGY,
     title: '8 Figma design systems you can download for free today',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post5,
@@ -313,16 +313,16 @@ export const digest: IDigest[] = [
   },
   {
     id: 8,
-    label: 'Startup',
+    label: Category.TECHNOLOGY,
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
     author: users[6],
-    labelIcon: startupIcon,
+    labelIcon: technologyIcon,
   },
   {
     id: 9,
-    label: 'ECONOMY',
+    label: Category.ECONOMY,
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
@@ -331,16 +331,16 @@ export const digest: IDigest[] = [
   },
   {
     id: 10,
-    label: 'Startup',
+    label: Category.BUSINESS,
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
     author: users[7],
-    labelIcon: startupIcon,
+    labelIcon: businessIcon,
   },
   {
     id: 11,
-    label: 'TECHNOLOGY',
+    label: Category.TECHNOLOGY,
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
@@ -349,7 +349,7 @@ export const digest: IDigest[] = [
   },
   {
     id: 12,
-    label: 'ECONOMY',
+    label: Category.ECONOMY,
     title: 'How to build rapport with your web design clients',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post4,
@@ -358,16 +358,16 @@ export const digest: IDigest[] = [
   },
   {
     id: 13,
-    label: 'ECONOMY',
+    label: Category.BUSINESS,
     title: 'Font sizes in UI design: The complete guide to follow',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post2,
     author: users[3],
-    labelIcon: economyIcon,
+    labelIcon: businessIcon,
   },
   {
     id: 14,
-    label: 'Startup',
+    label: Category.STARTUP,
     title: 'Design tips for designers that cover everything you need',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post5,
@@ -376,7 +376,7 @@ export const digest: IDigest[] = [
   },
   {
     id: 15,
-    label: 'TECHNOLOGY',
+    label: Category.TECHNOLOGY,
     title: 'Logo design trends to avoid in 2022',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     preview: post3,
@@ -391,6 +391,7 @@ export const mockDigest: IDigest = {
   title: null,
   body: null,
   preview: null,
+  labelIcon: null,
   author: {
     id: -1,
     avatar: null,
@@ -399,5 +400,4 @@ export const mockDigest: IDigest = {
     position: null,
     profile: null,
   },
-  labelIcon: null,
 };
