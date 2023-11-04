@@ -23,6 +23,10 @@ $width: 850px;
   @extend %flex-column;
   row-gap: 24px;
   margin: 0px auto;
+
+  @media (max-width: $TABLET) {
+    width: auto;
+  }
 }
 
 .headerClass {
