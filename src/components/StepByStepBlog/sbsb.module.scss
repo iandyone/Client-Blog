@@ -3,11 +3,10 @@
   background-color: $lavender;
 
   @media (max-width: $TABLET) {
-    padding-top: 100px;
+    padding: 120px 0;
   }
-
   @media (max-width: $MOBILE) {
-    padding-top: 40px;
+    padding: 100px 0 40px 0;
   }
 }
 
