@@ -10,7 +10,8 @@ export type Translation =
   | 'contact-us'
   | 'privacy'
   | 'author'
-  | 'blog-post';
+  | 'post'
+  | 'category';
 
 export type handlerChangeInput = (e: ChangeEvent<HTMLInputElement>) => void;
 export type handlerChangeTextatea = (e: ChangeEvent<HTMLTextAreaElement>) => void;

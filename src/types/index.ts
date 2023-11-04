@@ -106,3 +106,9 @@ export interface IDigest {
   labelIcon?: any;
   author: IUser;
 }
+
+// export interface IBannerClassNames {
+//   titleClass?: string;
+//   labelClass?: string;
+//   textClass?: string;
+// }
