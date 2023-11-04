@@ -1,6 +1,6 @@
 import { Category } from '@appTypes/enums';
 import { ReadNext } from '@components/BlogPost/ReadNext';
-import { mockDigest, testimonials } from '@constants/data';
+import { defaultDigest, testimonials } from '@constants/data';
 import poster from '@public/images/blogPostPage/poster.jpg';
 import startupIcon from '@public/images/homePage/startup.svg';
 import { Title } from '@ui/Title';
@@ -35,7 +35,7 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
   const { item1, item2, item3 } = list;
   const { avatar } = testimonials[0];
 
-  const currentDigest = digest ?? mockDigest;
+  const currentDigest = digest ?? defaultDigest;
   const { author, title: postTitle, label: postLabel, labelIcon, preview } = currentDigest;
   const { name, avatar: postAvatar } = author;
 

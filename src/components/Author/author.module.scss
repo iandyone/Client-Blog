@@ -42,6 +42,7 @@ $padding: 96px;
 .titleClass {
   font-size: 48px;
   letter-spacing: -2px;
+  max-width: 670px;
 
   @media (max-width: $TABLET) {
     font-size: 38px;

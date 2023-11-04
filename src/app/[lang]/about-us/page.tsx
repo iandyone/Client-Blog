@@ -19,7 +19,7 @@ export default async function AboutPage({ params: { lang } }: IPageProps) {
     <>
       <AboutUs data={about} />
       <Team data={team} />
-      <Authors data={authors} users={users} />
+      <Authors data={authors} users={users} lang={lang} />
       <JoinUs data={joinUs} />
     </>
   );
