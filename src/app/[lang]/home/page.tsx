@@ -37,7 +37,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
       <StepByStepHome data={stepByStep} />
       <Overview data={overview} />
       <AboutUsBanner data={aboutUs} />
-      <Categories data={categoriesHome} />
+      <Categories data={categoriesHome} lang={lang} />
       <WhyWeStarted data={whyWeStarted} />
       <Authors data={authorsHome} users={userList} lang={lang} />
       <Labels data={labelsHome} />

@@ -8,7 +8,7 @@ import { ICategoriesProps } from './types';
 
 const { wrapper, container, header, list } = styles;
 
-const CategoriesComponent: FC<ICategoriesProps> = ({ data }) => {
+const CategoriesComponent: FC<ICategoriesProps> = ({ data, lang }) => {
   const { title } = data;
   return (
     <section className={wrapper}>
@@ -16,7 +16,7 @@ const CategoriesComponent: FC<ICategoriesProps> = ({ data }) => {
         <Title className={header}>{title}</Title>
         <ul className={list}>
           {categories.map((category) => (
-            <Card {...category} key={category.title} />
+            <Card {...category} lang={lang} key={category.title} />
           ))}
         </ul>
       </div>
