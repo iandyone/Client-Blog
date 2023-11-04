@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage({ params: { lang, id } }: IBlogPostProps) {
-  const { joinUs, blog, readNext } = await getDictionary(lang, 'blog-post');
+  const { joinUs, blog } = await getDictionary(lang, 'blog-post');
   const currentDigest = digest.find((post) => post.id === Number(id));
 
   return (
     <>
-      <BlogPost data={blog} next={readNext} digest={currentDigest} />
+      <BlogPost data={blog} digest={currentDigest} />
       <JoinUs data={joinUs} />
     </>
   );
