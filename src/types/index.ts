@@ -16,7 +16,7 @@ export interface IPost extends ICredentials {
 }
 
 export interface ICredentials {
-  author: IUser;
+  author: IUser | string;
   date: string;
 }
 
