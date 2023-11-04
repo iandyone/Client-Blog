@@ -387,7 +387,7 @@ export const digest: IDigest[] = [
 
 export const mockDigest: IDigest = {
   id: -1,
-  label: null,
+  label: Category.STARTUP,
   title: null,
   body: null,
   preview: null,
@@ -396,7 +396,7 @@ export const mockDigest: IDigest = {
     id: -1,
     avatar: null,
     links: null,
-    name: null,
+    name: 'Andrew Jonson',
     position: null,
     profile: null,
   },

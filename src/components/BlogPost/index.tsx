@@ -1,5 +1,5 @@
 import { Category } from '@appTypes/enums';
-import { ReadNext } from '@components/ReadNext';
+import { ReadNext } from '@components/BlogPost/ReadNext';
 import { mockDigest, testimonials } from '@constants/data';
 import poster from '@public/images/blogPostPage/poster.jpg';
 import startupIcon from '@public/images/homePage/startup.svg';
@@ -27,10 +27,11 @@ const {
   contentClass,
   listContainer,
   listItem,
+  avatarClass,
 } = styles;
 
-const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest, next }) => {
-  const { user, date, header, title, content, label, list } = data;
+const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
+  const { user, date, header, title, content, label, list, readNext } = data;
   const { item1, item2, item3 } = list;
   const { avatar } = testimonials[0];
 
@@ -43,7 +44,10 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest, next }) => {
       <section className={wrapper}>
         <div className={container}>
           <div className={contenContainer}>
-            <User name={name ?? user} avatar={postAvatar ?? avatar} location={date} />
+            <User
+              user={{ avatar: postAvatar ?? avatar, location: date, name: name ?? user }}
+              iconClassName={avatarClass}
+            />
             <Title className={headerClass}>{postTitle ?? header}</Title>
             <div className={labelClass}>
               <Image src={labelIcon ?? startupIcon} alt='startup'></Image>
@@ -72,7 +76,7 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest, next }) => {
           </div>
         </div>
       </section>
-      <ReadNext data={next} category={postLabel ?? (label as Category)} />
+      <ReadNext data={readNext} category={postLabel ?? (label as Category)} />
     </>
   );
 };

@@ -14,8 +14,8 @@ export interface IBlogPostProps {
       item2: string;
       item3: string;
     };
-  };
-  next: {
-    title: string;
+    readNext: {
+      title: string;
+    };
   };
 }
