@@ -1,11 +1,62 @@
 .wrapper {
   @extend %wrapper;
+  @extend %flex-column;
+  row-gap: 48px;
   flex: 0 1 30%;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    row-gap: 20px;
+  }
+}
+
+.formClass {
+  display: flex;
+  position: relative;
+}
+
+.inputClass {
+  border-radius: 6px;
+  border: 1px solid $gray;
+  background: $white;
+  width: 100%;
+  height: 58px;
+  padding: 5px 100px 5px 16px;
+  color: $black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 170%;
+  letter-spacing: -0.21px;
+  transition: $transition;
+
+  @extend %inputActive;
+}
+
+.resultsClass {
+  position: absolute;
+  background-color: $white;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  border: 1px solid $gray;
+}
+
+.buttonClass {
+  @extend %flex-center;
+  position: absolute;
+  border-radius: 6px;
+  right: 0;
+  width: 85px;
+  padding: 10px;
+  height: 58px;
 }
 
 .categories {
   @extend %flex-column;
   row-gap: 40px;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    row-gap: 20px;
+  }
 }
 
 .categoriesTitleClass {
@@ -19,40 +70,13 @@
   row-gap: 24px;
 }
 
-.categoryItemClass {
+.tagsContainer {
+  @extend %flex-column;
+  row-gap: 24px;
+}
+
+.tagsListClass {
   display: flex;
-  align-items: center;
-  column-gap: 16px;
-  background-color: $white;
-  padding: 24px;
-  transition: $transition;
-  border: 1.5px solid $darkGray;
-
-  &:hover {
-    cursor: pointer;
-    border: 1.5px solid $yellow;
-    background-color: $yellow;
-    transition: $transition;
-  }
-
-  &.activeClass {
-    border: 1.5px solid $yellow;
-    background-color: $yellow;
-    transition: $transition;
-  }
-}
-
-.categoryItemTitleClass {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 142%;
-  letter-spacing: -1px;
-}
-
-.imageCotainer {
-  width: 48px;
-  height: 48px;
-  @extend %flex-center;
-  background-color: $lightYellow;
-  border-radius: 12px;
+  flex-wrap: wrap;
+  gap: 16px;
 }

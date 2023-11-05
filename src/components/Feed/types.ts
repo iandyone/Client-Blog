@@ -1,8 +1,8 @@
 import { Category } from '@appTypes/enums';
 
-import { ICategoriesProps } from './Categories/types';
+import { ICategoriesMenuPropsData } from './Categories/types';
 
 export interface IFeedProps {
   currentCategory: Category;
-  data: ICategoriesProps;
+  data: ICategoriesMenuPropsData;
 }
