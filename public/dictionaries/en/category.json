@@ -3,5 +3,11 @@
     "title": "{{category}}",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
     "label": "Blog > {{category}}"
+  },
+  "feed": {
+    "categoriesTitle": "Categories",
+    "tagsTitle": "All Tags",
+    "placeholder": "Search for tag...",
+    "buttonText": "Search"
   }
 }

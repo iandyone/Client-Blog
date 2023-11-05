@@ -1,4 +1,5 @@
 import { Banner } from '@components/Banner';
+import { Feed } from '@components/Feed';
 import { TAB_TITLE } from '@constants';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function CategoryPage({ params: { lang, category } }: ICategoryPageProps) {
-  const { banner } = await getDictionary(lang, 'category');
+  const { banner, feed } = await getDictionary(lang, 'category');
   const bannerData = getBannerData();
 
   function getBannerData() {
@@ -30,6 +31,7 @@ export default async function CategoryPage({ params: { lang, category } }: ICate
   return (
     <>
       <Banner data={bannerData} />
+      <Feed data={feed} currentCategory={category} />
     </>
   );
 }

@@ -23,7 +23,7 @@ export enum Viewports {
 
 export enum Category {
   STARTUP = 'Startup',
-  ECONOMY = 'Ecomomy',
+  ECONOMY = 'Economy',
   TECHNOLOGY = 'Technology',
   BUSINESS = 'Business',
 }

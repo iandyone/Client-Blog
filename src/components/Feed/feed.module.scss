@@ -1,0 +1,14 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+  @extend %flex-between;
+  align-items: flex-start;
+  column-gap: 40px;
+}
+
+.digestClass {
+  flex: 0 1 60%;
+}
