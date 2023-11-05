@@ -1,32 +1,52 @@
 'use client';
 
-import { Category } from '@appTypes/enums';
+import { ICategoryItem } from '@appTypes';
+import { Category, Tags } from '@appTypes/enums';
 import businessIcon from '@public/images/homePage/business.svg';
 import economyIcon from '@public/images/homePage/economy.svg';
 import startupIcon from '@public/images/homePage/startup.svg';
 import techIcon from '@public/images/homePage/technology.svg';
+import { Button } from '@ui/Button';
 import { Title } from '@ui/Title';
-import Image from 'next/image';
-import { FC, memo, useMemo } from 'react';
+import { Sen } from 'next/font/google';
+import { ChangeEvent, FC, FormEvent, memo, useCallback, useEffect, useMemo, useState } from 'react';
 
 import styles from './categories.module.scss';
+import { CategoryItem } from './Category';
+import { Result } from './Result';
+import { Tag } from './Tag';
 import { ICategoriesMenuProps } from './types';
+
+const sen = Sen({ subsets: ['latin'], weight: ['700'] });
 
 const {
   wrapper,
   categories,
   categoriesTitleClass,
   categoriesListClass,
-  categoryItemClass,
-  imageCotainer,
-  categoryItemTitleClass,
-  activeClass,
+  formClass,
+  inputClass,
+  resultsClass,
+  buttonClass,
+  tagsContainer,
+  tagsTitleClass,
+  tagsListClass,
 } = styles;
 
-const CategoriesComponent: FC<ICategoriesMenuProps> = ({ data, currentCategory, categoryHandler }) => {
-  const { categoriesTitle } = data;
+const CategoriesComponent: FC<ICategoriesMenuProps> = ({
+  data,
+  currentCategory,
+  categoryHandler,
+  tagsHandler,
+  inputValue,
+  inputOnChange,
+  onSubmit,
+}) => {
+  const [searchResult, setSearchResult] = useState<string[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const { categoriesTitle, buttonText, placeholder, tagsTitle } = data;
   const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY } = Category;
-  const categoriesList = useMemo(() => {
+  const categoriesList: ICategoryItem[] = useMemo(() => {
     return [
       {
         id: 1,
@@ -55,21 +75,69 @@ const CategoriesComponent: FC<ICategoriesMenuProps> = ({ data, currentCategory, 
     ];
   }, [BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, currentCategory]);
 
+  function handlerOnSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    onSubmit();
+  }
+
+  const handlerOnChangeInput = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      inputOnChange(e.target.value);
+      setShowResults(true);
+    },
+    [inputOnChange],
+  );
+
+  const handlerOnClickResult = useCallback(
+    (result: string) => {
+      inputOnChange(result);
+      setShowResults(false);
+    },
+    [inputOnChange],
+  );
+
+  useEffect(() => {
+    if (inputValue.length > 0) {
+      const results = Object.values(Tags).filter((tag) => tag.includes(inputValue));
+      setSearchResult(results);
+    } else {
+      setSearchResult([]);
+      setShowResults(false);
+    }
+  }, [inputValue]);
+
   return (
     <section className={wrapper}>
+      <form className={formClass} onSubmit={handlerOnSubmit}>
+        <input
+          className={`${inputClass} ${sen.className}`}
+          placeholder={placeholder}
+          value={inputValue}
+          onChange={handlerOnChangeInput}
+          type='text'
+        />
+        {showResults &&
+          searchResult.length > 0 &&
+          searchResult.map((result) => (
+            <ul className={resultsClass} key={result}>
+              <Result tag={result} onClick={handlerOnClickResult} />
+            </ul>
+          ))}
+        <Button className={buttonClass}>{buttonText}</Button>
+      </form>
       <div className={categories}>
         <Title className={categoriesTitleClass}>{categoriesTitle}</Title>
         <ul className={categoriesListClass}>
-          {categoriesList.map(({ icon, id, title, active }) => (
-            <div
-              className={`${categoryItemClass} ${active && activeClass}`}
-              key={id}
-              onClick={() => categoryHandler(title)}>
-              <div className={imageCotainer}>
-                <Image src={icon} alt={title} />
-              </div>
-              <Title className={categoryItemTitleClass}>{title}</Title>
-            </div>
+          {categoriesList.map((category) => (
+            <CategoryItem {...category} onClick={categoryHandler} key={category.id} />
+          ))}
+        </ul>
+      </div>
+      <div className={tagsContainer}>
+        <Title className={tagsTitleClass}>{tagsTitle}</Title>
+        <ul className={tagsListClass}>
+          {Object.values(Tags).map((tag) => (
+            <Tag tag={tag} key={tag} onClick={tagsHandler} />
           ))}
         </ul>
       </div>

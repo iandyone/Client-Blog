@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 10px;
+
+  @extend %hover;
+  @extend %active;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray;
+  }
+}

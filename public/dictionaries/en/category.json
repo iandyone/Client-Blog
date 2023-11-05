@@ -8,6 +8,7 @@
     "categoriesTitle": "Categories",
     "tagsTitle": "All Tags",
     "placeholder": "Search for tag...",
-    "buttonText": "Search"
+    "buttonText": "Search",
+    "noResults": "There is no posts"
   }
 }
