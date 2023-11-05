@@ -24,6 +24,10 @@
   font-weight: 700;
   line-height: 133%;
 
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
   @media (max-width: $TABLET) {
     font-size: 36px;
   }
@@ -36,10 +40,26 @@
 .textClass {
   color: $black;
   text-align: center;
+  max-width: 520px;
   @extend %text;
   opacity: 0.6;
 
   @media (max-width: $MOBILE) {
     font-size: 14px;
+  }
+}
+
+.labelClass {
+  text-align: center;
+  color: $black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 28px;
+
+  @media (max-width: $TABLET) {
+    margin-top: 20px;
   }
 }

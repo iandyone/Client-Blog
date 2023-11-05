@@ -4,16 +4,17 @@ import { FC, memo } from 'react';
 import styles from './banner.module.scss';
 import { IBannerProps } from './types';
 
-const { wrapper, container, titleClass, textClass } = styles;
+const { wrapper, container, titleClass, textClass, labelClass } = styles;
 
 const BanneComponent: FC<IBannerProps> = ({ data }) => {
-  const { text, title } = data;
+  const { text, title, label } = data;
 
   return (
     <section className={wrapper}>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
         <p className={textClass}>{text}</p>
+        {label && <p className={labelClass}>{label}</p>}
       </div>
     </section>
   );

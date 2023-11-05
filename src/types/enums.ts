@@ -23,7 +23,22 @@ export enum Viewports {
 
 export enum Category {
   STARTUP = 'Startup',
-  ECONOMY = 'Ecomomy',
+  ECONOMY = 'Economy',
   TECHNOLOGY = 'Technology',
   BUSINESS = 'Business',
+}
+
+export enum Tags {
+  BUSINESS = 'business',
+  EXPERIENCE = 'experience',
+  SCREEN = 'screen',
+  TECHNOLOGY = 'technology',
+  MARKETING = 'marketing',
+  LIFE = 'life',
+}
+
+export enum SeatchType {
+  SEARCH = 'search',
+  TAG = 'tag',
+  CATEGORY = 'category',
 }

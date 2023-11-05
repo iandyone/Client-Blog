@@ -32,6 +32,7 @@ const DigestConponent: FC<IDigestProps> = ({
   data = { next: '', prev: '' },
   controls = false,
   column = false,
+  containerClass,
 }) => {
   const [page, setPage] = useState(1);
   const { lang } = useSelectorTyped((store) => store.app);
@@ -74,7 +75,7 @@ const DigestConponent: FC<IDigestProps> = ({
   }, [page, getPosts]);
 
   return (
-    <div className={wrapper}>
+    <div className={`${containerClass} ${wrapper}`}>
       <ul className={`${column && columnClass} ${container}`}>
         {posts.map(({ preview, body, label, title, id }) => (
           <Link

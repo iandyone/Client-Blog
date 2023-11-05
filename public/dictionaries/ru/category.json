@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "title": "{{category}}",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "label": "Блог > {{category}}"
+  },
+  "feed": {
+    "categoriesTitle": "Категории",
+    "tagsTitle": "Все теги",
+    "placeholder": "Поиск по тегу...",
+    "buttonText": "Найти",
+    "noResults": "Постов нет"
+  }
+}
