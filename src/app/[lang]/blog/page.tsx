@@ -18,7 +18,7 @@ export default async function BlogPage({ params: { lang } }: IPageProps) {
     <>
       <StepByStepBlog data={stepByStep} />
       <Blog data={blog} />
-      <Categories data={categoriesHome} />
+      <Categories data={categoriesHome} lang={lang} />
       <JoinUs data={joinUs} />
     </>
   );
