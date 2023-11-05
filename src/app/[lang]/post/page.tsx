@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage({ params: { lang } }: IPageProps) {
-  const { joinUs, blog } = await getDictionary(lang, 'blog-post');
+  const { joinUs, blog } = await getDictionary(lang, 'post');
 
   return (
     <>

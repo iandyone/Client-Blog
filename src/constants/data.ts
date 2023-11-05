@@ -1,6 +1,6 @@
 import { IDigest, ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
 import { ICategory } from '@appTypes';
-import { Category, Routes } from '@appTypes/enums';
+import { Category, Routes, Tags } from '@appTypes/enums';
 import authorPreview from '@public/images/AuthorsPage/01.jpg';
 import postPreview from '@public/images/posts/01.jpg';
 import businessIcon from '@public/images/homePage/business.svg';
@@ -36,6 +36,15 @@ import post4 from '@public/images/posts/04.jpg';
 import post5 from '@public/images/posts/05.jpg';
 
 const { BUSINESS, ECONOMY, STARTUP, TECHNOLOGY, HOME, AUTHOR } = Routes;
+
+const {
+  BUSINESS: BUSINESS_TAG,
+  EXPERIENCE: EXPERIENCE_TAG,
+  LIFE: LIFE_TAG,
+  MARKETING: MARKETING_TAG,
+  SCREEN: SCREEN_TAG,
+  TECHNOLOGY: TECHNOLOGY_TAG,
+} = Tags;
 
 export const categories: ICategory[] = [
   {
@@ -266,6 +275,7 @@ export const digest: IDigest[] = [
     preview: post2,
     author: users[0],
     labelIcon: startupIcon,
+    tags: [TECHNOLOGY_TAG, BUSINESS_TAG],
   },
   {
     id: 3,
@@ -275,6 +285,7 @@ export const digest: IDigest[] = [
     preview: post3,
     author: users[1],
     labelIcon: businessIcon,
+    tags: [EXPERIENCE_TAG, LIFE_TAG],
   },
   {
     id: 4,
@@ -284,6 +295,7 @@ export const digest: IDigest[] = [
     preview: post4,
     author: users[2],
     labelIcon: startupIcon,
+    tags: [MARKETING_TAG, SCREEN_TAG],
   },
   {
     id: 5,
@@ -293,6 +305,7 @@ export const digest: IDigest[] = [
     preview: post5,
     author: users[3],
     labelIcon: technologyIcon,
+    tags: [TECHNOLOGY_TAG, MARKETING_TAG],
   },
   {
     id: 6,
@@ -302,6 +315,7 @@ export const digest: IDigest[] = [
     preview: post2,
     author: users[4],
     labelIcon: economyIcon,
+    tags: [EXPERIENCE_TAG, LIFE_TAG],
   },
   {
     id: 7,
@@ -311,6 +325,7 @@ export const digest: IDigest[] = [
     preview: post5,
     author: users[5],
     labelIcon: technologyIcon,
+    tags: [MARKETING_TAG, BUSINESS_TAG],
   },
   {
     id: 8,
@@ -320,6 +335,7 @@ export const digest: IDigest[] = [
     preview: post3,
     author: users[6],
     labelIcon: technologyIcon,
+    tags: [TECHNOLOGY_TAG, BUSINESS_TAG],
   },
   {
     id: 9,
@@ -329,6 +345,7 @@ export const digest: IDigest[] = [
     preview: post2,
     author: users[7],
     labelIcon: economyIcon,
+    tags: [MARKETING_TAG, SCREEN_TAG],
   },
   {
     id: 10,
@@ -338,6 +355,7 @@ export const digest: IDigest[] = [
     preview: post4,
     author: users[7],
     labelIcon: businessIcon,
+    tags: [SCREEN_TAG, LIFE_TAG],
   },
   {
     id: 11,
@@ -347,6 +365,7 @@ export const digest: IDigest[] = [
     preview: post3,
     author: users[1],
     labelIcon: technologyIcon,
+    tags: [TECHNOLOGY_TAG, LIFE_TAG],
   },
   {
     id: 12,
@@ -356,6 +375,7 @@ export const digest: IDigest[] = [
     preview: post4,
     author: users[2],
     labelIcon: economyIcon,
+    tags: [LIFE_TAG],
   },
   {
     id: 13,
@@ -365,6 +385,7 @@ export const digest: IDigest[] = [
     preview: post2,
     author: users[3],
     labelIcon: businessIcon,
+    tags: [BUSINESS_TAG],
   },
   {
     id: 14,
@@ -374,6 +395,7 @@ export const digest: IDigest[] = [
     preview: post5,
     author: users[4],
     labelIcon: startupIcon,
+    tags: [MARKETING_TAG],
   },
   {
     id: 15,
@@ -383,6 +405,7 @@ export const digest: IDigest[] = [
     preview: post3,
     author: users[5],
     labelIcon: technologyIcon,
+    tags: [BUSINESS_TAG],
   },
 ];
 
@@ -393,6 +416,7 @@ export const defaultDigest: IDigest = {
   body: null,
   preview: null,
   labelIcon: null,
+  tags: [],
   author: {
     id: -1,
     avatar: null,

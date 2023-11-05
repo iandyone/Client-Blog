@@ -1,5 +1,5 @@
 import { getDictionary } from '@utils/dictionaries';
-import { Category, Routes } from './enums';
+import { Category, Routes, Tags } from './enums';
 import { Language } from './types';
 import { ReactElement } from 'react';
 
@@ -105,4 +105,11 @@ export interface IDigest {
   preview: any;
   labelIcon?: any;
   author: IUser;
+  tags: Tags[];
+}
+export interface ICategoryItem {
+  id: number;
+  title: Category;
+  icon: any;
+  active: boolean;
 }

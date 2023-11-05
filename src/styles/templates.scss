@@ -83,3 +83,11 @@
     grid-template-columns: 1fr;
   }
 }
+
+%inputActive {
+  &:hover,
+  &:focus {
+    transition: $transition;
+    border-color: $yellow;
+  }
+}

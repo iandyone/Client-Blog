@@ -1,0 +1,19 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+  @extend %flex-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.digestClass {
+  flex: 0 1 60%;
+}
