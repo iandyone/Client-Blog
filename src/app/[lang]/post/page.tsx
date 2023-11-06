@@ -13,9 +13,9 @@ export default async function BlogPage({ params: { lang } }: IPageProps) {
   const { joinUs, blog } = await getDictionary(lang, 'post');
 
   return (
-    <>
+    <main data-testid='post-page'>
       <BlogPost data={blog} />
       <JoinUs data={joinUs} />
-    </>
+    </main>
   );
 }

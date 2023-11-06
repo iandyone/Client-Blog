@@ -22,10 +22,10 @@ const PopupComponent: FC<IModalProps> = ({ children }) => {
 
   return (
     <Portal id='video'>
-      <div className={`${popupClass} ${popup && active}`}>
+      <div className={`${popupClass} ${popup && active}`} data-testid='modal-media'>
         <div className={`${content} ${popup && active}`}>
           <div className={button} onClick={handlerOnClickButton}>
-            <Image className={icon} src={XMarkIcon} alt='close button' />
+            <Image className={icon} src={XMarkIcon} alt='close button' data-testid='popup-close-button' />
           </div>
           {children}
         </div>

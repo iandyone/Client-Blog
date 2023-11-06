@@ -17,7 +17,9 @@ const FeaturedPostComponent: FC<IFeaturedPostProps> = ({ post, buttonText, title
       <div className={body}>
         <Post post={post} />
         <Link href={Routes.POST}>
-          <Button className={button}>{buttonText}</Button>
+          <Button className={button} testID='feature-post-button'>
+            {buttonText}
+          </Button>
         </Link>
       </div>
     </article>

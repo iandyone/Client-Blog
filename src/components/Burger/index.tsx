@@ -24,7 +24,7 @@ export const BurgerMenu: FC = () => {
   }
 
   return (
-    <div className={container} onClick={handlerOnClickMenu}>
+    <div className={container} onClick={handlerOnClickMenu} data-testid='burger'>
       <div className={button} onClick={handlerOnClickButton}>
         <span className={lineClassName} />
         <span className={lineClassName} />

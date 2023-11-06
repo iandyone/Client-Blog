@@ -14,10 +14,12 @@ const { footer, container, header, logo, content, title, copyright, contacts, co
 export const Footer: FC<IFooterProps> = ({ data, navigation, lang }) => {
   const { headerLogoText, bannerText, address, email, index, form } = data;
   return (
-    <footer className={footer}>
+    <footer className={footer} data-testid='footer'>
       <div className={container}>
         <div className={header}>
-          <h3 className={logo}>{headerLogoText}</h3>
+          <h3 className={logo} data-testid='footer-logo'>
+            {headerLogoText}
+          </h3>
           <FooterNav navigation={navigation} lang={lang} />
         </div>
         <article className={content}>

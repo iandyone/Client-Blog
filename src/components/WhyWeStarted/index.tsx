@@ -25,13 +25,15 @@ export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
   const { bodyText, buttonText, labelText, titleText } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='why-we-started-component'>
       <div className={container}>
         <Image src={bgImage} alt={'why we started image'} style={imageStyles} className={image} />
         <div className={body}>
           <Preview label={labelText} title={titleText} body={bodyText} classNames={classNames} />
           <Link href={Routes.ABOUT}>
-            <Button className={button}>{buttonText}</Button>
+            <Button className={button} testID='why-we-started-button'>
+              {buttonText}
+            </Button>
           </Link>
         </div>
       </div>

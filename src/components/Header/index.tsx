@@ -41,14 +41,14 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
   }, [popup]);
 
   return (
-    <header className={header}>
+    <header className={header} data-testid='header'>
       <div className={container}>
-        <span className={logo}>
+        <span className={logo} data-testid='header-logo'>
           <Link href={`/${lang}/${HOME}`}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>
           <Navigation type='short' data={navigation} lang={lang} />
-          <Button onClick={handlerOnClickButton} colored>
+          <Button onClick={handlerOnClickButton} testID='header-media-button' colored>
             {buttonText}
           </Button>
         </div>

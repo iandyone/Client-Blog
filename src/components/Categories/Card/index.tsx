@@ -8,10 +8,10 @@ import { ICategoryCardProps } from './types';
 
 const { wrapper, imageClass, titleClass, text } = styles;
 
-const CardElement: FC<ICategoryCardProps> = ({ body, icon, title, href, lang }) => {
+const CardElement: FC<ICategoryCardProps> = ({ body, icon, title, href, lang, testID }) => {
   return (
     <Link href={`/${lang}/${href}`}>
-      <article className={wrapper}>
+      <article className={wrapper} data-testid={testID}>
         <div className={imageClass}>
           <Image src={icon} alt={title} />
         </div>

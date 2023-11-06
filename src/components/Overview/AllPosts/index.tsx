@@ -16,7 +16,7 @@ const AllPostsCompoennt: FC<IAllPostsProps> = ({ posts, lintText, titleText }) =
     <article className={wrapper}>
       <div className={header}>
         <Title>{titleText}</Title>
-        <Link href={Routes.BLOG} className={link}>
+        <Link href={Routes.BLOG} className={link} data-testid='all-posts-button'>
           {lintText}
         </Link>
       </div>
