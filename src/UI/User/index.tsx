@@ -12,7 +12,9 @@ export const UserComponent: FC<IUserProps> = ({ user, iconClassName }) => {
     <div className={userClass}>
       <Image className={iconClassName} src={avatar} alt={name} />
       <div>
-        <h4 className={nameClass}>{name}</h4>
+        <h4 className={nameClass} data-testid='user-name'>
+          {name}
+        </h4>
         <p className={locationClass}>{location}</p>
       </div>
     </div>
