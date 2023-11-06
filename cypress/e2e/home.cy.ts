@@ -26,13 +26,13 @@ describe('Home page test', () => {
 
   it('Step By Step component button should navigate to the post page', () => {
     cy.get('[data-testid=sbsh-button]').should('be.visible').click();
-    cy.get('[data-testid=post-page]').should('be.visible');
+    cy.get('[data-testid=default-post-page]').should('be.visible');
     cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
   });
 
   it('Feature post component button should navigate to the post page', () => {
     cy.get('[data-testid=feature-post-button]').should('be.visible').click();
-    cy.get('[data-testid=post-page]').should('be.visible');
+    cy.get('[data-testid=default-post-page]').should('be.visible');
     cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
   });
 

@@ -16,9 +16,15 @@ export const StepByStepBlogComponent: FC<IStepByStepBlogProps> = ({ data }) => {
   const { author, date } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='step-by-step-blog-component'>
       <div className={container}>
-        <MainContent {...data} credentials={{ author, date }} className={content} classNames={classNames} />
+        <MainContent
+          {...data}
+          credentials={{ author, date }}
+          className={content}
+          classNames={classNames}
+          buttonTestID='sbsb-button'
+        />
         <div className={imageContainer}>
           <Image className={image} src={preview} alt='preview' priority />
         </div>

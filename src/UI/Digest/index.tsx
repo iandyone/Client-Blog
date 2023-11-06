@@ -75,13 +75,14 @@ const DigestConponent: FC<IDigestProps> = ({
   }, [page, getPosts]);
 
   return (
-    <div className={`${containerClass} ${wrapper}`}>
+    <div className={`${containerClass} ${wrapper}`} data-testid='digest-component'>
       <ul className={`${column && columnClass} ${container}`}>
         {posts.map(({ preview, body, label, title, id }) => (
           <Link
             className={`${column && columnClass} ${digestClass}`}
             href={`/${lang}/${Routes.POST}/${id}`}
-            key={id}>
+            key={id}
+            data-testid='digest-post'>
             <div className={`${column && columnClass} ${imageContainer}`}>
               <Image className={image} src={preview} alt={label} />
             </div>
@@ -93,10 +94,16 @@ const DigestConponent: FC<IDigestProps> = ({
       </ul>
       {data && controls && (
         <div className={controlsClass}>
-          <button className={`${buttonClass} ${page === MIN_PAGE && disabled}`} onClick={handlerOnPrevPage}>
+          <button
+            className={`${buttonClass} ${page === MIN_PAGE && disabled}`}
+            onClick={handlerOnPrevPage}
+            data-testid='digest-controls-next'>
             {prev}
           </button>
-          <button className={`${buttonClass} ${page === MAX_PAGE && disabled}`} onClick={handlerOnNextPage}>
+          <button
+            className={`${buttonClass} ${page === MAX_PAGE && disabled}`}
+            onClick={handlerOnNextPage}
+            data-testid='digest-controls-prev'>
             {next}
           </button>
         </div>
