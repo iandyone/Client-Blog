@@ -1,6 +1,6 @@
 import { ICategoryItem } from '@appTypes';
-import { Category } from '@appTypes/enums';
+import { handlerCategory } from '@appTypes/types';
 
 export interface ICategoryItemProps extends ICategoryItem {
-  onClick: (category: Category) => void;
+  onClick: handlerCategory;
 }

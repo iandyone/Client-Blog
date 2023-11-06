@@ -1,17 +1,17 @@
 import { logos } from '@constants/data';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 import styles from './labels.module.scss';
 import { ILabelsProps } from './types';
 
 const { wrapper, container, titleClass, list } = styles;
 
-export const Labels: FC<ILabelsProps> = ({ data }) => {
+const LabelsComponent: FC<ILabelsProps> = ({ data }) => {
   const { title } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='labels-component'>
       <div className={container}>
         <h4 className={titleClass}>{title}</h4>
         <ul className={list}>
@@ -23,3 +23,5 @@ export const Labels: FC<ILabelsProps> = ({ data }) => {
     </section>
   );
 };
+
+export const Labels = memo(LabelsComponent);

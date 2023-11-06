@@ -41,7 +41,7 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
 
   return (
     <>
-      <section className={wrapper}>
+      <section className={wrapper} data-testid='blog-post-component'>
         <div className={container}>
           <div className={contenContainer}>
             <User
@@ -51,7 +51,9 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
             <Title className={headerClass}>{postTitle ?? header}</Title>
             <div className={labelClass}>
               <Image src={labelIcon ?? startupIcon} alt='startup'></Image>
-              <Title className={labelTitle}>{postLabel ?? label}</Title>
+              <Title className={labelTitle} testID='blog-post-label'>
+                {postLabel ?? label}
+              </Title>
             </div>
           </div>
           <Image className={posterClass} src={preview ?? poster} alt='poster' priority />

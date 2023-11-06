@@ -20,7 +20,7 @@ const NavigationComponent: FC<INavigationProps> = ({ data, lang = 'en', type = '
   const routesList = type === 'full' ? routes : routes.slice(0, 4);
 
   return (
-    <ul className={menu}>
+    <ul className={menu} data-testid='navigation'>
       {routesList.map(({ title, href }) => (
         <LinkButton href={href} title={title} key={title} />
       ))}

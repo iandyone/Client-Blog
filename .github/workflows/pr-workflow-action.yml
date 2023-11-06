@@ -25,6 +25,9 @@ jobs:
       - name: build project
         run: yarn build
 
+      - name: run auto tests
+        run: yarn test
+
       - name: check code style
         run: yarn lint
 

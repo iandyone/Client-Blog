@@ -16,11 +16,11 @@ export default async function AboutPage({ params: { lang } }: IPageProps) {
   const { about, team, authors, joinUs } = await getDictionary(lang, 'about-us');
 
   return (
-    <>
+    <main data-testid='about-us-page'>
       <AboutUs data={about} />
       <Team data={team} />
       <Authors data={authors} users={users} lang={lang} />
       <JoinUs data={joinUs} />
-    </>
+    </main>
   );
 }

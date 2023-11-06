@@ -19,11 +19,11 @@ const AboutUsBannerComponent: FC<IAboutUsBannerProps> = ({ data }) => {
   };
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='about-us-banner-component'>
       <div className={container}>
         <article className={about}>
           <Preview label={aboutLabel} title={aboutTitle} body={aboutBody} classNames={classNames} />
-          <Link href={Routes.ABOUT} className={`${link} ${sen.className}`}>
+          <Link href={Routes.ABOUT} className={`${link} ${sen.className}`} data-testid='about-us-button'>
             {buttonText}
           </Link>
         </article>

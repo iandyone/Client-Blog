@@ -1,6 +1,6 @@
 .wrapper {
   @extend %wrapper;
-  padding: 128px 0px;
+  padding: 96px 0px 40px 0;
 
   @media (max-width: $TABLET) {
     padding: 48px 0;

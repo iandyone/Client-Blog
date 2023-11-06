@@ -12,7 +12,7 @@ const AuthorsComponent: FC<IAuthorsProps> = ({ users, data, lang }) => {
   const { title } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='authors-component'>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
         <div className={usersClass}>

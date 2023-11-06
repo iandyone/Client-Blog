@@ -21,10 +21,11 @@ const PreviewComponent: FC<IPreview> = ({
   const { wrapperClassName, titleClassName, bodyClassName, labelClassName } = classNames;
 
   return (
-    <article className={`${wrapperClassName} ${wrapper} `}>
+    <article className={`${wrapperClassName} ${wrapper} `} data-testid='preview-component'>
       {label && (
-        <p className={`${labelClassName} ${labelClass}`}>
-          {label} <span>{labelMarked}</span>
+        <p className={`${labelClassName} ${labelClass}`} data-testid='preview-label'>
+          {label}
+          {labelMarked && <span> {labelMarked}</span>}
         </p>
       )}
       {header && <h1 className={`${titleClassName} ${headerClass} ${sen.className}`}>{header}</h1>}

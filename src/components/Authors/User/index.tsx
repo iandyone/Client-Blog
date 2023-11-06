@@ -10,9 +10,11 @@ const { wrapper, avatarClass, titleClass, positionClass, linksClass } = styles;
 
 const UserComponent: FC<IUser> = ({ avatar, name, position, links }) => {
   return (
-    <article className={wrapper}>
+    <article className={wrapper} data-testid='author-card'>
       <Image className={avatarClass} alt={name} src={avatar} />
-      <Title className={titleClass}>{name}</Title>
+      <Title className={titleClass} testID='author-card-name'>
+        {name}
+      </Title>
       <p className={positionClass}>{position}</p>
       <Links links={links} className={linksClass} />
     </article>

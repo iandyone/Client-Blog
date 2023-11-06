@@ -13,7 +13,7 @@ const TeamComponent: FC<ITeamProps> = ({ data }) => {
   const { title1, title2, subtitle1, subtitle2, content1, content2 } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='team-component'>
       <div className={container}>
         <article className={body}>
           <div className={content}>
