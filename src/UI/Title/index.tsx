@@ -7,10 +7,14 @@ import { ITitleProps } from './types';
 const { title } = styles;
 const sen = Sen({ subsets: ['latin'] });
 
-const TitleComponent: FC<ITitleProps> = ({ children, className }) => {
+const TitleComponent: FC<ITitleProps> = ({ children, className, testID }) => {
   const titleClassName = `${className} ${title} ${sen.className}`;
 
-  return <h2 className={titleClassName}>{children}</h2>;
+  return (
+    <h2 className={titleClassName} data-testid={testID}>
+      {children}
+    </h2>
+  );
 };
 
 export const Title = memo(TitleComponent);
