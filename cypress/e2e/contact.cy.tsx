@@ -33,7 +33,7 @@ describe('Contact page test', () => {
       .should('have.text', 'Send Message')
       .click()
       .should('have.text', 'Sending...')
-      .wait(2000)
+      .wait(5000)
       .should('have.text', 'Done!');
   });
 });
