@@ -12,9 +12,15 @@ const BanneComponent: FC<IBannerProps> = ({ data }) => {
   return (
     <section className={wrapper} data-testid='banner-component'>
       <div className={container}>
-        <Title className={titleClass}>{title}</Title>
+        <Title className={titleClass} testID='banner-title'>
+          {title}
+        </Title>
         <p className={textClass}>{text}</p>
-        {label && <p className={labelClass}>{label}</p>}
+        {label && (
+          <p className={labelClass} data-testid='banner-label'>
+            {label}
+          </p>
+        )}
       </div>
     </section>
   );

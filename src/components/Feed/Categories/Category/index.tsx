@@ -13,7 +13,11 @@ const CategoryItemComponent: FC<ICategoryItemProps> = ({ active, icon, id, title
   }
 
   return (
-    <li className={`${categoryItemClass} ${active && activeClass}`} key={id} onClick={handlerOnClick}>
+    <li
+      className={`${categoryItemClass} ${active && activeClass}`}
+      key={id}
+      onClick={handlerOnClick}
+      data-testid='categories-menu-option'>
       <div className={imageCotainer}>
         <Image src={icon} alt={title} />
       </div>
