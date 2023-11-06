@@ -58,14 +58,26 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   }
 
   return (
-    <article className={`${wrapper} ${className}`}>
+    <article className={`${wrapper} ${className}`} data-testid='carousel'>
       <div className={windowClass} ref={windowRef}>
         <div className={container} style={{ transform: `translateX(${offset}px)` }}>
           {pages}
         </div>
         <div className={navigation}>
-          <Image className={button} src={prevSlide} alt='next' onClick={handlerPrevSlide} />
-          <Image className={button} src={nextSlide} alt='prev' onClick={handlerNextSlide} />
+          <Image
+            className={button}
+            src={prevSlide}
+            alt='next'
+            onClick={handlerPrevSlide}
+            data-testid='carousel-button-next'
+          />
+          <Image
+            className={button}
+            src={nextSlide}
+            alt='prev'
+            onClick={handlerNextSlide}
+            data-testid='carousel-button-prev'
+          />
         </div>
       </div>
     </article>

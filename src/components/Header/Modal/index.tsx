@@ -5,7 +5,7 @@ const source = process.env.NEXT_PUBLIC_ABOUT_US_VIDEO;
 
 export const Modal: FC = () => {
   return (
-    <Popup>
+    <Popup data-testid='popup'>
       <iframe
         width='100%'
         src={source}

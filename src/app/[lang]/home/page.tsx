@@ -33,7 +33,7 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
   } = await getDictionary(lang, 'home');
 
   return (
-    <>
+    <main data-testid='home-page'>
       <StepByStepHome data={stepByStep} />
       <Overview data={overview} />
       <AboutUsBanner data={aboutUs} />
@@ -43,6 +43,6 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
       <Labels data={labelsHome} />
       <Testimonials data={testimonials} />
       <JoinUs data={joinUs} />
-    </>
+    </main>
   );
 }

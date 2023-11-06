@@ -17,9 +17,9 @@ export default async function AuthorPage({ params: { lang, id: userID } }: IAuth
   const currentAuthor = users.find(({ id }) => id === Number(userID));
 
   return (
-    <>
+    <main data-testid='author-page'>
       <Author data={author} author={currentAuthor} />
       <AuthorPosts data={posts} posts={postsList} />
-    </>
+    </main>
   );
 }

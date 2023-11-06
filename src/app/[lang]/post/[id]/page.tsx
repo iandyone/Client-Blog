@@ -16,9 +16,9 @@ export default async function BlogPage({ params: { lang, id } }: IBlogPostProps)
   const currentDigest = digest.find((post) => post.id === Number(id));
 
   return (
-    <>
+    <main data-testid='post-page'>
       <BlogPost data={blog} digest={currentDigest} />
       <JoinUs data={joinUs} />
-    </>
+    </main>
   );
 }

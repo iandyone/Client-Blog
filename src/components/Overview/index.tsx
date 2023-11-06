@@ -11,7 +11,7 @@ const { wrapper, container } = styles;
 export const Overview: FC<IOverviewProps> = ({ data }) => {
   const { allPosts, featuredPost } = data;
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='overview-component'>
       <div className={container}>
         <FeaturedPost post={posts[0]} {...featuredPost} />
         <AllPosts posts={posts} {...allPosts} />

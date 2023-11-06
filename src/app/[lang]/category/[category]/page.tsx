@@ -29,9 +29,9 @@ export default async function CategoryPage({ params: { lang, category } }: ICate
   }
 
   return (
-    <>
+    <main data-testid={`${category}-category-page`}>
       <Banner data={bannerData} />
       <Feed data={feed} currentCategory={category} />
-    </>
+    </main>
   );
 }
