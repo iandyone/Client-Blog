@@ -18,11 +18,13 @@ const AuthorComponent: FC<IAuthorProps> = ({ data, author }) => {
   const titleText = title.replace('{{name}}', name);
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='author-component'>
       <div className={container}>
         <Image src={avatar} alt='author' priority />
         <div className={contentClass}>
-          <Title className={titleClass}>{titleText}</Title>
+          <Title className={titleClass} testID='author-title'>
+            {titleText}
+          </Title>
           <p className={aboutText}>{about}</p>
           <Links links={links} className={linksClass} />
           <Decor className={decor} />

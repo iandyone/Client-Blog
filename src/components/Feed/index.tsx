@@ -51,7 +51,7 @@ const FeedComponent: FC<IFeedProps> = ({ data, currentCategory }) => {
   }, [getDigest, category, searchType, tag]);
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='feed-component'>
       <div className={container}>
         {digestList.length > 0 && <Digest containerClass={digestClass} digests={digestList} />}
         {digestList.length === 0 && <Title>{noResults}</Title>}
@@ -61,7 +61,7 @@ const FeedComponent: FC<IFeedProps> = ({ data, currentCategory }) => {
           inputOnChange={handlerOnChangeInput}
           onSubmit={handlerOnSubmitSearch}
           currentCategory={category}
-          categoryHandler={handlerOnClickCategory}
+          handlerCategory={handlerOnClickCategory}
           tagsHandler={handlerOnClickTag}
         />
       </div>

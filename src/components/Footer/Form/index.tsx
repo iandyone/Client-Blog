@@ -75,7 +75,7 @@ export const Form: FC<IFooterFormProps> = ({
   }, []);
 
   return (
-    <form className={form} onSubmit={handlerOnSubmit}>
+    <form className={form} onSubmit={handlerOnSubmit} data-testid='footer-emailer'>
       <div className={container}>
         <Input
           handlerChange={handlerOnChange}

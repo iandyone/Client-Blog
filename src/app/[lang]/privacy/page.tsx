@@ -13,9 +13,9 @@ export default async function PrivacyPage({ params: { lang } }: IPageProps) {
   const { banner, policy } = await getDictionary(lang, 'privacy');
 
   return (
-    <>
+    <main data-testid='privacy-page'>
       <Banner data={banner} />
       <Policy data={policy} />
-    </>
+    </main>
   );
 }

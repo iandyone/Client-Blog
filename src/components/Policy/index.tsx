@@ -10,7 +10,7 @@ const PolicyComponent: FC<IPolicyProps> = ({ data }) => {
   const { text, title, subtext, subtitle, subtext2 } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='privacy-component'>
       <div className={container}>
         <div className={content}>
           <Title className={titleClass}>{title}</Title>

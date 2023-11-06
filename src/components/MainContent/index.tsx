@@ -20,6 +20,7 @@ const MainContentComponent: FC<IMainContantProps> = ({
   className,
   colored,
   header,
+  buttonTestID,
 }) => {
   return (
     <div className={`${className} ${wrapper}`}>
@@ -35,7 +36,7 @@ const MainContentComponent: FC<IMainContantProps> = ({
       />
       {buttonText && (
         <Link href={Routes.POST}>
-          <Button>{buttonText}</Button>
+          <Button testID={buttonTestID}>{buttonText}</Button>
         </Link>
       )}
     </div>

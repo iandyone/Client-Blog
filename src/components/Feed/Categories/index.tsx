@@ -36,7 +36,7 @@ const {
 const CategoriesComponent: FC<ICategoriesMenuProps> = ({
   data,
   currentCategory,
-  categoryHandler,
+  handlerCategory,
   tagsHandler,
   inputValue,
   inputOnChange,
@@ -115,6 +115,7 @@ const CategoriesComponent: FC<ICategoriesMenuProps> = ({
           value={inputValue}
           onChange={handlerOnChangeInput}
           type='text'
+          data-testid='categories-input'
         />
         {showResults &&
           searchResult.length > 0 &&
@@ -123,13 +124,15 @@ const CategoriesComponent: FC<ICategoriesMenuProps> = ({
               <Result tag={result} onClick={handlerOnClickResult} />
             </ul>
           ))}
-        <Button className={buttonClass}>{buttonText}</Button>
+        <Button className={buttonClass} testID='categories-submit-button'>
+          {buttonText}
+        </Button>
       </form>
-      <div className={categories}>
+      <div className={categories} data-testid='categories-menu'>
         <Title className={categoriesTitleClass}>{categoriesTitle}</Title>
         <ul className={categoriesListClass}>
           {categoriesList.map((category) => (
-            <CategoryItem {...category} onClick={categoryHandler} key={category.id} />
+            <CategoryItem {...category} onClick={handlerCategory} key={category.id} />
           ))}
         </ul>
       </div>

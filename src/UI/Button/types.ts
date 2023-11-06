@@ -6,4 +6,5 @@ export interface IButtonProps {
   colored?: boolean;
   className?: string;
   onClick?: handler;
+  testID?: string;
 }

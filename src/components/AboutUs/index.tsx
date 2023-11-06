@@ -59,7 +59,7 @@ const AboutUsComponent: FC<IAboutUsProps> = ({ data }) => {
   );
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='about-us-component'>
       <div className={container}>
         <article className={headerClass}>
           <MainContent label={label} title={header} classNames={headerPeviewClasses} />

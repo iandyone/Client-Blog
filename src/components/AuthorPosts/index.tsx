@@ -11,7 +11,7 @@ export const AuthorPostsComponent: FC<IAuthorPostsProps> = ({ data, posts }) => 
   const { title } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='author-posts-component'>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
         <Digest digests={posts} />

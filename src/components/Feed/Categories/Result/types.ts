@@ -1,4 +1,6 @@
+import { handlerString } from '@appTypes/types';
+
 export interface IResultProps {
   tag: string;
-  onClick: (tag: string) => void;
+  onClick: handlerString;
 }

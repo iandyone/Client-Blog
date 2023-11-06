@@ -15,11 +15,11 @@ export default async function BlogPage({ params: { lang } }: IPageProps) {
   const { stepByStep, categoriesHome, joinUs, blog } = await getDictionary(lang, 'blog');
 
   return (
-    <>
+    <main data-testid='blog-page'>
       <StepByStepBlog data={stepByStep} />
       <Blog data={blog} />
       <Categories data={categoriesHome} lang={lang} />
       <JoinUs data={joinUs} />
-    </>
+    </main>
   );
 }

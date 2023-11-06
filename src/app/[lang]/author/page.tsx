@@ -15,9 +15,9 @@ export default async function AuthorPage({ params: { lang } }: IPageProps) {
   const authorPosts = digest.slice(0, 2);
 
   return (
-    <>
+    <main data-testid='default-author-page'>
       <Author data={author} />
       <AuthorPosts data={posts} posts={authorPosts} />
-    </>
+    </main>
   );
 }
