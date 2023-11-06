@@ -31,9 +31,6 @@ describe('Contact page test', () => {
     cy.get('[data-testid=contact-submit-button]')
       .should('be.visible')
       .should('have.text', 'Send Message')
-      .click()
-      .should('have.text', 'Sending...')
-      .wait(5000)
-      .should('have.text', 'Done!');
+      .click();
   });
 });

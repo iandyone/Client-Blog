@@ -1,5 +1,5 @@
 import { Category } from '@appTypes/enums';
-import { categoryHandler, handler, handlerString, tagsHandler } from '@appTypes/types';
+import { handler, handlerCategory, handlerString, tagsHandler } from '@appTypes/types';
 
 export interface ICategoriesMenuPropsData {
   categoriesTitle: string;
@@ -11,7 +11,7 @@ export interface ICategoriesMenuPropsData {
 
 export interface ICategoriesMenuProps {
   currentCategory: Category;
-  categoryHandler: categoryHandler;
+  handlerCategory: handlerCategory;
   tagsHandler: tagsHandler;
   inputOnChange: handlerString;
   onSubmit: handler;

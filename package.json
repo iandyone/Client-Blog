@@ -11,7 +11,8 @@
     "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "cypress": "cypress open",
     "cypress:test": "cypress run",
-    "test": "start-server-and-test dev http://localhost:3000 cypress:test"
+    "build-and-start": "yarn build && yarn start",
+    "test": "start-server-and-test build-and-start http://localhost:3000 cypress:test"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
