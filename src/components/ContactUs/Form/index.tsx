@@ -160,6 +160,7 @@ const FormComponent: FC<IFormProps> = ({
         placeholder={namePlaceholder}
         value={name}
         className={inputClass}
+        testID='contact-input-username'
         requred
       />
       <Input
@@ -171,6 +172,7 @@ const FormComponent: FC<IFormProps> = ({
         placeholder={emailPlaceholder}
         value={email}
         className={inputClass}
+        testID='contact-input-email'
         requred
       />
       <Input
@@ -181,10 +183,13 @@ const FormComponent: FC<IFormProps> = ({
         handlerChange={handlerOnChangMessage}
         handlerBlur={handlerOnBlurMessage}
         labelError={messageError}
+        testID='contact-input-message'
         requred
         textarea
       />
-      <Button className={buttonClass}>{statusMessage}</Button>
+      <Button className={buttonClass} testID='contact-submit-button'>
+        {statusMessage}
+      </Button>
     </form>
   );
 };

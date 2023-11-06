@@ -4,7 +4,6 @@ import { FC, memo } from 'react';
 
 import styles from './cu.module.scss';
 import { Form } from './Form';
-import { Map } from './Map';
 import { IContactUsPropds } from './types';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'], weight: ['400', '900'] });
@@ -27,7 +26,7 @@ const ContactUsComponent: FC<IContactUsPropds> = ({ data }) => {
   const { header1, header2, days, message, time, email, index } = banner;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='contact-us-component'>
       <div className={container}>
         <article className={header}>
           <h4 className={`${labelClass}  ${inter}`}>{label}</h4>
@@ -49,7 +48,6 @@ const ContactUsComponent: FC<IContactUsPropds> = ({ data }) => {
         </article>
         <Form {...form} />
       </div>
-      <Map />
     </section>
   );
 };
