@@ -12,7 +12,7 @@ const BlogComponent: FC<IBlogProps> = ({ data }) => {
   const { title, next, prev } = data;
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='blog-component'>
       <div className={container}>
         <Title className={titleClass}>{title}</Title>
         <Digest digests={digest} controls={true} data={{ next, prev }} />
