@@ -36,7 +36,7 @@ const {
 const CategoriesComponent: FC<ICategoriesMenuProps> = ({
   data,
   currentCategory,
-  categoryHandler,
+  handlerCategory,
   tagsHandler,
   inputValue,
   inputOnChange,
@@ -132,7 +132,7 @@ const CategoriesComponent: FC<ICategoriesMenuProps> = ({
         <Title className={categoriesTitleClass}>{categoriesTitle}</Title>
         <ul className={categoriesListClass}>
           {categoriesList.map((category) => (
-            <CategoryItem {...category} onClick={categoryHandler} key={category.id} />
+            <CategoryItem {...category} onClick={handlerCategory} key={category.id} />
           ))}
         </ul>
       </div>

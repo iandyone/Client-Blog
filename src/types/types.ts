@@ -22,10 +22,12 @@ export type handlerChange = handlerChangeInput | handlerChangeTextatea;
 
 export type handler = () => void;
 
-export type categoryHandler = (category: Category) => void;
-
 export type handlerString = (value: string) => void;
 
 export type tagsHandler = (tag: Tags) => void;
 
 export type handlerOnSubmit = (e: FormEvent<HTMLFormElement>) => void;
+
+export type handlerCategory = (category: Category) => void;
+
+export type handlerTags = (tag: Tags) => void;

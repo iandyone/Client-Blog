@@ -61,7 +61,7 @@ const FeedComponent: FC<IFeedProps> = ({ data, currentCategory }) => {
           inputOnChange={handlerOnChangeInput}
           onSubmit={handlerOnSubmitSearch}
           currentCategory={category}
-          categoryHandler={handlerOnClickCategory}
+          handlerCategory={handlerOnClickCategory}
           tagsHandler={handlerOnClickTag}
         />
       </div>
