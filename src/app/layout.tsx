@@ -14,7 +14,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <ErrorBoundary>
       <ReduxProvider>
         <html lang='en'>
-          <body className={inter.className}>
+          <body className={`${inter.className} app`}>
             <div className={app}>{children}</div>
           </body>
         </html>
