@@ -1,10 +1,10 @@
-describe('Blog page test', () => {
-  it('Blog page should be rendered', () => {
+describe('Post page test', () => {
+  it('Post page should be rendered', () => {
     cy.visit('http://localhost:3000/en/post');
     cy.get('[data-testid=default-post-page]').should('be.visible');
   });
 
-  it('Blog page components should be rendered', () => {
+  it('Post page components should be rendered', () => {
     const components = ['blog-post', 'join-us'];
 
     components.forEach((name) => {
