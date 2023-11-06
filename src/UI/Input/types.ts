@@ -12,4 +12,5 @@ export interface IInputProps {
   className?: string;
   requred?: boolean;
   textarea?: boolean;
+  testID?: string;
 }

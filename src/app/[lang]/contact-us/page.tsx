@@ -1,5 +1,6 @@
 import { IPageProps } from '@appTypes';
 import { ContactUs } from '@components/ContactUs';
+import { Map } from '@components/Map';
 import { TAB_TITLE } from '@constants';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
@@ -14,7 +15,7 @@ export default async function ContactPage({ params: { lang } }: IPageProps) {
   return (
     <main data-testid='contact-us-page'>
       <ContactUs data={contact} />
-      <div>Contact us</div>
+      <Map />
     </main>
   );
 }

@@ -18,6 +18,7 @@ export const InputComponent: FC<IInputProps> = ({
   name,
   type,
   textarea,
+  testID,
 }) => {
   const labelClassName = useMemo(() => {
     if (labelSuccess) return `${labelClass} ${success}`;
@@ -47,6 +48,7 @@ export const InputComponent: FC<IInputProps> = ({
             placeholder={placeholder}
             className={`${className} ${inputClassName}`}
             required={requred}
+            data-testid={testID}
           />
         )}
         {textarea && (
@@ -58,6 +60,7 @@ export const InputComponent: FC<IInputProps> = ({
             placeholder={placeholder}
             className={`${className} ${inputClassName}`}
             required={requred}
+            data-testid={testID}
           />
         )}
       </div>

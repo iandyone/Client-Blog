@@ -28,7 +28,7 @@ export const Map: FC = () => {
   }, []);
 
   return (
-    <section className={wrapper}>
+    <section className={wrapper} data-testid='map-component'>
       <div className={container} ref={mapRef} />
     </section>
   );
