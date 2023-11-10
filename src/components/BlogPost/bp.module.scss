@@ -10,7 +10,9 @@ $width: 850px;
 
 .container {
   @extend %container;
+
   @extend %flex-center;
+
   row-gap: 24px;
 
   @media (max-width: $TABLET) {
@@ -19,8 +21,9 @@ $width: 850px;
 }
 
 .contenContainer {
-  width: $width;
   @extend %flex-column;
+
+  width: $width;
   row-gap: 24px;
   margin: 0px auto;
 
@@ -60,7 +63,6 @@ $width: 850px;
   @media (max-width: $TABLET) {
     margin: 20px 0;
   }
-
   @media (max-width: $MOBILE) {
     margin: 0;
   }
@@ -95,6 +97,7 @@ $width: 850px;
 
 .listContainer {
   @extend %flex-column;
+
   margin-bottom: 24px;
 
   @media (max-width: $TABLET) {

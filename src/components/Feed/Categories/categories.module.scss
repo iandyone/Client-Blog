@@ -1,6 +1,8 @@
 .wrapper {
   @extend %wrapper;
+
   @extend %flex-column;
+
   row-gap: 48px;
   flex: 0 1 30%;
 
@@ -42,6 +44,7 @@
 
 .buttonClass {
   @extend %flex-center;
+
   position: absolute;
   border-radius: 6px;
   right: 0;
@@ -52,6 +55,7 @@
 
 .categories {
   @extend %flex-column;
+
   row-gap: 40px;
 
   @media (max-width: $DESKTOP_MEDIUM) {
@@ -67,11 +71,13 @@
 
 .categoriesListClass {
   @extend %flex-column;
+
   row-gap: 24px;
 }
 
 .tagsContainer {
   @extend %flex-column;
+
   row-gap: 24px;
 }
 

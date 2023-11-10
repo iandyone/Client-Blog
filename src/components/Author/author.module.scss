@@ -3,6 +3,7 @@ $padding: 96px;
 
 .wrapper {
   @extend %wrapper;
+
   padding: $padding 0;
   background-color: $lavender;
 
@@ -17,6 +18,7 @@ $padding: 96px;
 
 .container {
   @extend %container;
+
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -32,6 +34,7 @@ $padding: 96px;
 
 .contentClass {
   @extend %flex-column;
+
   row-gap: 24px;
 
   @media (max-width: $TABLET_SMALL) {
@@ -57,6 +60,7 @@ $padding: 96px;
 .aboutText {
   color: $mediumGray;
   max-width: 645px;
+
   @extend %text;
 }
 

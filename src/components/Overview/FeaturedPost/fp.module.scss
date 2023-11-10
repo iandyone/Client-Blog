@@ -6,8 +6,9 @@
 .body {
   padding: 32px;
   border: 1px solid rgba($color: $mediumGray, $alpha: 0.1);
-  @extend %flex-column;
   row-gap: 16px;
+
+  @extend %flex-column;
 
   @media (max-width: $TABLET) {
     padding: 20px;
@@ -20,6 +21,7 @@
 
 .title {
   @extend %title;
+
   font-size: 36px;
   margin-bottom: 32px;
 }

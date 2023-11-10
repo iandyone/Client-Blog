@@ -2,6 +2,7 @@
 
 .wrapper {
   @extend %wrapper;
+
   width: 100%;
   max-width: 1920px;
   margin: 0px auto;
@@ -12,9 +13,9 @@
 }
 
 .container {
-  min-height: 400px;
+  min-height: 300px;
 
   @media (max-width: $TABLET) {
-    min-height: 300px;
+    min-height: 200px;
   }
 }

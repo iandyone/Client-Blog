@@ -1,7 +1,8 @@
 import { getDictionary } from '@utils/dictionaries';
+import { ReactElement } from 'react';
+
 import { Category, Routes, Tags } from './enums';
 import { Language } from './types';
-import { ReactElement } from 'react';
 
 export interface IPageData {
   data: Promise<ReturnType<typeof getDictionary>>;

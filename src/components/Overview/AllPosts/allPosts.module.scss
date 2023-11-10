@@ -4,6 +4,7 @@
 
 .header {
   @extend %flex-between;
+
   margin-bottom: 32px;
 
   @media (max-width: $TABLET) {
@@ -13,8 +14,11 @@
 
 .link {
   @extend %hover;
+
   @extend %active;
+
   @extend %text;
+
   color: $purple;
   transition: $transition;
   font-weight: 500;

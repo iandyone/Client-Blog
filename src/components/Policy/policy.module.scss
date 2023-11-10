@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   padding: 96px 0;
 
   @media (max-width: $TABLET) {
@@ -9,12 +10,15 @@
 
 .container {
   @extend %container;
+
   @extend %flex-center;
+
   row-gap: 32px;
 }
 
 .content {
   @extend %flex-column;
+
   max-width: 768px;
   row-gap: 24px;
 }
@@ -38,5 +42,6 @@
 
 .textClass {
   color: $darkGray;
+
   @extend %text;
 }

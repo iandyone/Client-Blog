@@ -1,10 +1,13 @@
 .wrapper {
   @extend %flex-between;
+
   column-gap: 26px;
 }
 
 .media {
   transition: $transition;
+
   @extend %hover;
+
   @extend %active;
 }
