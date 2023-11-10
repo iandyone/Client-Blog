@@ -1,4 +1,5 @@
 import { Links } from '@components/Links';
+import { imagePlaceholder } from '@constants/animations';
 import { defaulUser, links } from '@constants/data';
 import { Decor } from '@ui/Decor';
 import { Title } from '@ui/Title';
@@ -20,7 +21,7 @@ const AuthorComponent: FC<IAuthorProps> = ({ data, author }) => {
   return (
     <section className={wrapper} data-testid='author-component'>
       <div className={container}>
-        <Image src={avatar} alt='author' priority />
+        <Image src={avatar} alt='author' placeholder={`data:image/${imagePlaceholder}`} priority />
         <div className={contentClass}>
           <Title className={titleClass} testID='author-title'>
             {titleText}

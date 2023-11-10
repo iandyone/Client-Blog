@@ -1,3 +1,4 @@
+import { imagePlaceholder } from '@constants/animations';
 import { logos } from '@constants/data';
 import Image from 'next/image';
 import { FC, memo } from 'react';
@@ -16,7 +17,7 @@ const LabelsComponent: FC<ILabelsProps> = ({ data }) => {
         <h4 className={titleClass}>{title}</h4>
         <ul className={list}>
           {logos.map(({ id, icon }) => (
-            <Image src={icon} alt={`logo-${id}`} key={id} />
+            <Image src={icon} alt={`logo-${id}`} key={id} placeholder={`data:image/${imagePlaceholder}`} />
           ))}
         </ul>
       </div>

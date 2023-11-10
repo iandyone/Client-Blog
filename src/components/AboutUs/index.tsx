@@ -1,5 +1,6 @@
 import { IPreviewClasses } from '@appTypes';
 import { MainContent } from '@components/MainContent';
+import { imagePlaceholder } from '@constants/animations';
 import bannerImage from '@public/images/aboutPage/banner.jpg';
 import { Title } from '@ui/Title';
 import Image from 'next/image';
@@ -66,7 +67,13 @@ const AboutUsComponent: FC<IAboutUsProps> = ({ data }) => {
           <div className={headerText}>{description}</div>
         </article>
         <article className={bannerClass}>
-          <Image className={bannerImageClass} src={bannerImage} alt='banner' priority />
+          <Image
+            className={bannerImageClass}
+            src={bannerImage}
+            alt='banner'
+            placeholder={`data:image/${imagePlaceholder}`}
+            priority
+          />
           <ul className={achievesContainer}>
             {achivesList &&
               achivesList.map(({ id, counter, text }) => (

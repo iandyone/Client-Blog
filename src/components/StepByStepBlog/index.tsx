@@ -1,4 +1,5 @@
 import { MainContent } from '@components/MainContent';
+import { imagePlaceholder } from '@constants/animations';
 import preview from '@public/images/blogPage/preview.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';
@@ -26,7 +27,13 @@ export const StepByStepBlogComponent: FC<IStepByStepBlogProps> = ({ data }) => {
           buttonTestID='sbsb-button'
         />
         <div className={imageContainer}>
-          <Image className={image} src={preview} alt='preview' priority />
+          <Image
+            className={image}
+            src={preview}
+            alt='preview'
+            placeholder={`data:image/${imagePlaceholder}`}
+            priority
+          />
         </div>
       </div>
     </section>

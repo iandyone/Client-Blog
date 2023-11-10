@@ -1,3 +1,4 @@
+import { imagePlaceholder } from '@constants/animations';
 import { Title } from '@ui/Title';
 import Image from 'next/image';
 import { FC, memo } from 'react';
@@ -19,7 +20,7 @@ const CategoryItemComponent: FC<ICategoryItemProps> = ({ active, icon, id, title
       onClick={handlerOnClick}
       data-testid='categories-menu-option'>
       <div className={imageCotainer}>
-        <Image src={icon} alt={title} />
+        <Image src={icon} alt={title} placeholder={`data:image/${imagePlaceholder}`} />
       </div>
       <Title className={categoryItemTitleClass}>{title}</Title>
     </li>

@@ -1,4 +1,5 @@
 import { Routes } from '@appTypes/enums';
+import { imagePlaceholder } from '@constants/animations';
 import bgImage from '@public/images/homePage/peoples.jpg';
 import { Button } from '@ui/Button';
 import { Preview } from '@ui/Preview';
@@ -27,7 +28,13 @@ export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
   return (
     <section className={wrapper} data-testid='why-we-started-component'>
       <div className={container}>
-        <Image src={bgImage} alt={'why we started image'} style={imageStyles} className={image} />
+        <Image
+          src={bgImage}
+          alt={'why we started image'}
+          style={imageStyles}
+          className={image}
+          placeholder={`data:image/${imagePlaceholder}`}
+        />
         <div className={body}>
           <Preview label={labelText} title={titleText} body={bodyText} classNames={classNames} />
           <Link href={Routes.ABOUT}>
