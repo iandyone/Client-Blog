@@ -13,7 +13,7 @@ import { FC, memo } from 'react';
 import styles from './bp.module.scss';
 import { IBlogPostProps } from './types';
 
-const sen = Sen({ subsets: ['latin'] });
+const fontSen = Sen({ subsets: ['latin'] });
 
 const {
   wrapper,
@@ -77,9 +77,9 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
             <p className={contentClass}>{content}</p>
             <p className={contentClass}>{content}</p>
             <div className={listContainer}>
-              <h4 className={`${listItem} ${sen.className}`}>{item1}</h4>
-              <h4 className={`${listItem} ${sen.className}`}>{item2}</h4>
-              <h4 className={`${listItem} ${sen.className}`}>{item3}</h4>
+              <h4 className={`${listItem} ${fontSen.className}`}>{item1}</h4>
+              <h4 className={`${listItem} ${fontSen.className}`}>{item2}</h4>
+              <h4 className={`${listItem} ${fontSen.className}`}>{item3}</h4>
             </div>
             <p className={contentClass}>{content}</p>
           </div>
