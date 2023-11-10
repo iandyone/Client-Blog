@@ -1,5 +1,5 @@
 import { IPreview } from '@appTypes';
-import { Credentials } from '@ui/Credentials';
+import { Credentials } from '@ui';
 import { Sen } from 'next/font/google';
 import { FC, memo } from 'react';
 

@@ -1,8 +1,7 @@
 'use client';
 
 import { Tags } from '@appTypes/enums';
-import { Button } from '@ui/Button';
-import { Title } from '@ui/Title';
+import { Button, Title } from '@ui';
 import { Sen } from 'next/font/google';
 import { ChangeEvent, FC, FormEvent, memo, useCallback, useEffect, useState } from 'react';
 

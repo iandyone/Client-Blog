@@ -1,5 +1,5 @@
 import { categories } from '@constants/data';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { FC, memo } from 'react';
 
 import { Card } from './Card';

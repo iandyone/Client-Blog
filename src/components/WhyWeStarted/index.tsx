@@ -1,8 +1,7 @@
 import { Routes } from '@appTypes/enums';
 import { imagePlaceholder } from '@constants/animations';
 import bgImage from '@public/images/homePage/peoples.jpg';
-import { Button } from '@ui/Button';
-import { Preview } from '@ui/Preview';
+import { Button, Preview } from '@ui';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CSSProperties, FC } from 'react';

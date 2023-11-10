@@ -22,6 +22,7 @@
     "paths": {
       "@public/images/*": ["./public/*"],
       "@components/*": ["./src/components/*"],
+      "@ui": ["./src/UI"],
       "@ui/*": ["./src/UI/*"],
       "@assets/*": ["./src/assets/*"],
       "@constants": ["./src/constants"],

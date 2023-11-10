@@ -1,4 +1,4 @@
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC, memo } from 'react';

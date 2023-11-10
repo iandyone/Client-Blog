@@ -5,17 +5,17 @@
   background-color: $white;
   padding: 24px;
   transition: $transition;
-  border: 2px solid $darkGray;
+  border: 1px solid $darkGray;
 
   &:hover {
     cursor: pointer;
-    border: 2px solid $yellow;
+    border: 1px solid $yellow;
     background-color: $yellow;
     transition: $transition;
   }
 
   &.activeClass {
-    border: 2px solid $yellow;
+    border: 1px solid $yellow;
     background-color: $yellow;
     transition: $transition;
   }

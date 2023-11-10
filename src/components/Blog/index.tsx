@@ -1,6 +1,6 @@
+import { Digest } from '@components/Digest';
 import { digest } from '@constants/data';
-import { Digest } from '@ui/Digest';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { FC, memo } from 'react';
 
 import styles from './blog.module.scss';

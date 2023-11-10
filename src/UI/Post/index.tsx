@@ -1,5 +1,5 @@
 import { imagePlaceholder } from '@constants/animations';
-import { Credentials } from '@ui/Credentials';
+import { Credentials } from '@ui';
 import { Sen } from 'next/font/google';
 import Image from 'next/image';
 import { CSSProperties, FC, memo } from 'react';

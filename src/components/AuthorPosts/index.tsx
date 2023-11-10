@@ -1,5 +1,5 @@
-import { Digest } from '@ui/Digest';
-import { Title } from '@ui/Title';
+import { Digest } from '@components/Digest';
+import { Title } from '@ui';
 import { FC, memo } from 'react';
 
 import styles from './ap.module.scss';

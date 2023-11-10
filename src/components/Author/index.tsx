@@ -1,8 +1,7 @@
 import { Links } from '@components/Links';
 import { imagePlaceholder } from '@constants/animations';
 import { defaulUser, links } from '@constants/data';
-import { Decor } from '@ui/Decor';
-import { Title } from '@ui/Title';
+import { Decor, Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo } from 'react';
 

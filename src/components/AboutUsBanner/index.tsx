@@ -1,6 +1,6 @@
 import { IPreviewClasses } from '@appTypes';
 import { Routes } from '@appTypes/enums';
-import { Preview } from '@ui/Preview';
+import { Preview } from '@ui';
 import { Sen } from 'next/font/google';
 import Link from 'next/link';
 import { FC, memo } from 'react';
