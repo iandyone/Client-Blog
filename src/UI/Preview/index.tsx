@@ -5,7 +5,7 @@ import { FC, memo } from 'react';
 
 import styles from './preview.module.scss';
 
-const sen = Sen({ subsets: ['latin'] });
+const fontSen = Sen({ subsets: ['latin'] });
 const { wrapper, labelClass, headerClass, bodyClass, titleClass } = styles;
 
 const PreviewComponent: FC<IPreview> = ({
@@ -28,8 +28,8 @@ const PreviewComponent: FC<IPreview> = ({
           {labelMarked && <span> {labelMarked}</span>}
         </p>
       )}
-      {header && <h1 className={`${titleClassName} ${headerClass} ${sen.className}`}>{header}</h1>}
-      {title && <h2 className={`${titleClassName} ${titleClass} ${sen.className} `}>{title}</h2>}
+      {header && <h1 className={`${titleClassName} ${headerClass} ${fontSen.className}`}>{header}</h1>}
+      {title && <h2 className={`${titleClassName} ${titleClass} ${fontSen.className} `}>{title}</h2>}
       {credentials && <Credentials {...credentials} colored={colored} />}
       {body && <p className={`${bodyClassName} ${bodyClass} `}>{body}</p>}
     </article>

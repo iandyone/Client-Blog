@@ -1,18 +1,6 @@
-import { IDigest, ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
-import { ICategory } from '@appTypes';
+import { ICategory, IDigest, ILink, ILogo, IPost, ITestimonials, IUser } from '@appTypes';
 import { Category, Routes, Tags } from '@appTypes/enums';
 import authorPreview from '@public/images/AuthorsPage/01.jpg';
-import postPreview from '@public/images/posts/01.jpg';
-import businessIcon from '@public/images/homePage/business.svg';
-import economyIcon from '@public/images/homePage/economy.svg';
-import startupIcon from '@public/images/homePage/startup.svg';
-import technologyIcon from '@public/images/homePage/technology.svg';
-
-import facebook from '@public/images/icons/facebook.svg';
-import instagram from '@public/images/icons/instagram.svg';
-import linkedin from '@public/images/icons/linkedin.svg';
-import twitter from '@public/images/icons/twitter.svg';
-
 import user1 from '@public/images/avatars/01.svg';
 import user2 from '@public/images/avatars/02.svg';
 import user3 from '@public/images/avatars/03.svg';
@@ -22,14 +10,21 @@ import user6 from '@public/images/avatars/06.svg';
 import user7 from '@public/images/avatars/07.svg';
 import user8 from '@public/images/avatars/08.svg';
 import user9 from '@public/images/avatars/09.svg';
-
+import businessIcon from '@public/images/homePage/business.svg';
+import economyIcon from '@public/images/homePage/economy.svg';
+import startupIcon from '@public/images/homePage/startup.svg';
+import technologyIcon from '@public/images/homePage/technology.svg';
+import facebook from '@public/images/icons/facebook.svg';
+import instagram from '@public/images/icons/instagram.svg';
+import linkedin from '@public/images/icons/linkedin.svg';
+import twitter from '@public/images/icons/twitter.svg';
 import logo1 from '@public/images/logos/01.svg';
 import logo2 from '@public/images/logos/02.svg';
 import logo3 from '@public/images/logos/03.svg';
 import logo4 from '@public/images/logos/04.svg';
 import logo5 from '@public/images/logos/05.svg';
 import logo6 from '@public/images/logos/06.svg';
-
+import postPreview from '@public/images/posts/01.jpg';
 import post2 from '@public/images/posts/02.jpg';
 import post3 from '@public/images/posts/03.jpg';
 import post4 from '@public/images/posts/04.jpg';

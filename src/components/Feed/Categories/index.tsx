@@ -17,7 +17,7 @@ import { Result } from './Result';
 import { Tag } from './Tag';
 import { ICategoriesMenuProps } from './types';
 
-const sen = Sen({ subsets: ['latin'], weight: ['700'] });
+const fontSen = Sen({ subsets: ['latin'], weight: ['700'] });
 
 const {
   wrapper,
@@ -110,7 +110,7 @@ const CategoriesComponent: FC<ICategoriesMenuProps> = ({
     <section className={wrapper}>
       <form className={formClass} onSubmit={handlerOnSubmit}>
         <input
-          className={`${inputClass} ${sen.className}`}
+          className={`${inputClass} ${fontSen.className}`}
           placeholder={placeholder}
           value={inputValue}
           onChange={handlerOnChangeInput}

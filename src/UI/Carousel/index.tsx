@@ -15,7 +15,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState<number>(0);
   const windowRef = useRef(null);
-  const [width, setWIdth] = useState<number>(0);
+  const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
     setPages(
@@ -41,7 +41,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
 
   function handleResize() {
     const width = windowRef.current.offsetWidth;
-    setWIdth(width);
+    setWidth(width);
     setOffset(0);
   }
 

@@ -9,7 +9,7 @@ import { IPostProps } from './types';
 
 const imageStyles: CSSProperties = { objectFit: 'cover', height: 'auto' };
 const { wrapper, head, text, image } = styles;
-const sen = Sen({ subsets: ['latin'] });
+const fontSen = Sen({ subsets: ['latin'] });
 
 const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, body = true }) => {
   const { preview, author, date, title, content } = post;
@@ -26,7 +26,7 @@ const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, b
         />
       )}
       {date && author && <Credentials author={author} date={date} />}
-      <h3 className={`${head} ${sen.className}`}>{title}</h3>
+      <h3 className={`${head} ${fontSen.className}`}>{title}</h3>
       {body && <p className={text}>{content}</p>}
     </article>
   );

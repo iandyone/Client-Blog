@@ -8,7 +8,7 @@ import { FooterNav } from './FooterNav';
 import { Form } from './Form';
 import { IFooterProps } from './types';
 
-const sen = Sen({ subsets: ['latin'] });
+const fontSen = Sen({ subsets: ['latin'] });
 const { footer, container, header, logo, content, title, copyright, contacts, contact } = styles;
 
 export const Footer: FC<IFooterProps> = ({ data, navigation, lang }) => {
@@ -23,7 +23,7 @@ export const Footer: FC<IFooterProps> = ({ data, navigation, lang }) => {
           <FooterNav navigation={navigation} lang={lang} />
         </div>
         <article className={content}>
-          <h2 className={`${title} ${sen.className}`}>{bannerText}</h2>
+          <h2 className={`${title} ${fontSen.className}`}>{bannerText}</h2>
           <Form {...form} />
         </article>
         <div className={copyright}>

@@ -8,7 +8,7 @@ import { FC, memo } from 'react';
 import styles from './aub.module.scss';
 import { IAboutUsBannerProps } from './types';
 
-const sen = Sen({ subsets: ['latin'] });
+const fontSen = Sen({ subsets: ['latin'] });
 const { wrapper, container, about, mission, aboutTitleClass, link } = styles;
 
 const AboutUsBannerComponent: FC<IAboutUsBannerProps> = ({ data }) => {
@@ -23,7 +23,7 @@ const AboutUsBannerComponent: FC<IAboutUsBannerProps> = ({ data }) => {
       <div className={container}>
         <article className={about}>
           <Preview label={aboutLabel} title={aboutTitle} body={aboutBody} classNames={classNames} />
-          <Link href={Routes.ABOUT} className={`${link} ${sen.className}`} data-testid='about-us-button'>
+          <Link href={Routes.ABOUT} className={`${link} ${fontSen.className}`} data-testid='about-us-button'>
             {buttonText}
           </Link>
         </article>
