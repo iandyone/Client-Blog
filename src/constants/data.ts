@@ -41,6 +41,15 @@ const {
   TECHNOLOGY: TECHNOLOGY_TAG,
 } = Tags;
 
+export const ENV = {
+  EMAIL_TEMPLATE: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  EMAIL_SERVICE: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  EMAIL_KEY: process.env.NEXT_PUBLIC_EMAILJS_KEY,
+  MAP_STYLE: process.env.NEXT_PUBLIC_MAP_STYLE,
+  MAP_TOKEN: process.env.NEXT_PUBLIC_MAP_TOKEN,
+  ABOUT_VIDEO: process.env.NEXT_PUBLIC_ABOUT_US_VIDEO,
+};
+
 export const categories: ICategory[] = [
   {
     title: 'Business',

@@ -1,6 +1,7 @@
 'use client';
 
 import { emailValidator, messagValidator, usernameValidator } from '@constants';
+import { ENV } from '@constants/data';
 import emailjs from '@emailjs/browser';
 import { Button } from '@ui/Button';
 import { Input } from '@ui/Input';
@@ -10,9 +11,10 @@ import { ValidationError } from 'yup';
 import styles from './form.module.scss';
 import { IFormProps } from './types';
 
-const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
-const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
-const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
+const emailServiceKey = ENV.EMAIL_KEY ?? '';
+const emailServiceID = ENV.EMAIL_SERVICE ?? '';
+const emailTemplateID = ENV.EMAIL_TEMPLATE ?? '';
+('');
 
 const FormComponent: FC<IFormProps> = (props) => {
   const { button, emailPlaceholder, messagePlaceholder, namePlaceholder, successMessage, sendingMessage } =

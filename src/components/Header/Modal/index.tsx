@@ -1,7 +1,8 @@
 import { Popup } from '@components/Popup';
+import { ENV } from '@constants/data';
 import { FC } from 'react';
 
-const source = process.env.NEXT_PUBLIC_ABOUT_US_VIDEO;
+const source = ENV.ABOUT_VIDEO;
 
 export const Modal: FC = () => {
   return (
