@@ -7,23 +7,23 @@ import { FC, memo } from 'react';
 import styles from './mc.module.scss';
 import { IMainContantProps } from './types';
 
-const { wrapper } = styles;
+const MainContentComponent: FC<IMainContantProps> = (props) => {
+  const {
+    buttonText,
+    body,
+    classNames,
+    credentials,
+    label,
+    labelMarked,
+    title,
+    className,
+    colored,
+    header,
+    buttonTestID,
+  } = props;
 
-const MainContentComponent: FC<IMainContantProps> = ({
-  buttonText,
-  body,
-  classNames,
-  credentials,
-  label,
-  labelMarked,
-  title,
-  className,
-  colored,
-  header,
-  buttonTestID,
-}) => {
   return (
-    <div className={`${className} ${wrapper}`}>
+    <div className={`${className} ${styles.wrapper}`}>
       <Preview
         body={body}
         header={header}

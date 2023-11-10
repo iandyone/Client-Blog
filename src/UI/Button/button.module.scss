@@ -8,7 +8,9 @@
   color: $black;
   transition: $transition;
   background: $yellow;
+
   @extend %hover;
+
   @extend %active;
 
   &.white {

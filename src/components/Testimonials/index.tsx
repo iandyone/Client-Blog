@@ -7,28 +7,26 @@ import { Card } from './Card';
 import styles from './testimonials.module.scss';
 import { ITestimonialsProps } from './types';
 
-const { wrapper, container, testimonialsClass, previewWrapper, previewTitle, previewBody, slider, carousel } =
-  styles;
-
 const TestimonialsComponent: FC<ITestimonialsProps> = ({ data }) => {
   const { body, label, titie } = data;
   const previewClassNames = {
-    wrapperClassName: previewWrapper,
-    titleClassName: previewTitle,
-    bodyClassName: previewBody,
+    wrapperClassName: styles.previewWrapper,
+    titleClassName: styles.previewTitle,
+    bodyClassName: styles.previewBody,
   };
+  const testimonialsList = testimonials.slice(0, 3);
 
   return (
-    <section className={wrapper} data-testid='testimonals-component'>
-      <div className={container}>
-        <article className={testimonialsClass}>
+    <section className={styles.wrapper} data-testid='testimonals-component'>
+      <div className={styles.container}>
+        <article className={styles.testimonialsClass}>
           <Preview label={label} title={titie} body={body} classNames={previewClassNames} />
         </article>
-        <article className={slider}>
-          <Carousel className={carousel}>
-            <Card {...testimonials[0]} />
-            <Card {...testimonials[0]} />
-            <Card {...testimonials[0]} />
+        <article className={styles.slider}>
+          <Carousel className={styles.carousel}>
+            {testimonialsList.map((testimonial) => (
+              <Card {...testimonial} key={testimonial.id} />
+            ))}
           </Carousel>
         </article>
       </div>

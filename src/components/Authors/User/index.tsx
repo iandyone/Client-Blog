@@ -6,17 +6,17 @@ import { FC, memo } from 'react';
 
 import styles from './user.module.scss';
 
-const { wrapper, avatarClass, titleClass, positionClass, linksClass } = styles;
+const UserComponent: FC<IUser> = (props) => {
+  const { avatar, name, position, links } = props;
 
-const UserComponent: FC<IUser> = ({ avatar, name, position, links }) => {
   return (
-    <article className={wrapper} data-testid='author-card'>
-      <Image className={avatarClass} alt={name} src={avatar} />
-      <Title className={titleClass} testID='author-card-name'>
+    <article className={styles.wrapper} data-testid='author-card'>
+      <Image className={styles.avatarClass} alt={name} src={avatar} />
+      <Title className={styles.titleClass} testID='author-card-name'>
         {name}
       </Title>
-      <p className={positionClass}>{position}</p>
-      <Links links={links} className={linksClass} />
+      <p className={styles.positionClass}>{position}</p>
+      <Links links={links} className={styles.linksClass} />
     </article>
   );
 };

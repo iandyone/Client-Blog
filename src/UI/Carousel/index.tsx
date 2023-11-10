@@ -9,8 +9,6 @@ import { Children, cloneElement, FC, useEffect, useRef, useState } from 'react';
 import styles from './carousel.module.scss';
 import { ICarouselProps } from './types';
 
-const { wrapper, container, windowClass, navigation, button } = styles;
-
 export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState<number>(0);
@@ -59,14 +57,14 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   }
 
   return (
-    <article className={`${wrapper} ${className}`} data-testid='carousel'>
-      <div className={windowClass} ref={windowRef}>
-        <div className={container} style={{ transform: `translateX(${offset}px)` }}>
+    <article className={`${styles.wrapper} ${className}`} data-testid='carousel'>
+      <div className={styles.windowClass} ref={windowRef}>
+        <div className={styles.container} style={{ transform: `translateX(${offset}px)` }}>
           {pages}
         </div>
-        <div className={navigation}>
+        <div className={styles.navigation}>
           <Image
-            className={button}
+            className={styles.button}
             src={prevSlide}
             alt='next'
             onClick={handlerPrevSlide}
@@ -74,7 +72,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
             data-testid='carousel-button-next'
           />
           <Image
-            className={button}
+            className={styles.button}
             src={nextSlide}
             alt='prev'
             onClick={handlerNextSlide}

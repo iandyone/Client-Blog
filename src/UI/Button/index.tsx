@@ -4,12 +4,12 @@ import { FC } from 'react';
 import styles from './button.module.scss';
 import { IButtonProps } from './types';
 
-const { button, white } = styles;
 const fontSen = Sen({ subsets: ['latin'] });
 
-export const Button: FC<IButtonProps> = ({ children, className, colored, onClick, testID }) => {
-  const typeClass = colored ? white : '';
-  const buttonClassName = `${button} ${fontSen.className} ${typeClass} ${className}`;
+export const Button: FC<IButtonProps> = (props) => {
+  const { children, className, colored, onClick, testID } = props;
+  const typeClass = colored ? styles.white : '';
+  const buttonClassName = `${styles.button} ${fontSen.className} ${typeClass} ${className}`;
 
   return (
     <button className={buttonClassName} onClick={onClick} data-testid={testID}>

@@ -3,8 +3,10 @@
   width: 100%;
   position: relative;
 }
+
 .windowClass {
   @extend %flex-center;
+
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -29,7 +31,6 @@
     bottom: 6px;
     right: 6px;
   }
-
   @media (max-width: $MOBILE) {
     position: static;
     margin-top: 40px;
@@ -38,6 +39,8 @@
 
 .button {
   @extend %hover;
+
   @extend %active;
+
   transition: $transition;
 }

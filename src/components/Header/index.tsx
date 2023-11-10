@@ -16,7 +16,6 @@ import styles from './header.module.scss';
 import { Modal } from './Modal';
 import { IHeaderProps } from './types';
 
-const { header, container, logo, navigationClass, active } = styles;
 const { HOME } = Routes;
 
 export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
@@ -24,7 +23,7 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
   const { burger, popup } = useSelectorTyped((store) => store.app);
   const dispatch = useDispatchTyped();
   const navigationClassName = useMemo(
-    () => (burger ? `${navigationClass} ${active}` : navigationClass),
+    () => (burger ? `${styles.navigationClass} ${styles.active}` : styles.navigationClass),
     [burger],
   );
 
@@ -41,9 +40,9 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
   }, [popup]);
 
   return (
-    <header className={header} data-testid='header'>
-      <div className={container}>
-        <span className={logo} data-testid='header-logo'>
+    <header className={styles.header} data-testid='header'>
+      <div className={styles.container}>
+        <span className={styles.logo} data-testid='header-logo'>
           <Link href={`/${lang}/${HOME}`}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>

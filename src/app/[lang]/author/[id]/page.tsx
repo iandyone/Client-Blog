@@ -4,7 +4,6 @@ import { TAB_TITLE } from '@constants';
 import { digest, users } from '@constants/data';
 import { getDictionary } from '@utils/dictionaries';
 import { Metadata } from 'next';
-import { useMemo } from 'react';
 
 import { IAuthorPageProps } from './types';
 
@@ -14,8 +13,8 @@ export const metadata: Metadata = {
 
 export default async function AuthorPage({ params: { lang, id: userID } }: IAuthorPageProps) {
   const { author, posts } = await getDictionary(lang, 'author');
-  const postsList = useMemo(() => digest.filter(({ author }) => author.id === Number(userID)), [userID]);
-  const currentAuthor = useMemo(() => users.find(({ id }) => id === Number(userID)), [userID]);
+  const postsList = digest.filter(({ author }) => author.id === Number(userID));
+  const currentAuthor = users.find(({ id }) => id === Number(userID));
 
   return (
     <main data-testid='author-page'>

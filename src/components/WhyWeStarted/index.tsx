@@ -10,11 +10,10 @@ import { CSSProperties, FC } from 'react';
 import { IWhyWeStartedProps } from './types';
 import styles from './wws.module.scss';
 
-const { wrapper, container, body, title, button, image } = styles;
-
 const classNames = {
-  titleClassName: title,
+  titleClassName: styles.title,
 };
+
 const imageStyles: CSSProperties = {
   objectFit: 'cover',
   height: 'auto',
@@ -26,19 +25,19 @@ export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
   const { bodyText, buttonText, labelText, titleText } = data;
 
   return (
-    <section className={wrapper} data-testid='why-we-started-component'>
-      <div className={container}>
+    <section className={styles.wrapper} data-testid='why-we-started-component'>
+      <div className={styles.container}>
         <Image
           src={bgImage}
           alt={'why we started image'}
           style={imageStyles}
-          className={image}
+          className={styles.image}
           placeholder={`data:image/${imagePlaceholder}`}
         />
-        <div className={body}>
+        <div className={styles.body}>
           <Preview label={labelText} title={titleText} body={bodyText} classNames={classNames} />
           <Link href={Routes.ABOUT}>
-            <Button className={button} testID='why-we-started-button'>
+            <Button className={styles.button} testID='why-we-started-button'>
               {buttonText}
             </Button>
           </Link>
