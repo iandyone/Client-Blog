@@ -1,11 +1,12 @@
 'use client';
 
+import { ENV } from '@constants/data';
 import mapboxgl from 'mapbox-gl';
 import { FC, memo, useEffect, useRef } from 'react';
 
 import styles from './map.module.scss';
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
+mapboxgl.accessToken = ENV.MAP_TOKEN;
 
 const MapComponent: FC = () => {
   const mapRef = useRef(null);
@@ -16,7 +17,7 @@ const MapComponent: FC = () => {
     const map = new mapboxgl.Map({
       container: mapRef.current,
       center: [data.lng, data.lat],
-      style: process.env.NEXT_PUBLIC_MAP_STYLE,
+      style: ENV.MAP_STYLE,
       zoom: data.zoom,
     });
 
