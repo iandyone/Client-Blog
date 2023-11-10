@@ -1,7 +1,7 @@
 'use client';
 
 import { ErrorBoundaryProps, ErrorBoundaryState } from '@components/ErrorBoundary/types';
-import { Spinner } from '@ui/Spinner';
+import { Spinner } from '@ui';
 import React, { PureComponent, Suspense } from 'react';
 
 import styles from './boundary.module.scss';

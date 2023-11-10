@@ -2,7 +2,7 @@ import { IPreviewClasses } from '@appTypes';
 import { MainContent } from '@components/MainContent';
 import { imagePlaceholder } from '@constants/animations';
 import bannerImage from '@public/images/aboutPage/banner.jpg';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo, useMemo } from 'react';
 

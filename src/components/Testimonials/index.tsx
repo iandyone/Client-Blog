@@ -1,6 +1,5 @@
 import { testimonials } from '@constants/data';
-import { Carousel } from '@ui/Carousel';
-import { Preview } from '@ui/Preview';
+import { Carousel, Preview } from '@ui';
 import { FC, memo } from 'react';
 
 import { Card } from './Card';

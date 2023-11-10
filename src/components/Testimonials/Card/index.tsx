@@ -1,6 +1,5 @@
 import { ITestimonials } from '@appTypes';
-import { Title } from '@ui/Title';
-import { User } from '@ui/User';
+import { Title, User } from '@ui';
 import { FC, memo } from 'react';
 
 import styles from './card.module.scss';

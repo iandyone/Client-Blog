@@ -1,7 +1,5 @@
 import { Routes } from '@appTypes/enums';
-import { Button } from '@ui/Button';
-import { Post } from '@ui/Post';
-import { Title } from '@ui/Title';
+import { Button, Post, Title } from '@ui';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 

@@ -1,4 +1,4 @@
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { FC, memo } from 'react';
 
 import styles from './banner.module.scss';

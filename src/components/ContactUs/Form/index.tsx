@@ -3,8 +3,7 @@
 import { emailValidator, messagValidator, usernameValidator } from '@constants';
 import { ENV } from '@constants/data';
 import emailjs from '@emailjs/browser';
-import { Button } from '@ui/Button';
-import { Input } from '@ui/Input';
+import { Button, Input } from '@ui';
 import { ChangeEvent, FC, FormEvent, memo, useCallback, useEffect, useState } from 'react';
 import { ValidationError } from 'yup';
 

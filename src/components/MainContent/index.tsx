@@ -1,6 +1,5 @@
 import { Routes } from '@appTypes/enums';
-import { Button } from '@ui/Button';
-import { Preview } from '@ui/Preview';
+import { Button, Preview } from '@ui';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 

@@ -1,6 +1,6 @@
 import { IUser } from '@appTypes';
 import { Links } from '@components/Links';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo } from 'react';
 

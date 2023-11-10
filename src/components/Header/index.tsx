@@ -7,7 +7,7 @@ import { BurgerMenu } from '@components/Burger';
 import { Navigation } from '@components/Navigation';
 import { useDispatchTyped, useSelectorTyped } from '@hooks/redux';
 import { setLanguage, setPopup } from '@reducers/app';
-import { Button } from '@ui/Button';
+import { Button } from '@ui';
 import { setPageScroll } from '@utils';
 import Link from 'next/link';
 import { FC, useEffect, useMemo } from 'react';

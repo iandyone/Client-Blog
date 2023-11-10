@@ -1,7 +1,7 @@
 import { imagePlaceholder } from '@constants/animations';
 import image1 from '@public/images/aboutPage/01.jpg';
 import image2 from '@public/images/aboutPage/02.jpg';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo } from 'react';
 
