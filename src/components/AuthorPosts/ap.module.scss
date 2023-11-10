@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   padding: 96px 0;
 
   @media (max-width: $TABLET) {
@@ -9,7 +10,9 @@
 
 .container {
   @extend %container;
+
   @extend %flex-column;
+
   max-width: 1100px;
   row-gap: 64px;
 

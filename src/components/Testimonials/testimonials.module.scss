@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   background-color: $lightYellow;
 
   @media (max-width: $TABLET_MEDIUM) {
@@ -9,7 +10,9 @@
 
 .container {
   @extend %container;
+
   @extend %flex-between;
+
   align-items: flex-start;
 
   @media (max-width: $DESKTOP_MEDIUM) {
@@ -19,8 +22,9 @@
 }
 
 .testimonialsClass {
-  flex: 1 1 50%;
   @extend %flex-center;
+
+  flex: 1 1 50%;
   justify-content: flex-start;
   padding: 80px;
   align-self: center;
@@ -52,6 +56,7 @@
 
 .slider {
   @extend %flex-center;
+
   justify-content: flex-start;
   flex: 1 1 50%;
   border-left: 1px solid rgba($color: $mediumGray, $alpha: 0.4);

@@ -16,11 +16,14 @@
 
 .container {
   @extend %container;
+
   @extend %flex-center;
+
   align-items: flex-start;
 }
 .content {
   @extend %flex-column;
+
   align-items: flex-start;
   row-gap: 24px;
 
@@ -31,6 +34,7 @@
 
 .subtitle {
   @extend %text;
+
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -43,6 +47,7 @@
 
 .title {
   @extend %text;
+
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
@@ -59,5 +64,6 @@
 
 .description {
   @extend %text;
+
   max-width: 600px;
 }

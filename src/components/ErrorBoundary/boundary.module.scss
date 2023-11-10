@@ -1,6 +1,3 @@
-@import '@styles/variables.scss';
-@import '@styles/templates.scss';
-
 .container {
   display: flex;
   flex-direction: column;
@@ -8,6 +5,7 @@
   row-gap: 20px;
   color: $black;
 }
+
 .title {
   font-size: 20px;
 }

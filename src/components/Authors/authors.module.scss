@@ -1,11 +1,14 @@
 .wrapper {
   @extend %wrapper;
+
   height: 100%;
 }
 
 .container {
   @extend %container;
+
   @extend %flex-column;
+
   row-gap: 48px;
 
   @media (max-width: $TABLET) {
@@ -19,6 +22,7 @@
 
 .usersClass {
   @extend %grid;
+
   @media (max-width: $DESKTOP_MEDIUM) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;

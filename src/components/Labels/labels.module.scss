@@ -4,7 +4,9 @@
 
 .container {
   @extend %container;
+
   @extend %flex-column;
+
   row-gap: 4px;
 
   @media (max-width: $TABLET_SMALL) {
@@ -25,6 +27,7 @@
 
 .list {
   @extend %flex-between;
+
   align-items: center;
   gap: 20px;
 

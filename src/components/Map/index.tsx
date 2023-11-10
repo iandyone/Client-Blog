@@ -1,16 +1,15 @@
 'use client';
 
 import mapboxgl from 'mapbox-gl';
-import { FC, useEffect, useRef } from 'react';
+import { FC, memo, useEffect, useRef } from 'react';
 
 import styles from './map.module.scss';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
 
 const { wrapper, container } = styles;
 
-export const Map: FC = () => {
+const MapComponent: FC = () => {
   const mapRef = useRef(null);
 
   useEffect(() => {
@@ -33,3 +32,5 @@ export const Map: FC = () => {
     </section>
   );
 };
+
+export const Map = memo(MapComponent);

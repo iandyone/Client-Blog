@@ -6,7 +6,9 @@ $width: 850px;
 
 .container {
   @extend %container;
+
   @extend %flex-column;
+
   row-gap: 64px;
 
   @media (max-width: $TABLET) {

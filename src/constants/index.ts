@@ -4,7 +4,13 @@ export const TAB_TITLE = 'Modsen Client Blog';
 
 export const emailValidator = string()
   .email('Must be a valid email')
-  .min(10, 'Email must be at least 10 characters long');
+  .test('is-valid-email', 'Invalid email address', (value) => {
+    if (!value) return true;
+    const regex = /@\S+\.\S{2,}$/;
+    return regex.test(value);
+  })
+  .min(10, 'Email must be at least 10 characters long')
+  .required('Email is required');
 
 export const messagValidator = string().min(10, 'Message must be at least 10 characters long');
 

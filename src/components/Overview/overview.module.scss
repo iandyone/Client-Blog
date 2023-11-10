@@ -4,7 +4,9 @@
 
 .container {
   @extend %container;
+
   @extend %flex-between;
+
   align-items: flex-start;
   gap: 32px;
 

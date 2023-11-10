@@ -1,11 +1,13 @@
 .wrapper {
   @extend %flex-center;
+
   justify-content: flex-start;
   background-color: $lightGray;
   transition: $transition;
   padding: 40px 28px;
 
   @include hoverCard($lightYellow);
+
   @extend %active;
 
   @media (max-width: $DESKTOP_MEDIUM) {
@@ -29,6 +31,7 @@
 .positionClass {
   margin-bottom: 20px;
 }
+
 .linksClass {
   column-gap: 16px;
 }
