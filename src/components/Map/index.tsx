@@ -7,8 +7,6 @@ import styles from './map.module.scss';
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAP_TOKEN;
 
-const { wrapper, container } = styles;
-
 const MapComponent: FC = () => {
   const mapRef = useRef(null);
 
@@ -27,8 +25,8 @@ const MapComponent: FC = () => {
   }, []);
 
   return (
-    <section className={wrapper} data-testid='map-component'>
-      <div className={container} ref={mapRef} />
+    <section className={styles.wrapper} data-testid='map-component'>
+      <div className={styles.container} ref={mapRef} />
     </section>
   );
 };

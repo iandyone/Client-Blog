@@ -8,17 +8,17 @@ import styles from './post.module.scss';
 import { IPostProps } from './types';
 
 const imageStyles: CSSProperties = { objectFit: 'cover', height: 'auto' };
-const { wrapper, head, text, image } = styles;
 const fontSen = Sen({ subsets: ['latin'] });
 
-const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, body = true }) => {
+const PostComponent: FC<IPostProps> = (props) => {
+  const { post, wrapperClassName, media = true, body = true } = props;
   const { preview, author, date, title, content } = post;
 
   return (
-    <article className={`${wrapper} ${wrapperClassName}`}>
+    <article className={`${styles.wrapper} ${wrapperClassName}`}>
       {media && (
         <Image
-          className={image}
+          className={styles.image}
           alt='post preview'
           src={preview}
           style={imageStyles}
@@ -26,8 +26,8 @@ const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, b
         />
       )}
       {date && author && <Credentials author={author} date={date} />}
-      <h3 className={`${head} ${fontSen.className}`}>{title}</h3>
-      {body && <p className={text}>{content}</p>}
+      <h3 className={`${styles.head} ${fontSen.className}`}>{title}</h3>
+      {body && <p className={styles.text}>{content}</p>}
     </article>
   );
 };

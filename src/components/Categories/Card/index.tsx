@@ -6,17 +6,17 @@ import { FC, memo } from 'react';
 import styles from './card.module.scss';
 import { ICategoryCardProps } from './types';
 
-const { wrapper, imageClass, titleClass, text } = styles;
+const CardElement: FC<ICategoryCardProps> = (props) => {
+  const { body, icon, title, href, lang, testID } = props;
 
-const CardElement: FC<ICategoryCardProps> = ({ body, icon, title, href, lang, testID }) => {
   return (
     <Link href={`/${lang}/${href}`}>
-      <article className={wrapper} data-testid={testID}>
-        <div className={imageClass}>
+      <article className={styles.wrapper} data-testid={testID}>
+        <div className={styles.imageClass}>
           <Image src={icon} alt={title} />
         </div>
-        <Title className={titleClass}>{title}</Title>
-        <p className={text}>{body}</p>
+        <Title className={styles.titleClass}>{title}</Title>
+        <p className={styles.text}>{body}</p>
       </article>
     </Link>
   );

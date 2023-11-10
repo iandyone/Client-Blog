@@ -4,11 +4,10 @@ import { FC, memo } from 'react';
 import styles from './title.module.scss';
 import { ITitleProps } from './types';
 
-const { title } = styles;
 const fontSen = Sen({ subsets: ['latin'] });
 
 const TitleComponent: FC<ITitleProps> = ({ children, className, testID }) => {
-  const titleClassName = `${className} ${title} ${fontSen.className}`;
+  const titleClassName = `${className} ${styles.title} ${fontSen.className}`;
 
   return (
     <h2 className={titleClassName} data-testid={testID}>

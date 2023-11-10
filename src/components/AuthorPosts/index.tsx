@@ -5,15 +5,13 @@ import { FC, memo } from 'react';
 import styles from './ap.module.scss';
 import { IAuthorPostsProps } from './types';
 
-const { wrapper, container, titleClass } = styles;
-
 export const AuthorPostsComponent: FC<IAuthorPostsProps> = ({ data, posts }) => {
   const { title } = data;
 
   return (
-    <section className={wrapper} data-testid='author-posts-component'>
-      <div className={container}>
-        <Title className={titleClass}>{title}</Title>
+    <section className={styles.wrapper} data-testid='author-posts-component'>
+      <div className={styles.container}>
+        <Title className={styles.titleClass}>{title}</Title>
         <Digest digests={posts} />
       </div>
     </section>

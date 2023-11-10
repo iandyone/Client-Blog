@@ -10,19 +10,12 @@ import { ValidationError } from 'yup';
 import styles from './footerForm.module.scss';
 import { IFooterFormProps } from './types';
 
-const { form, container, button } = styles;
 const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
 const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
 const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
 
-export const Form: FC<IFooterFormProps> = ({
-  buttonText,
-  placeholder,
-  emailSuccessLabel,
-  emailMessage,
-  emailSender,
-  errorMessage,
-}) => {
+export const Form: FC<IFooterFormProps> = (props) => {
+  const { buttonText, placeholder, emailSuccessLabel, emailMessage, emailSender, errorMessage } = props;
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
   const [emailSuccess, setemailSuccess] = useState(null);
@@ -75,8 +68,8 @@ export const Form: FC<IFooterFormProps> = ({
   }, []);
 
   return (
-    <form className={form} onSubmit={handlerOnSubmit} data-testid='footer-emailer'>
-      <div className={container}>
+    <form className={styles.form} onSubmit={handlerOnSubmit} data-testid='footer-emailer'>
+      <div className={styles.container}>
         <Input
           handlerChange={handlerOnChange}
           labelError={error}
@@ -87,7 +80,7 @@ export const Form: FC<IFooterFormProps> = ({
           type='email'
         />
       </div>
-      <Button className={button}>{buttonText}</Button>
+      <Button className={styles.button}>{buttonText}</Button>
     </form>
   );
 };

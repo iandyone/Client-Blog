@@ -176,6 +176,22 @@ export const testimonials: ITestimonials[] = [
     title:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
+  {
+    id: 2,
+    name: 'Jonathan Vallem',
+    location: 'New york, USA',
+    avatar: user9,
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    id: 3,
+    name: 'Jonathan Vallem',
+    location: 'New york, USA',
+    avatar: user9,
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
 ];
 
 export const posts: IPost[] = [

@@ -6,15 +6,13 @@ import { ITagProps } from './types';
 
 const fontSen = Sen({ subsets: ['latin'], weight: ['700'] });
 
-const { tagClass } = styles;
-
 const TagComponent: FC<ITagProps> = ({ onClick, tag }) => {
   function handlerOnClick() {
     onClick(tag);
   }
 
   return (
-    <span className={` ${tagClass} ${fontSen.className}`} onClick={handlerOnClick}>
+    <span className={` ${styles.tagClass} ${fontSen.className}`} onClick={handlerOnClick}>
       {tag}
     </span>
   );

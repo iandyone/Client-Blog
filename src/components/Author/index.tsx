@@ -9,8 +9,6 @@ import { FC, memo } from 'react';
 import styles from './author.module.scss';
 import { IAuthorProps } from './types';
 
-const { wrapper, container, contentClass, titleClass, aboutText, linksClass, decor } = styles;
-
 const AuthorComponent: FC<IAuthorProps> = ({ data, author }) => {
   const { title, about } = data;
   const user = author ?? defaulUser;
@@ -19,16 +17,16 @@ const AuthorComponent: FC<IAuthorProps> = ({ data, author }) => {
   const titleText = title.replace('{{name}}', name);
 
   return (
-    <section className={wrapper} data-testid='author-component'>
-      <div className={container}>
+    <section className={styles.wrapper} data-testid='author-component'>
+      <div className={styles.container}>
         <Image src={avatar} alt='author' placeholder={`data:image/${imagePlaceholder}`} priority />
-        <div className={contentClass}>
-          <Title className={titleClass} testID='author-title'>
+        <div className={styles.contentClass}>
+          <Title className={styles.titleClass} testID='author-title'>
             {titleText}
           </Title>
-          <p className={aboutText}>{about}</p>
-          <Links links={links} className={linksClass} />
-          <Decor className={decor} />
+          <p className={styles.aboutText}>{about}</p>
+          <Links links={links} className={styles.linksClass} />
+          <Decor className={styles.decor} />
         </div>
       </div>
     </section>

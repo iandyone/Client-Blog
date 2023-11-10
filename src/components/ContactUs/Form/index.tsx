@@ -10,20 +10,14 @@ import { ValidationError } from 'yup';
 import styles from './form.module.scss';
 import { IFormProps } from './types';
 
-const { wrapper, inputClass, textareaClass, buttonClass } = styles;
-
 const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
 const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
 const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
 
-const FormComponent: FC<IFormProps> = ({
-  button,
-  emailPlaceholder,
-  messagePlaceholder,
-  namePlaceholder,
-  successMessage,
-  sendingMessage,
-}) => {
+const FormComponent: FC<IFormProps> = (props) => {
+  const { button, emailPlaceholder, messagePlaceholder, namePlaceholder, successMessage, sendingMessage } =
+    props;
+
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState(null);
   const [email, setEmail] = useState('');
@@ -150,7 +144,7 @@ const FormComponent: FC<IFormProps> = ({
   }, []);
 
   return (
-    <form className={wrapper} onSubmit={handlerOnSubmit}>
+    <form className={styles.wrapper} onSubmit={handlerOnSubmit}>
       <Input
         name='usename'
         handlerChange={handlerOnChangeName}
@@ -159,7 +153,7 @@ const FormComponent: FC<IFormProps> = ({
         type='text'
         placeholder={namePlaceholder}
         value={name}
-        className={inputClass}
+        className={styles.inputClass}
         testID='contact-input-username'
         requred
       />
@@ -171,12 +165,12 @@ const FormComponent: FC<IFormProps> = ({
         type='email'
         placeholder={emailPlaceholder}
         value={email}
-        className={inputClass}
+        className={styles.inputClass}
         testID='contact-input-email'
         requred
       />
       <Input
-        className={textareaClass}
+        className={styles.textareaClass}
         placeholder={messagePlaceholder}
         name='message'
         value={message}
@@ -187,7 +181,7 @@ const FormComponent: FC<IFormProps> = ({
         requred
         textarea
       />
-      <Button className={buttonClass} testID='contact-submit-button'>
+      <Button className={styles.buttonClass} testID='contact-submit-button'>
         {statusMessage}
       </Button>
     </form>

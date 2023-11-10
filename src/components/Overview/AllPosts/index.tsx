@@ -7,22 +7,20 @@ import { FC, memo, useMemo } from 'react';
 import styles from './allPosts.module.scss';
 import { IAllPostsProps } from './types';
 
-const { wrapper, header, link, list, postItem } = styles;
-
 const AllPostsCompoennt: FC<IAllPostsProps> = ({ posts, lintText, titleText }) => {
   const postList = useMemo(() => posts.slice(0, 4), [posts]);
 
   return (
-    <article className={wrapper}>
-      <div className={header}>
+    <article className={styles.wrapper}>
+      <div className={styles.header}>
         <Title>{titleText}</Title>
-        <Link href={Routes.BLOG} className={link} data-testid='all-posts-button'>
+        <Link href={Routes.BLOG} className={styles.link} data-testid='all-posts-button'>
           {lintText}
         </Link>
       </div>
-      <ul className={list}>
+      <ul className={styles.list}>
         {postList.map((post) => (
-          <li key={post.id} className={postItem}>
+          <li key={post.id} className={styles.postItem}>
             <Post post={post} media={false} body={false} />
           </li>
         ))}
