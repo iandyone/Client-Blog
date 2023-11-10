@@ -1,3 +1,4 @@
+import { imagePlaceholder } from '@constants/animations';
 import image1 from '@public/images/aboutPage/01.jpg';
 import image2 from '@public/images/aboutPage/02.jpg';
 import { Title } from '@ui/Title';
@@ -22,7 +23,12 @@ const TeamComponent: FC<ITeamProps> = ({ data }) => {
             <p className={subtitle}>{content1}</p>
           </div>
           <div className={imageContainer}>
-            <Image className={image} src={image1} alt='content-image-1' />
+            <Image
+              className={image}
+              src={image1}
+              alt='content-image-1'
+              placeholder={`data:image/${imagePlaceholder}`}
+            />
           </div>
         </article>
         <article className={body}>
@@ -32,7 +38,12 @@ const TeamComponent: FC<ITeamProps> = ({ data }) => {
             <p className={subtitle}>{content2}</p>
           </div>
           <div className={imageContainer}>
-            <Image className={image} src={image2} alt='content-image-2' />
+            <Image
+              className={image}
+              src={image2}
+              alt='content-image-2'
+              placeholder={`data:image/${imagePlaceholder}`}
+            />
           </div>
         </article>
       </div>

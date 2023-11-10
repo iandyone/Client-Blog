@@ -1,5 +1,6 @@
 'use client';
 
+import { imagePlaceholder } from '@constants/animations';
 import prevSlide from '@public/images/icons/arrowLeft.svg';
 import nextSlide from '@public/images/icons/arrowRight.svg';
 import Image from 'next/image';
@@ -69,6 +70,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
             src={prevSlide}
             alt='next'
             onClick={handlerPrevSlide}
+            placeholder={`data:image/${imagePlaceholder}`}
             data-testid='carousel-button-next'
           />
           <Image
@@ -76,6 +78,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
             src={nextSlide}
             alt='prev'
             onClick={handlerNextSlide}
+            placeholder={`data:image/${imagePlaceholder}`}
             data-testid='carousel-button-prev'
           />
         </div>

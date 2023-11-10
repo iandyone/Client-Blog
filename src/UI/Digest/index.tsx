@@ -2,6 +2,7 @@
 
 import { Routes } from '@appTypes/enums';
 import { MainContent } from '@components/MainContent';
+import { imagePlaceholder } from '@constants/animations';
 import { digest } from '@constants/data';
 import { useSelectorTyped } from '@hooks/redux';
 import Image from 'next/image';
@@ -84,7 +85,12 @@ const DigestConponent: FC<IDigestProps> = ({
             key={id}
             data-testid='digest-post'>
             <div className={`${column && columnClass} ${imageContainer}`}>
-              <Image className={image} src={preview} alt={label} />
+              <Image
+                className={image}
+                src={preview}
+                alt={label}
+                placeholder={`data:image/${imagePlaceholder}`}
+              />
             </div>
             <div className={content}>
               <MainContent body={body} label={label} title={title} classNames={classNames} />

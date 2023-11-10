@@ -1,5 +1,6 @@
 import { Category } from '@appTypes/enums';
 import { ReadNext } from '@components/BlogPost/ReadNext';
+import { imagePlaceholder } from '@constants/animations';
 import { defaultDigest, testimonials } from '@constants/data';
 import poster from '@public/images/blogPostPage/poster.jpg';
 import startupIcon from '@public/images/homePage/startup.svg';
@@ -50,13 +51,23 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
             />
             <Title className={headerClass}>{postTitle ?? header}</Title>
             <div className={labelClass}>
-              <Image src={labelIcon ?? startupIcon} alt='startup'></Image>
+              <Image
+                src={labelIcon ?? startupIcon}
+                alt='startup'
+                placeholder={`data:image/${imagePlaceholder}`}
+              />
               <Title className={labelTitle} testID='blog-post-label'>
                 {postLabel ?? label}
               </Title>
             </div>
           </div>
-          <Image className={posterClass} src={preview ?? poster} alt='poster' priority />
+          <Image
+            className={posterClass}
+            src={preview ?? poster}
+            alt='poster'
+            placeholder={`data:image/${imagePlaceholder}`}
+            priority
+          />
           <div className={`${contenContainer} ${postContainer}`}>
             <Title className={titleClass}>{title}</Title>
             <p className={contentClass}>{content}</p>

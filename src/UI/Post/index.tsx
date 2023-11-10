@@ -1,3 +1,4 @@
+import { imagePlaceholder } from '@constants/animations';
 import { Credentials } from '@ui/Credentials';
 import { Sen } from 'next/font/google';
 import Image from 'next/image';
@@ -15,7 +16,15 @@ const PostComponent: FC<IPostProps> = ({ post, wrapperClassName, media = true, b
 
   return (
     <article className={`${wrapper} ${wrapperClassName}`}>
-      {media && <Image className={image} alt='post preview' src={preview} style={imageStyles} />}
+      {media && (
+        <Image
+          className={image}
+          alt='post preview'
+          src={preview}
+          style={imageStyles}
+          placeholder={`data:image/${imagePlaceholder}`}
+        />
+      )}
       {date && author && <Credentials author={author} date={date} />}
       <h3 className={`${head} ${sen.className}`}>{title}</h3>
       {body && <p className={text}>{content}</p>}
