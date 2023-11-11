@@ -1,5 +1,6 @@
 .wrapper {
   @extend %flex-column;
+
   row-gap: 6px;
   margin-bottom: 20px;
 }
@@ -12,9 +13,10 @@
   border: 1px solid $mediumGray;
   transition: $transition;
   height: auto;
-
   color: $black;
+
   @extend %text;
+
   @extend %inputActive;
 }
 

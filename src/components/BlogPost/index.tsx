@@ -1,10 +1,10 @@
 import { Category } from '@appTypes/enums';
 import { ReadNext } from '@components/BlogPost/ReadNext';
+import { imagePlaceholder } from '@constants/animations';
 import { defaultDigest, testimonials } from '@constants/data';
 import poster from '@public/images/blogPostPage/poster.jpg';
 import startupIcon from '@public/images/homePage/startup.svg';
-import { Title } from '@ui/Title';
-import { User } from '@ui/User';
+import { Title, User } from '@ui';
 import { Sen } from 'next/font/google';
 import Image from 'next/image';
 import { FC, memo } from 'react';
@@ -12,23 +12,7 @@ import { FC, memo } from 'react';
 import styles from './bp.module.scss';
 import { IBlogPostProps } from './types';
 
-const sen = Sen({ subsets: ['latin'] });
-
-const {
-  wrapper,
-  container,
-  contenContainer,
-  headerClass,
-  labelClass,
-  labelTitle,
-  posterClass,
-  titleClass,
-  postContainer,
-  contentClass,
-  listContainer,
-  listItem,
-  avatarClass,
-} = styles;
+const fontSen = Sen({ subsets: ['latin'] });
 
 const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
   const { user, date, header, title, content, label, list, readNext } = data;
@@ -41,40 +25,46 @@ const BlogPostComponent: FC<IBlogPostProps> = ({ data, digest }) => {
 
   return (
     <>
-      <section className={wrapper} data-testid='blog-post-component'>
-        <div className={container}>
-          <div className={contenContainer}>
+      <section className={styles.wrapper} data-testid='blog-post-component'>
+        <div className={styles.container}>
+          <div className={styles.contenContainer}>
             <User
               user={{ avatar: postAvatar ?? avatar, location: date, name: name ?? user }}
-              iconClassName={avatarClass}
+              iconClassName={styles.avatarClass}
             />
-            <Title className={headerClass}>{postTitle ?? header}</Title>
-            <div className={labelClass}>
-              <Image src={labelIcon ?? startupIcon} alt='startup'></Image>
-              <Title className={labelTitle} testID='blog-post-label'>
+            <Title className={styles.headerClass}>{postTitle ?? header}</Title>
+            <div className={styles.labelClass}>
+              <Image src={labelIcon ?? startupIcon} alt='startup' />
+              <Title className={styles.labelTitle} testID='blog-post-label'>
                 {postLabel ?? label}
               </Title>
             </div>
           </div>
-          <Image className={posterClass} src={preview ?? poster} alt='poster' priority />
-          <div className={`${contenContainer} ${postContainer}`}>
-            <Title className={titleClass}>{title}</Title>
-            <p className={contentClass}>{content}</p>
+          <Image
+            className={styles.posterClass}
+            src={preview ?? poster}
+            alt='poster'
+            placeholder={`data:image/${imagePlaceholder}`}
+            priority
+          />
+          <div className={`${styles.contenContainer} ${styles.postContainer}`}>
+            <Title className={styles.titleClass}>{title}</Title>
+            <p className={styles.contentClass}>{content}</p>
           </div>
-          <div className={`${contenContainer} ${postContainer}`}>
-            <Title className={titleClass}>{title}</Title>
-            <p className={contentClass}>{content}</p>
-            <p className={contentClass}>{content}</p>
-            <div className={listContainer}>
-              <h4 className={`${listItem} ${sen.className}`}>{item1}</h4>
-              <h4 className={`${listItem} ${sen.className}`}>{item2}</h4>
-              <h4 className={`${listItem} ${sen.className}`}>{item3}</h4>
+          <div className={`${styles.contenContainer} ${styles.postContainer}`}>
+            <Title className={styles.titleClass}>{title}</Title>
+            <p className={styles.contentClass}>{content}</p>
+            <p className={styles.contentClass}>{content}</p>
+            <div className={styles.listContainer}>
+              <h4 className={`${styles.listItem} ${fontSen.className}`}>{item1}</h4>
+              <h4 className={`${styles.listItem} ${fontSen.className}`}>{item2}</h4>
+              <h4 className={`${styles.listItem} ${fontSen.className}`}>{item3}</h4>
             </div>
-            <p className={contentClass}>{content}</p>
+            <p className={styles.contentClass}>{content}</p>
           </div>
-          <div className={`${contenContainer} ${postContainer}`}>
-            <Title className={titleClass}>{title}</Title>
-            <p className={contentClass}>{content}</p>
+          <div className={`${styles.contenContainer} ${styles.postContainer}`}>
+            <Title className={styles.titleClass}>{title}</Title>
+            <p className={styles.contentClass}>{content}</p>
           </div>
         </div>
       </section>

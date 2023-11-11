@@ -7,11 +7,9 @@ import { FC, MouseEvent } from 'react';
 
 import styles from './burger.module.scss';
 
-const { container, button, line, active } = styles;
-
 export const BurgerMenu: FC = () => {
   const { burger } = useSelectorTyped((store) => store.app);
-  const lineClassName = burger ? `${line} ${active}` : line;
+  const lineClassName = burger ? `${styles.line} ${styles.active}` : styles.line;
   const dispatch = useDispatchTyped();
 
   function handlerOnClickButton() {
@@ -24,8 +22,8 @@ export const BurgerMenu: FC = () => {
   }
 
   return (
-    <div className={container} onClick={handlerOnClickMenu} data-testid='burger'>
-      <div className={button} onClick={handlerOnClickButton}>
+    <div className={styles.container} onClick={handlerOnClickMenu} data-testid='burger'>
+      <div className={styles.button} onClick={handlerOnClickButton}>
         <span className={lineClassName} />
         <span className={lineClassName} />
         <span className={lineClassName} />

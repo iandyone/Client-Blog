@@ -1,7 +1,7 @@
 import { Routes } from '@appTypes/enums';
+import { imagePlaceholder } from '@constants/animations';
 import bgImage from '@public/images/homePage/peoples.jpg';
-import { Button } from '@ui/Button';
-import { Preview } from '@ui/Preview';
+import { Button, Preview } from '@ui';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CSSProperties, FC } from 'react';
@@ -9,11 +9,10 @@ import { CSSProperties, FC } from 'react';
 import { IWhyWeStartedProps } from './types';
 import styles from './wws.module.scss';
 
-const { wrapper, container, body, title, button, image } = styles;
-
 const classNames = {
-  titleClassName: title,
+  titleClassName: styles.title,
 };
+
 const imageStyles: CSSProperties = {
   objectFit: 'cover',
   height: 'auto',
@@ -25,13 +24,19 @@ export const WhyWeStarted: FC<IWhyWeStartedProps> = ({ data }) => {
   const { bodyText, buttonText, labelText, titleText } = data;
 
   return (
-    <section className={wrapper} data-testid='why-we-started-component'>
-      <div className={container}>
-        <Image src={bgImage} alt={'why we started image'} style={imageStyles} className={image} />
-        <div className={body}>
+    <section className={styles.wrapper} data-testid='why-we-started-component'>
+      <div className={styles.container}>
+        <Image
+          src={bgImage}
+          alt={'why we started image'}
+          style={imageStyles}
+          className={styles.image}
+          placeholder={`data:image/${imagePlaceholder}`}
+        />
+        <div className={styles.body}>
           <Preview label={labelText} title={titleText} body={bodyText} classNames={classNames} />
           <Link href={Routes.ABOUT}>
-            <Button className={button} testID='why-we-started-button'>
+            <Button className={styles.button} testID='why-we-started-button'>
               {buttonText}
             </Button>
           </Link>

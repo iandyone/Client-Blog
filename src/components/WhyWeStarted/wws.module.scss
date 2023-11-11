@@ -4,6 +4,7 @@
 
 .container {
   @extend %container;
+
   position: relative;
 }
 
@@ -15,6 +16,7 @@
   max-width: 706px;
   padding: 80px;
   row-gap: 32px;
+
   @extend %flex-column;
 
   @media (max-width: $TABLET) {
@@ -25,6 +27,7 @@
 
 .title {
   @extend %title;
+
   margin-bottom: 16px;
 
   @media (max-width: $TABLET_MEDIUM) {

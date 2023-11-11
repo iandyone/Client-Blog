@@ -1,16 +1,15 @@
 'use client';
 
 import { Category, SeatchType, Tags } from '@appTypes/enums';
+import { Digest } from '@components/Digest';
 import { digest } from '@constants/data';
-import { Digest } from '@ui/Digest';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { FC, memo, useCallback, useEffect, useState } from 'react';
 
 import { Categories } from './Categories';
 import styles from './feed.module.scss';
 import { IFeedProps } from './types';
 
-const { wrapper, container, digestClass } = styles;
 const { CATEGORY, SEARCH, TAG } = SeatchType;
 
 const FeedComponent: FC<IFeedProps> = ({ data, currentCategory }) => {
@@ -51,9 +50,9 @@ const FeedComponent: FC<IFeedProps> = ({ data, currentCategory }) => {
   }, [getDigest, category, searchType, tag]);
 
   return (
-    <section className={wrapper} data-testid='feed-component'>
-      <div className={container}>
-        {digestList.length > 0 && <Digest containerClass={digestClass} digests={digestList} />}
+    <section className={styles.wrapper} data-testid='feed-component'>
+      <div className={styles.container}>
+        {digestList.length > 0 && <Digest containerClass={styles.digestClass} digests={digestList} />}
         {digestList.length === 0 && <Title>{noResults}</Title>}
         <Categories
           data={data}

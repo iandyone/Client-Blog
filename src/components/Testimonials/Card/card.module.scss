@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   background-color: $lightYellow;
   padding: 0;
   height: 100%;
@@ -7,6 +8,7 @@
 
 .container {
   @extend %flex-column;
+
   justify-content: space-between;
   row-gap: 120px;
 

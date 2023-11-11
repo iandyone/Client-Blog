@@ -1,22 +1,13 @@
 'use client';
 
-import React, { memo, ReactNode, useEffect, useState } from 'react';
+import { FC, memo, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-interface PortalProps {
-  children: ReactNode;
-  id: string;
-}
+import { PortalProps } from './types';
 
-const Portal: React.FC<PortalProps> = ({ children, id = 'Portal' }) => {
-  const [container] = useState<HTMLElement>(getInitialState);
-
-  function getInitialState() {
-    const container = document.createElement('div');
-    container.setAttribute('id', id);
-
-    return container;
-  }
+const Portal: FC<PortalProps> = ({ children, id = 'Portal' }) => {
+  const container = document.createElement('div');
+  container.setAttribute('id', id);
 
   useEffect(() => {
     const appElement = document.querySelector('.app');

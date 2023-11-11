@@ -1,29 +1,24 @@
 'use client';
 
 import { emailValidator, messagValidator, usernameValidator } from '@constants';
+import { ENV } from '@constants/data';
 import emailjs from '@emailjs/browser';
-import { Button } from '@ui/Button';
-import { Input } from '@ui/Input';
+import { Button, Input } from '@ui';
 import { ChangeEvent, FC, FormEvent, memo, useCallback, useEffect, useState } from 'react';
 import { ValidationError } from 'yup';
 
 import styles from './form.module.scss';
 import { IFormProps } from './types';
 
-const { wrapper, inputClass, textareaClass, buttonClass } = styles;
+const emailServiceKey = ENV.EMAIL_KEY ?? '';
+const emailServiceID = ENV.EMAIL_SERVICE ?? '';
+const emailTemplateID = ENV.EMAIL_TEMPLATE ?? '';
+('');
 
-const emailServiceKey = process.env.NEXT_PUBLIC_EMAILJS_KEY ?? '';
-const emailServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '';
-const emailTemplateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? '';
+const FormComponent: FC<IFormProps> = (props) => {
+  const { button, emailPlaceholder, messagePlaceholder, namePlaceholder, successMessage, sendingMessage } =
+    props;
 
-const FormComponent: FC<IFormProps> = ({
-  button,
-  emailPlaceholder,
-  messagePlaceholder,
-  namePlaceholder,
-  successMessage,
-  sendingMessage,
-}) => {
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState(null);
   const [email, setEmail] = useState('');
@@ -150,7 +145,7 @@ const FormComponent: FC<IFormProps> = ({
   }, []);
 
   return (
-    <form className={wrapper} onSubmit={handlerOnSubmit}>
+    <form className={styles.wrapper} onSubmit={handlerOnSubmit}>
       <Input
         name='usename'
         handlerChange={handlerOnChangeName}
@@ -159,7 +154,7 @@ const FormComponent: FC<IFormProps> = ({
         type='text'
         placeholder={namePlaceholder}
         value={name}
-        className={inputClass}
+        className={styles.inputClass}
         testID='contact-input-username'
         requred
       />
@@ -171,12 +166,12 @@ const FormComponent: FC<IFormProps> = ({
         type='email'
         placeholder={emailPlaceholder}
         value={email}
-        className={inputClass}
+        className={styles.inputClass}
         testID='contact-input-email'
         requred
       />
       <Input
-        className={textareaClass}
+        className={styles.textareaClass}
         placeholder={messagePlaceholder}
         name='message'
         value={message}
@@ -187,7 +182,7 @@ const FormComponent: FC<IFormProps> = ({
         requred
         textarea
       />
-      <Button className={buttonClass} testID='contact-submit-button'>
+      <Button className={styles.buttonClass} testID='contact-submit-button'>
         {statusMessage}
       </Button>
     </form>

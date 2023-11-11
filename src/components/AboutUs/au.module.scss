@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   @media (max-width: $TABLET) {
     padding: 100px 0 40px 0;
   }
@@ -39,7 +40,9 @@
 
 .headerText {
   @extend %text;
+
   @extend %flex-center;
+
   line-height: 175%;
   color: $darkGray;
   max-width: 480px;
@@ -84,7 +87,6 @@
 
 .achievesContainer {
   display: inline-flex;
-
   position: absolute;
   bottom: 0;
   left: 20%;
@@ -104,7 +106,9 @@
 
 .achievesItem {
   @extend %flex-column;
+
   @extend%text;
+
   background: $yellow;
   color: $black;
   line-height: 175%;
@@ -146,6 +150,7 @@
 
 .contentText {
   @extend %text;
+
   color: $mediumGray;
   line-height: 175%;
 

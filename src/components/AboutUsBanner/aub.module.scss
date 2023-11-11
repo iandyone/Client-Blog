@@ -1,10 +1,13 @@
 .wrapper {
   @extend %wrapper;
+
   background-color: $lavender;
 }
 .container {
   @extend %container;
+
   @extend %flex-between;
+
   align-items: flex-start;
   column-gap: 82px;
 
@@ -31,7 +34,9 @@
 
 .link {
   @extend %hover;
+
   @extend %active;
+
   transition: $transition;
   color: $purple;
   font-size: 18px;

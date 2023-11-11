@@ -4,9 +4,7 @@ import { FC, memo } from 'react';
 import styles from './tag.module.scss';
 import { ITagProps } from './types';
 
-const sen = Sen({ subsets: ['latin'], weight: ['700'] });
-
-const { tagClass } = styles;
+const fontSen = Sen({ subsets: ['latin'], weight: ['700'] });
 
 const TagComponent: FC<ITagProps> = ({ onClick, tag }) => {
   function handlerOnClick() {
@@ -14,7 +12,7 @@ const TagComponent: FC<ITagProps> = ({ onClick, tag }) => {
   }
 
   return (
-    <span className={` ${tagClass} ${sen.className}`} onClick={handlerOnClick}>
+    <span className={` ${styles.tagClass} ${fontSen.className}`} onClick={handlerOnClick}>
       {tag}
     </span>
   );

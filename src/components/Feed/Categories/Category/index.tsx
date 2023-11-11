@@ -1,27 +1,27 @@
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo } from 'react';
 
 import styles from './cic.module.scss';
 import { ICategoryItemProps } from './types';
 
-const { categoryItemClass, activeClass, imageCotainer, categoryItemTitleClass } = styles;
+const CategoryItemComponent: FC<ICategoryItemProps> = (props) => {
+  const { active, icon, id, title, onClick } = props;
 
-const CategoryItemComponent: FC<ICategoryItemProps> = ({ active, icon, id, title, onClick }) => {
   function handlerOnClick() {
     onClick(title);
   }
 
   return (
     <li
-      className={`${categoryItemClass} ${active && activeClass}`}
+      className={`${styles.categoryItemClass} ${active && styles.activeClass}`}
       key={id}
       onClick={handlerOnClick}
       data-testid='categories-menu-option'>
-      <div className={imageCotainer}>
+      <div className={styles.imageCotainer}>
         <Image src={icon} alt={title} />
       </div>
-      <Title className={categoryItemTitleClass}>{title}</Title>
+      <Title className={styles.categoryItemTitleClass}>{title}</Title>
     </li>
   );
 };

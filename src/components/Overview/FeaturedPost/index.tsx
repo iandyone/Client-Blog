@@ -1,23 +1,19 @@
 import { Routes } from '@appTypes/enums';
-import { Button } from '@ui/Button';
-import { Post } from '@ui/Post';
-import { Title } from '@ui/Title';
+import { Button, Post, Title } from '@ui';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 
 import styles from './fp.module.scss';
 import { IFeaturedPostProps } from './types';
 
-const { wrapper, body, title, button } = styles;
-
 const FeaturedPostComponent: FC<IFeaturedPostProps> = ({ post, buttonText, titleText }) => {
   return (
-    <article className={wrapper}>
-      <Title className={title}>{titleText}</Title>
-      <div className={body}>
+    <article className={styles.wrapper}>
+      <Title className={styles.title}>{titleText}</Title>
+      <div className={styles.body}>
         <Post post={post} />
         <Link href={Routes.POST}>
-          <Button className={button} testID='feature-post-button'>
+          <Button className={styles.button} testID='feature-post-button'>
             {buttonText}
           </Button>
         </Link>

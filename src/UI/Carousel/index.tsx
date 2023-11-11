@@ -1,23 +1,20 @@
 'use client';
 
+import { imagePlaceholder } from '@constants/animations';
 import prevSlide from '@public/images/icons/arrowLeft.svg';
 import nextSlide from '@public/images/icons/arrowRight.svg';
 import Image from 'next/image';
-import { Children, cloneElement, FC, useEffect, useRef, useState } from 'react';
+import { Children, cloneElement, FC, useEffect, useMemo, useRef, useState } from 'react';
 
 import styles from './carousel.module.scss';
 import { ICarouselProps } from './types';
 
-const { wrapper, container, windowClass, navigation, button } = styles;
-
 export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
-  const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState<number>(0);
+  const [width, setWidth] = useState<number>(0);
   const windowRef = useRef(null);
-  const [width, setWIdth] = useState<number>(0);
-
-  useEffect(() => {
-    setPages(
+  const pages = useMemo(
+    () =>
       Children.map(children, (child) => {
         return cloneElement(child, {
           style: {
@@ -26,8 +23,8 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
           },
         });
       }),
-    );
-  }, [children]);
+    [children],
+  );
 
   useEffect(() => {
     handleResize();
@@ -40,7 +37,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
 
   function handleResize() {
     const width = windowRef.current.offsetWidth;
-    setWIdth(width);
+    setWidth(width);
     setOffset(0);
   }
 
@@ -58,24 +55,26 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   }
 
   return (
-    <article className={`${wrapper} ${className}`} data-testid='carousel'>
-      <div className={windowClass} ref={windowRef}>
-        <div className={container} style={{ transform: `translateX(${offset}px)` }}>
+    <article className={`${styles.wrapper} ${className}`} data-testid='carousel'>
+      <div className={styles.windowClass} ref={windowRef}>
+        <div className={styles.container} style={{ transform: `translateX(${offset}px)` }}>
           {pages}
         </div>
-        <div className={navigation}>
+        <div className={styles.navigation}>
           <Image
-            className={button}
+            className={styles.button}
             src={prevSlide}
             alt='next'
             onClick={handlerPrevSlide}
+            placeholder={`data:image/${imagePlaceholder}`}
             data-testid='carousel-button-next'
           />
           <Image
-            className={button}
+            className={styles.button}
             src={nextSlide}
             alt='prev'
             onClick={handlerNextSlide}
+            placeholder={`data:image/${imagePlaceholder}`}
             data-testid='carousel-button-prev'
           />
         </div>
