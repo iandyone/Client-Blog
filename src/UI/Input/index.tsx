@@ -40,6 +40,7 @@ export const InputComponent: FC<IInputProps> = (props) => {
         {!textarea && (
           <input
             name={name}
+            id={name}
             type={type}
             value={value}
             onChange={handlerChange as handlerChangeInput}
@@ -53,6 +54,7 @@ export const InputComponent: FC<IInputProps> = (props) => {
         {textarea && (
           <textarea
             name={name}
+            id={name}
             value={value}
             onChange={handlerChange as handlerChangeTextatea}
             onBlur={handlerBlur}

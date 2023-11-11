@@ -13,6 +13,7 @@ import Link from 'next/link';
 import { FC, useEffect, useMemo } from 'react';
 
 import styles from './header.module.scss';
+import { Language } from './Language';
 import { Modal } from './Modal';
 import { IHeaderProps } from './types';
 
@@ -33,7 +34,7 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
 
   useEffect(() => {
     dispatch(setLanguage(lang));
-  }, [dispatch, lang]);
+  }, [lang]);
 
   useEffect(() => {
     setPageScroll(!popup);
@@ -47,6 +48,7 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
         </span>
         <div className={navigationClassName}>
           <Navigation type='short' data={navigation} lang={lang} />
+          <Language lang={lang} />
           <Button onClick={handlerOnClickButton} testID='header-media-button' colored>
             {buttonText}
           </Button>
