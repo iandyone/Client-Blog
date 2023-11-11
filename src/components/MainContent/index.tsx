@@ -22,7 +22,7 @@ const MainContentComponent: FC<IMainContantProps> = (props) => {
   } = props;
 
   return (
-    <div className={`${className} ${styles.wrapper}`}>
+    <div className={`${className && className} ${styles.wrapper}`}>
       <Preview
         body={body}
         header={header}

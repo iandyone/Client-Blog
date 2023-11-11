@@ -4,19 +4,17 @@ import { imagePlaceholder } from '@constants/animations';
 import prevSlide from '@public/images/icons/arrowLeft.svg';
 import nextSlide from '@public/images/icons/arrowRight.svg';
 import Image from 'next/image';
-import { Children, cloneElement, FC, useEffect, useRef, useState } from 'react';
+import { Children, cloneElement, FC, useEffect, useMemo, useRef, useState } from 'react';
 
 import styles from './carousel.module.scss';
 import { ICarouselProps } from './types';
 
 export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
-  const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState<number>(0);
-  const windowRef = useRef(null);
   const [width, setWidth] = useState<number>(0);
-
-  useEffect(() => {
-    setPages(
+  const windowRef = useRef(null);
+  const pages = useMemo(
+    () =>
       Children.map(children, (child) => {
         return cloneElement(child, {
           style: {
@@ -25,8 +23,8 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
           },
         });
       }),
-    );
-  }, [children]);
+    [children],
+  );
 
   useEffect(() => {
     handleResize();
