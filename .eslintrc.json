@@ -35,11 +35,6 @@
     "import/first": "warn",
     "import/newline-after-import": "warn",
     "import/no-duplicates": "error",
-    "react-hooks/exhaustive-deps": [
-      "warn",
-      {
-        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
-      }
-    ]
+    "react-hooks/exhaustive-deps": "off"
   }
 }

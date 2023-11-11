@@ -1,5 +1,6 @@
 .wrapper {
   @extend %wrapper;
+
   padding: 96px 0px 40px 0;
 
   @media (max-width: $TABLET) {
@@ -13,14 +14,16 @@
 
 .container {
   @extend %container;
-  @extend %flex-column;
-  overflow: hidden;
 
+  @extend %flex-column;
+
+  overflow: hidden;
   max-width: 768px;
 }
 
 .header {
   @extend %flex-center;
+
   margin-bottom: 64px;
 
   @media (max-width: $TABLET_SMALL) {
@@ -51,6 +54,7 @@
 .subtitleClass {
   color: $mediumGray;
   text-align: center;
+
   @extend %text;
 }
 
@@ -75,6 +79,7 @@
 
 .bannerContent {
   @extend %flex-column;
+
   display: flex;
   width: 100%;
 
@@ -105,6 +110,7 @@
 .bannerText {
   color: $white;
   opacity: 0.6;
+
   @extend %text;
 
   @media (max-width: $TABLET_SMALL) {

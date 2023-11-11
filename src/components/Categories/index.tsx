@@ -1,20 +1,18 @@
 import { categories } from '@constants/data';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { FC, memo } from 'react';
 
 import { Card } from './Card';
 import styles from './categories.module.scss';
 import { ICategoriesProps } from './types';
 
-const { wrapper, container, header, list } = styles;
-
 const CategoriesComponent: FC<ICategoriesProps> = ({ data, lang }) => {
   const { title } = data;
   return (
-    <section className={wrapper} data-testid='categories-component'>
-      <div className={container}>
-        <Title className={header}>{title}</Title>
-        <ul className={list}>
+    <section className={styles.wrapper} data-testid='categories-component'>
+      <div className={styles.container}>
+        <Title className={styles.header}>{title}</Title>
+        <ul className={styles.list}>
           {categories.map((category) => (
             <Card
               {...category}

@@ -7,16 +7,16 @@ import { BurgerMenu } from '@components/Burger';
 import { Navigation } from '@components/Navigation';
 import { useDispatchTyped, useSelectorTyped } from '@hooks/redux';
 import { setLanguage, setPopup } from '@reducers/app';
-import { Button } from '@ui/Button';
+import { Button } from '@ui';
 import { setPageScroll } from '@utils';
 import Link from 'next/link';
 import { FC, useEffect, useMemo } from 'react';
 
 import styles from './header.module.scss';
+import { Language } from './Language';
 import { Modal } from './Modal';
 import { IHeaderProps } from './types';
 
-const { header, container, logo, navigationClass, active } = styles;
 const { HOME } = Routes;
 
 export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
@@ -24,7 +24,7 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
   const { burger, popup } = useSelectorTyped((store) => store.app);
   const dispatch = useDispatchTyped();
   const navigationClassName = useMemo(
-    () => (burger ? `${navigationClass} ${active}` : navigationClass),
+    () => (burger ? `${styles.navigationClass} ${styles.active}` : styles.navigationClass),
     [burger],
   );
 
@@ -34,20 +34,21 @@ export const Header: FC<IHeaderProps> = ({ data, navigation, lang }) => {
 
   useEffect(() => {
     dispatch(setLanguage(lang));
-  }, [dispatch, lang]);
+  }, [lang]);
 
   useEffect(() => {
     setPageScroll(!popup);
   }, [popup]);
 
   return (
-    <header className={header} data-testid='header'>
-      <div className={container}>
-        <span className={logo} data-testid='header-logo'>
+    <header className={styles.header} data-testid='header'>
+      <div className={styles.container}>
+        <span className={styles.logo} data-testid='header-logo'>
           <Link href={`/${lang}/${HOME}`}>{headerLogoText}</Link>
         </span>
         <div className={navigationClassName}>
           <Navigation type='short' data={navigation} lang={lang} />
+          <Language lang={lang} />
           <Button onClick={handlerOnClickButton} testID='header-media-button' colored>
             {buttonText}
           </Button>

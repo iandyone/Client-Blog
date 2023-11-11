@@ -1,12 +1,10 @@
 'use client';
 
 import { ErrorBoundaryProps, ErrorBoundaryState } from '@components/ErrorBoundary/types';
-import { Spinner } from '@ui/Spinner';
+import { Spinner } from '@ui';
 import React, { PureComponent, Suspense } from 'react';
 
 import styles from './boundary.module.scss';
-
-const { container, title, text } = styles;
 
 class ErrorBoundary extends PureComponent<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
@@ -24,9 +22,9 @@ class ErrorBoundary extends PureComponent<ErrorBoundaryProps, ErrorBoundaryState
     if (error) {
       return (
         <Suspense fallback={<Spinner />}>
-          <div className={container}>
-            <h1 className={title}></h1>
-            <p className={text}>{error}</p>
+          <div className={styles.container}>
+            <h1 className={styles.title}></h1>
+            <p className={styles.text}>{error}</p>
           </div>
         </Suspense>
       );

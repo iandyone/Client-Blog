@@ -1,4 +1,4 @@
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Link from 'next/link';
 import { FC, memo } from 'react';
 
@@ -6,16 +6,14 @@ import styles from './authors.module.scss';
 import { IAuthorsProps } from './types';
 import { User } from './User';
 
-const { wrapper, container, titleClass, usersClass } = styles;
-
 const AuthorsComponent: FC<IAuthorsProps> = ({ users, data, lang }) => {
   const { title } = data;
 
   return (
-    <section className={wrapper} data-testid='authors-component'>
-      <div className={container}>
-        <Title className={titleClass}>{title}</Title>
-        <div className={usersClass}>
+    <section className={styles.wrapper} data-testid='authors-component'>
+      <div className={styles.container}>
+        <Title className={styles.titleClass}>{title}</Title>
+        <div className={styles.usersClass}>
           {users.map((user) => {
             const { profile, id } = user;
             const link = `/${lang}/${profile}/${id}`;

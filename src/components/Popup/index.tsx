@@ -10,8 +10,6 @@ import { FC, memo } from 'react';
 import styles from './popup.module.scss';
 import { IModalProps } from './types';
 
-const { popupClass, content, button, icon, active } = styles;
-
 const PopupComponent: FC<IModalProps> = ({ children }) => {
   const dispatch = useDispatchTyped();
   const { popup } = useSelectorTyped((store) => store.app);
@@ -22,10 +20,15 @@ const PopupComponent: FC<IModalProps> = ({ children }) => {
 
   return (
     <Portal id='video'>
-      <div className={`${popupClass} ${popup && active}`} data-testid='modal-media'>
-        <div className={`${content} ${popup && active}`}>
-          <div className={button} onClick={handlerOnClickButton}>
-            <Image className={icon} src={XMarkIcon} alt='close button' data-testid='popup-close-button' />
+      <div className={`${styles.popupClass} ${popup && styles.active}`} data-testid='modal-media'>
+        <div className={`${styles.content} ${popup && styles.active}`}>
+          <div className={styles.button} onClick={handlerOnClickButton}>
+            <Image
+              className={styles.icon}
+              src={XMarkIcon}
+              alt='close button'
+              data-testid='popup-close-button'
+            />
           </div>
           {children}
         </div>

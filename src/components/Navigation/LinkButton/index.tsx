@@ -9,8 +9,6 @@ import { FC } from 'react';
 import styles from './linkButton.module.scss';
 import { ILinkButtonProps } from './types';
 
-const { link } = styles;
-
 export const LinkButton: FC<ILinkButtonProps> = ({ href, title }) => {
   const testID = `route-${title.split(' ').join('-').toLowerCase()}`;
   const dispatch = useDispatchTyped();
@@ -21,7 +19,7 @@ export const LinkButton: FC<ILinkButtonProps> = ({ href, title }) => {
   }
 
   return (
-    <li className={link} key={title} onClick={handlerOnClick} data-testid={testID}>
+    <li className={styles.link} key={title} onClick={handlerOnClick} data-testid={testID}>
       <Link href={href}>{title}</Link>
     </li>
   );

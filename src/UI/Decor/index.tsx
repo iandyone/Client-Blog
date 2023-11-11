@@ -3,13 +3,11 @@ import { FC, memo } from 'react';
 import styles from './decor.module.scss';
 import { IDecorProps } from './types';
 
-const { wrapper, light, dark } = styles;
-
 const DecorComponent: FC<IDecorProps> = ({ className }) => {
   return (
-    <div className={`${className} ${wrapper}`}>
-      <span className={light} />
-      <span className={dark} />
+    <div className={`${className} ${styles.wrapper}`}>
+      <span className={styles.light} />
+      <span className={styles.dark} />
     </div>
   );
 };

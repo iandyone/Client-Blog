@@ -4,13 +4,11 @@ import { FC, memo } from 'react';
 import styles from './links.module.scss';
 import { ILinksComponentProps } from './types';
 
-const { wrapper, media } = styles;
-
 export const LinksComponent: FC<ILinksComponentProps> = ({ links, className }) => {
   return (
-    <ul className={`${wrapper} ${className}`}>
+    <ul className={`${styles.wrapper} ${className}`}>
       {links.map(({ icon, alt }) => (
-        <Image className={media} key={alt} alt={alt} src={icon} />
+        <Image className={styles.media} key={alt} alt={alt} src={icon} />
       ))}
     </ul>
   );

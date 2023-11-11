@@ -1,39 +1,23 @@
 import { IPreviewClasses } from '@appTypes';
 import { MainContent } from '@components/MainContent';
+import { imagePlaceholder } from '@constants/animations';
 import bannerImage from '@public/images/aboutPage/banner.jpg';
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import Image from 'next/image';
 import { FC, memo, useMemo } from 'react';
 
 import styles from './au.module.scss';
 import { IAboutUsProps } from './types';
 
-const {
-  wrapper,
-  container,
-  headerClass,
-  headerText,
-  previewWrapper,
-  headerTitle,
-  bannerClass,
-  bannerImageClass,
-  achievesContainer,
-  achievesItem,
-  contentClass,
-  contentTitle,
-  contentText,
-  contentWrapper,
-} = styles;
-
 const headerPeviewClasses: IPreviewClasses = {
-  titleClassName: headerTitle,
-  wrapperClassName: previewWrapper,
+  titleClassName: styles.headerTitle,
+  wrapperClassName: styles.previewWrapper,
 };
 
 const contentPeviewClasses: IPreviewClasses = {
-  titleClassName: contentTitle,
-  bodyClassName: contentText,
-  wrapperClassName: contentWrapper,
+  titleClassName: styles.contentTitle,
+  bodyClassName: styles.contentText,
+  wrapperClassName: styles.contentWrapper,
 };
 
 const AboutUsComponent: FC<IAboutUsProps> = ({ data }) => {
@@ -59,25 +43,31 @@ const AboutUsComponent: FC<IAboutUsProps> = ({ data }) => {
   );
 
   return (
-    <section className={wrapper} data-testid='about-us-component'>
-      <div className={container}>
-        <article className={headerClass}>
+    <section className={styles.wrapper} data-testid='about-us-component'>
+      <div className={styles.container}>
+        <article className={styles.headerClass}>
           <MainContent label={label} title={header} classNames={headerPeviewClasses} />
-          <div className={headerText}>{description}</div>
+          <div className={styles.headerText}>{description}</div>
         </article>
-        <article className={bannerClass}>
-          <Image className={bannerImageClass} src={bannerImage} alt='banner' priority />
-          <ul className={achievesContainer}>
+        <article className={styles.bannerClass}>
+          <Image
+            className={styles.bannerImageClass}
+            src={bannerImage}
+            alt='banner'
+            placeholder={`data:image/${imagePlaceholder}`}
+            priority
+          />
+          <ul className={styles.achievesContainer}>
             {achivesList &&
               achivesList.map(({ id, counter, text }) => (
-                <li className={achievesItem} key={id}>
+                <li className={styles.achievesItem} key={id}>
                   <Title>{counter}</Title>
                   {text}
                 </li>
               ))}
           </ul>
         </article>
-        <article className={contentClass}>
+        <article className={styles.contentClass}>
           {contentList &&
             contentList.map((content) => (
               <MainContent key={content.id} {...content} classNames={contentPeviewClasses} />

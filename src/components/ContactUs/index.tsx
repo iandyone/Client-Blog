@@ -1,4 +1,4 @@
-import { Title } from '@ui/Title';
+import { Title } from '@ui';
 import { Inter } from 'next/font/google';
 import { FC, memo } from 'react';
 

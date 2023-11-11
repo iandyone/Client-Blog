@@ -5,7 +5,6 @@ import { LinkButton } from './LinkButton';
 import styles from './navigation.module.scss';
 import { INavigationProps } from './types';
 
-const { menu } = styles;
 const { HOME, ABOUT, BLOG, CONTACT, PRIVACY } = Routes;
 
 const NavigationComponent: FC<INavigationProps> = ({ data, lang = 'en', type = 'full' }) => {
@@ -20,7 +19,7 @@ const NavigationComponent: FC<INavigationProps> = ({ data, lang = 'en', type = '
   const routesList = type === 'full' ? routes : routes.slice(0, 4);
 
   return (
-    <ul className={menu} data-testid='navigation'>
+    <ul className={styles.menu} data-testid='navigation'>
       {routesList.map(({ title, href }) => (
         <LinkButton href={href} title={title} key={title} />
       ))}
