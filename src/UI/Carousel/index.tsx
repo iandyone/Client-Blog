@@ -4,7 +4,7 @@ import { imagePlaceholder } from '@constants/animations';
 import prevSlide from '@public/images/icons/arrowLeft.svg';
 import nextSlide from '@public/images/icons/arrowRight.svg';
 import Image from 'next/image';
-import { Children, cloneElement, FC, useEffect, useMemo, useRef, useState } from 'react';
+import { Children, FC, useEffect, useMemo, useRef, useState } from 'react';
 
 import styles from './carousel.module.scss';
 import { ICarouselProps } from './types';
@@ -15,14 +15,7 @@ export const Carousel: FC<ICarouselProps> = ({ children, className }) => {
   const windowRef = useRef(null);
   const pages = useMemo(
     () =>
-      Children.map(children, (child) => {
-        return cloneElement(child, {
-          style: {
-            minWidth: '100%',
-            maxWidth: '100%',
-          },
-        });
-      }),
+      Children.map(children, (child) => <div style={{ minWidth: '100%', maxWidth: '100%' }}>{child}</div>),
     [children],
   );
 
