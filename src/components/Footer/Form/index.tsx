@@ -60,6 +60,7 @@ export const Form: FC<IFooterFormProps> = (props) => {
     if (isEmailValid) {
       await sendEmail(email);
       setemailSuccess(emailSuccessLabel);
+      setEmail('');
     }
   }
 
