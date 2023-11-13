@@ -1,5 +1,7 @@
 'use client';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import { ENV } from '@constants/data';
 import mapboxgl from 'mapbox-gl';
 import { FC, memo, useEffect, useRef } from 'react';
