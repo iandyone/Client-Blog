@@ -9,3 +9,32 @@
 .container {
   @extend %container;
 }
+
+.errorBoundary {
+  @extend %wrapper;
+  @extend %flex-center;
+
+  row-gap: 30px;
+  font-size: 50px;
+  color: $black;
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  padding: 16px 48px;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 133.333%;
+  color: $black;
+  transition: $transition;
+  background: $yellow;
+
+  @extend %hover;
+
+  @extend %active;
+}

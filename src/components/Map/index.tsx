@@ -1,5 +1,7 @@
 'use client';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import { ENV } from '@constants/data';
 import mapboxgl from 'mapbox-gl';
 import { FC, memo, useEffect, useRef } from 'react';
@@ -12,7 +14,7 @@ const MapComponent: FC = () => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    const data = { lng: 24.5, lat: 53.78, zoom: 4.3 };
+    const data = { lng: 26, lat: 54, zoom: 4.1 };
 
     const map = new mapboxgl.Map({
       container: mapRef.current,
