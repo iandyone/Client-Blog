@@ -14,7 +14,7 @@ const MapComponent: FC = () => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    const data = { lng: 26, lat: 54, zoom: 4.1 };
+    const data = { lng: 26, lat: 54, zoom: 4.3 };
 
     const map = new mapboxgl.Map({
       container: mapRef.current,
