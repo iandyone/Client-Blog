@@ -2,6 +2,7 @@ import { IPageProps } from '@appTypes';
 import { AboutUsBanner } from '@components/AboutUsBanner';
 import { Authors } from '@components/Authors';
 import { Categories } from '@components/Categories';
+import { Observer } from '@components/IntersectionObserver';
 import { JoinUs } from '@components/JoinUs';
 import { Labels } from '@components/Labels';
 import { Overview } from '@components/Overview';
@@ -32,17 +33,25 @@ export default async function HomePage({ params: { lang } }: IPageProps) {
     joinUs,
   } = await getDictionary(lang, 'home');
 
+  const componentsData = [
+    { component: StepByStepHome, props: { data: stepByStep } },
+    { component: Overview, props: { data: overview } },
+    { component: AboutUsBanner, props: { data: aboutUs } },
+    { component: Categories, props: { data: categoriesHome, lang: lang } },
+    { component: WhyWeStarted, props: { data: whyWeStarted } },
+    { component: Authors, props: { data: authorsHome, users: userList, lang: lang } },
+    { component: Labels, props: { data: labelsHome } },
+    { component: Testimonials, props: { data: testimonials } },
+    { component: JoinUs, props: { data: joinUs } },
+  ];
+
   return (
     <main data-testid='home-page'>
-      <StepByStepHome data={stepByStep} />
-      <Overview data={overview} />
-      <AboutUsBanner data={aboutUs} />
-      <Categories data={categoriesHome} lang={lang} />
-      <WhyWeStarted data={whyWeStarted} />
-      <Authors data={authorsHome} users={userList} lang={lang} />
-      <Labels data={labelsHome} />
-      <Testimonials data={testimonials} />
-      <JoinUs data={joinUs} />
+      {componentsData.map(({ component: Component, props }, index) => (
+        <Observer key={index}>
+          <Component {...props} />
+        </Observer>
+      ))}
     </main>
   );
 }

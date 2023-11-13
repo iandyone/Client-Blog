@@ -1,7 +1,7 @@
 import { Language } from '@appTypes/types';
 
 export interface ICategoriesProps {
-  lang: Language;
+  lang?: Language;
   data: {
     title: string;
   };
