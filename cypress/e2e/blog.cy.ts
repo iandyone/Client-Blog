@@ -33,7 +33,7 @@ describe('Blog page test', () => {
       const categoryCardTestID = `${category.toLowerCase()}-category-card`;
       cy.get(`[data-testid=${categoryCardTestID}]`).should('be.visible').click();
       cy.get(`[data-testid=${category.toLowerCase()}-category-page]`).should('be.visible');
-      cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
+      cy.get('[data-testid=route-blog]').eq(0).should('be.visible').click();
     });
   });
 
