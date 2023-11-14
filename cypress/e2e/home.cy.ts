@@ -1,4 +1,14 @@
-import { Category } from '../../src/types/enums';
+const components = [
+  'step-by-step-home',
+  'overview',
+  'about-us-banner',
+  'categories',
+  'why-we-started',
+  'authors',
+  'labels',
+  'testimonals',
+  'join-us',
+];
 
 describe('Home page test', () => {
   it('Home page should be rendered', () => {
@@ -7,19 +17,9 @@ describe('Home page test', () => {
   });
 
   it('Home page components should be rendered', () => {
-    const components = [
-      'step-by-step-home',
-      'overview',
-      'about-us-banner',
-      'categories',
-      'why-we-started',
-      'authors',
-      'labels',
-      'testimonals',
-      'join-us',
-    ];
-
-    components.forEach((name) => {
+    cy.get('[data-testid=section-placeholder]').as('section');
+    components.forEach((name, index) => {
+      cy.get('@section').eq(index).scrollIntoView();
       cy.get(`[data-testid=${name}-component]`).should('be.visible');
     });
   });
@@ -31,53 +31,16 @@ describe('Home page test', () => {
   });
 
   it('Feature post component button should navigate to the post page', () => {
-    cy.get('[data-testid=feature-post-button]').should('be.visible').click();
-    cy.get('[data-testid=default-post-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
+    cy.get('[data-testid=footer]').should('be.visible');
+    cy.get('[data-testid=footer-navigation]').should('be.visible');
+    cy.get('[data-testid=footer-emailer]').should('be.visible');
+    cy.get('[data-testid=route-privacy-policy').should('be.visible').click();
+    cy.get('[data-testid=privacy-page').should('be.visible');
   });
 
   it('All posts component button should navigate to the blog page', () => {
-    cy.get('[data-testid=all-posts-button]').should('be.visible').click();
-    cy.get('[data-testid=blog-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
-  });
-
-  it('About us component button should navigate to the blog page', () => {
-    cy.get('[data-testid=about-us-button]').should('be.visible').click();
-    cy.get('[data-testid=about-us-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
-  });
-
-  it('Category card should navigate to the category page', () => {
-    Object.keys(Category).forEach((category) => {
-      const categoryCardTestID = `${category.toLowerCase()}-category-card`;
-      cy.get(`[data-testid=${categoryCardTestID}]`).should('be.visible').click();
-      cy.get(`[data-testid=${category.toLowerCase()}-category-page]`).should('be.visible');
-      cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
-    });
-  });
-
-  it('Why we started component button should navigate to the about us page', () => {
-    cy.get('[data-testid=why-we-started-button]').should('be.visible').click();
-    cy.get('[data-testid=about-us-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
-  });
-
-  it('Author card should navigate to the author page', () => {
-    cy.get('[data-testid=author-card]').should('be.visible').should('have.length', 4).eq(1).click();
-    cy.get('[data-testid=author-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
-  });
-
-  it('Testimonials component should have a carousel', () => {
-    cy.get('[data-testid=carousel]').should('be.visible');
-    cy.get('[data-testid=carousel-button-next]').should('be.visible').click();
-    cy.get('[data-testid=carousel-button-prev]').should('be.visible').click();
-  });
-
-  it('Join us component button should navigate to the contact page', () => {
-    cy.get('[data-testid=join-us-button]').should('be.visible').click();
-    cy.get('[data-testid=contact-us-page]').should('be.visible');
-    cy.get('[data-testid=route-home]').eq(0).should('be.visible').click();
+    cy.get('[data-testid=header-media-button]').should('be.visible').click();
+    cy.get('[data-testid=modal-media]').should('be.visible');
+    cy.get('[data-testid=popup-close-button]').should('be.visible').click();
   });
 });

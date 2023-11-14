@@ -29,7 +29,7 @@ const IntersectionObserverComponent: FC<LazyLoadProps> = (props) => {
   if (once && isIntersecting) return children;
 
   return (
-    <section ref={childRef}>
+    <section ref={childRef} data-testid='section-placeholder'>
       {isIntersecting ? children : <Placeholder width={width} height={height} />}
     </section>
   );
