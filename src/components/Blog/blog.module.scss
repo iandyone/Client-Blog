@@ -1,0 +1,18 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+}
+
+.titleClass {
+  border-bottom: 1px solid rgba($color: $mediumGray, $alpha: 0.3);
+  padding-bottom: 32px;
+  margin-bottom: 64px;
+
+  @media (max-width: $TABLET) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}

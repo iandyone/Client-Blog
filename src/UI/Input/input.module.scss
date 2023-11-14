@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  row-gap: 8px;
+}
+
+.inputClass {
+  flex: 1 1 auto;
+  height: 56px;
+  border: 1px solid $darkGray;
+  flex-shrink: 0;
+  padding: 14px 10px 14px 25px;
+  border: 1px solid $darkGray;
+  background-color: transparent;
+  color: $white;
+  font-size: 16px;
+  line-height: 175%;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    transition: $transition;
+    border: 1px solid $white;
+  }
+
+  &.rejected {
+    border: 1px solid $red;
+    transition: $transition;
+  }
+  &.success {
+    border: 1px solid $green;
+    transition: $transition;
+  }
+
+  @media (max-width: $TABLET_MEDIUM) {
+    width: 100%;
+  }
+}
+
+.labelClass {
+  color: $red;
+  font-size: 14px;
+  height: 14px;
+
+  &.rejected {
+    color: $red;
+  }
+  &.success {
+    color: $green;
+  }
+}

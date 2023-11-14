@@ -1,0 +1,19 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.userClass {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.nameClass {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133%;
+}
+
+.locationClass {
+  @extend %text;
+}

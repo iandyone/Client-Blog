@@ -1,0 +1,9 @@
+dist
+public
+node_modules
+eslintrc.json
+types
+config
+webpack.config.ts
+cypress.config.ts
+.prettierignore

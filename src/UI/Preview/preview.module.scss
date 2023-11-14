@@ -1,0 +1,57 @@
+.wrapper {
+  @extend %flex-column;
+
+  align-items: flex-start;
+  row-gap: 24px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 20px;
+  }
+  @media (max-width: $TABLET_MEDIUM) {
+    row-gap: 10px;
+  }
+}
+
+.labelClass {
+  @extend %text;
+
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  span {
+    font-weight: 900;
+    line-height: 20px;
+  }
+}
+
+.headerClass {
+  @extend %text;
+
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -2px;
+  max-width: 830px;
+
+  @media (max-width: $TABLET) {
+    font-size: 44px;
+  }
+  @media (max-width: $MOBILE) {
+    font-size: 36px;
+  }
+}
+
+.titleClass {
+  @extend %title;
+
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.bodyClass {
+  @extend %text;
+
+  max-width: 600px;
+}

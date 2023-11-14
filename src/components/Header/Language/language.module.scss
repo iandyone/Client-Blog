@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: $white;
+
+  @extend %hover;
+
+  @extend %text;
+
+  @extend %active;
+
+  @media (max-width: $TABLET) {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  height: 24px;
+}
+
+.light {
+  flex: 0 0 80%;
+  display: inline-block;
+  background-color: $yellow;
+}
+
+.dark {
+  flex: 0 0 20%;
+  display: inline-block;
+  background-color: $purple;
+}

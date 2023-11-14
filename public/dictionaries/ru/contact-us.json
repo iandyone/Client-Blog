@@ -1,0 +1,24 @@
+{
+  "contact": {
+    "label": "Свяжитесь с нами",
+    "title": "Давайте обсудим",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "banner": {
+      "header1": "Часы работы",
+      "header2": "Свяжитесь с нами",
+      "days": "С Понедельника По Пятницу",
+      "time": "с 9:00 до 20:00",
+      "index": "020 7993 2905",
+      "message": "Наша команда поддержки доступна 24/7",
+      "email": "hello@finsweet.com"
+    },
+    "form": {
+      "namePlaceholder": "Полное имя",
+      "emailPlaceholder": "Ваш email",
+      "messagePlaceholder": "Текст сообщения",
+      "button": "Отправить",
+      "successMessage": "Готово!",
+      "sendingMessage": "Отправка..."
+    }
+  }
+}

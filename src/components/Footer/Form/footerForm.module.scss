@@ -1,0 +1,32 @@
+.form {
+  @extend %flex-between;
+
+  column-gap: 24px;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  row-gap: 8px;
+}
+
+.button {
+  @media (max-width: $TABLET) {
+    align-self: flex-end;
+  }
+  @media (max-width: $MOBILE) {
+    width: 100%;
+    justify-content: center;
+  }
+}

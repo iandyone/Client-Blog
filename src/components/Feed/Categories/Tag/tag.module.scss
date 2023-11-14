@@ -1,0 +1,23 @@
+.tagClass {
+  @extend %flex-center;
+
+  display: inline-flex;
+  color: $black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 220%;
+  padding: 8px 38px;
+  border-radius: 28px;
+  border: 2px solid $mediumGray;
+  transition: $transition;
+  text-transform: capitalize;
+
+  @extend %active;
+
+  &:hover {
+    cursor: pointer;
+    transition: $transition;
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+}
