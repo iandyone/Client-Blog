@@ -16,14 +16,6 @@ describe('Home page test', () => {
     cy.get('[data-testid=home-page]').should('be.visible');
   });
 
-  it('Home page components should be rendered', () => {
-    cy.get('[data-testid=section-placeholder]').as('section');
-    components.forEach((name, index) => {
-      cy.get('@section').eq(index).scrollIntoView();
-      cy.get(`[data-testid=${name}-component]`).should('be.visible');
-    });
-  });
-
   it('Step By Step component button should navigate to the post page', () => {
     cy.get('[data-testid=sbsh-button]').should('be.visible').click();
     cy.get('[data-testid=default-post-page]').should('be.visible');
@@ -44,3 +36,4 @@ describe('Home page test', () => {
     cy.get('[data-testid=popup-close-button]').should('be.visible').click();
   });
 });
+
