@@ -1,0 +1,133 @@
+$width: 850px;
+
+.wrapper {
+  @extend %wrapper;
+
+  @media (max-width: $TABLET) {
+    padding-top: 100px;
+  }
+}
+
+.container {
+  @extend %container;
+
+  @extend %flex-center;
+
+  row-gap: 24px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 20px;
+  }
+}
+
+.contenContainer {
+  @extend %flex-column;
+
+  width: $width;
+  row-gap: 24px;
+  margin: 0px auto;
+
+  @media (max-width: $TABLET) {
+    width: auto;
+  }
+}
+
+.headerClass {
+  font-size: 48px;
+
+  @media (max-width: $TABLET) {
+    width: auto;
+  }
+
+  @media (max-width: $TABLET_SMALL) {
+    font-size: 36px;
+  }
+}
+
+.labelClass {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.labelTitle {
+  font-size: 24px !important;
+}
+
+.posterClass {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+  margin: 40px 0;
+
+  @media (max-width: $TABLET) {
+    margin: 20px 0;
+  }
+  @media (max-width: $MOBILE) {
+    margin: 0;
+  }
+}
+
+.titleClass {
+  font-size: 36px;
+  margin-bottom: 16px;
+
+  @media (max-width: $TABLET) {
+    font-size: 32px;
+  }
+}
+
+.postContainer {
+  row-gap: 0;
+}
+
+.contentClass {
+  color: $mediumGray;
+
+  @extend %text;
+
+  &:not(last-child) {
+    margin-bottom: 24px;
+
+    @media (max-width: $TABLET) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.listContainer {
+  @extend %flex-column;
+
+  margin-bottom: 24px;
+
+  @media (max-width: $TABLET) {
+    margin-bottom: 20px;
+  }
+}
+
+.listItem {
+  font-size: 24px;
+  padding-left: 20px;
+  position: relative;
+
+  @media (max-width: $TABLET) {
+    font-size: 20px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #494a53;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+.avatarClass {
+  width: 48px;
+  height: 48px;
+}

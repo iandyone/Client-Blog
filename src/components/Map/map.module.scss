@@ -1,0 +1,25 @@
+.wrapper {
+  @extend %wrapper;
+
+  width: 100%;
+  max-width: 1920px;
+  margin: 0px auto;
+  position: relative;
+
+  @media (max-width: $MOBILE) {
+    padding: 0;
+  }
+}
+
+.container {
+  min-height: 300px;
+
+  @media (max-width: $TABLET) {
+    min-height: 200px;
+  }
+}
+
+.mapboxgl-canvas {
+  position: fixed !important;
+  height: 100% !important;
+}

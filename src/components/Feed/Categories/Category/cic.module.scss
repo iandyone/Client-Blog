@@ -1,0 +1,38 @@
+.categoryItemClass {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  background-color: $white;
+  padding: 24px;
+  transition: $transition;
+  border: 1px solid $darkGray;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $yellow;
+    background-color: $yellow;
+    transition: $transition;
+  }
+
+  &.activeClass {
+    border: 1px solid $yellow;
+    background-color: $yellow;
+    transition: $transition;
+  }
+}
+
+.categoryItemTitleClass {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 142%;
+  letter-spacing: -1px;
+}
+
+.imageCotainer {
+  @extend %flex-center;
+
+  width: 48px;
+  height: 48px;
+  background-color: $lightYellow;
+  border-radius: 12px;
+}

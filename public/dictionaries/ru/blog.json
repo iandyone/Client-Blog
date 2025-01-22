@@ -1,0 +1,23 @@
+{
+  "stepByStep": {
+    "label": "Избранный пост",
+    "title": "Пошаговое руководство по выбору отличных пар шрифтов",
+    "author": "Джеймс Доу",
+    "date": "23 мая 2022 года",
+    "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+    "buttonText": "Читать далее >"
+  },
+  "categoriesHome": {
+    "title": "Выберите категорию"
+  },
+  "joinUs": {
+    "title": "Присоединяйтесь к нашей команде и станьте частью нашей истории",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Присоединиться сейчас"
+  },
+  "blog": {
+    "title": "Дайжест",
+    "next": "Вперед >",
+    "prev": "< Назад"
+  }
+}

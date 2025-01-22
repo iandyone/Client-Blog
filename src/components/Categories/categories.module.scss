@@ -1,0 +1,23 @@
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+
+  @extend %flex-column;
+
+  row-gap: 48px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 20px;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.list {
+  @extend %grid;
+}

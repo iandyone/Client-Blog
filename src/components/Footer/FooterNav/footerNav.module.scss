@@ -1,0 +1,7 @@
+.wrapper {
+  display: block;
+
+  @media (max-width: $TABLET) {
+    display: none;
+  }
+}

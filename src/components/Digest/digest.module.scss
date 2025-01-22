@@ -1,0 +1,109 @@
+.wrapper {
+  @extend %flex-column;
+
+  row-gap: 70px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 40px;
+  }
+}
+
+.container {
+  @extend %flex-column;
+
+  gap: 64px;
+
+  @media (max-width: $TABLET) {
+    gap: 40px;
+  }
+
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-direction: row;
+    }
+  }
+}
+
+.digestClass {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    gap: 20px;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-direction: column;
+      align-items: normal;
+      gap: 20px;
+    }
+  }
+}
+
+.content {
+  max-width: 650px;
+  flex: 0 1 60%;
+}
+
+.imageContainer {
+  flex: 0 1 490px;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    flex-basis: auto;
+  }
+
+  &.columnClass {
+    @media (min-width: $TABLET_MEDIUM) {
+      flex-basis: auto;
+      min-height: 160px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    max-height: 300px;
+  }
+}
+
+.labelClass {
+  color: $purple;
+}
+
+.controlsClass {
+  @extend %flex-center;
+
+  flex-direction: row;
+  column-gap: 18px;
+}
+
+.buttonClass {
+  background-color: transparent;
+  color: $black;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 133%;
+  transition: $transition;
+
+  @extend %hover;
+
+  @extend %active;
+
+  &.disabled {
+    color: $mediumGray;
+    transition: $transition;
+  }
+}

@@ -1,0 +1,35 @@
+.wrapper {
+  @extend %flex-column;
+
+  row-gap: 6px;
+  margin-bottom: 20px;
+}
+
+.inputClass,
+.textareaClass {
+  color: $black;
+  padding: 24px;
+  border-radius: 2px;
+  border: 1px solid $mediumGray;
+  transition: $transition;
+  height: auto;
+  color: $black;
+
+  @extend %text;
+
+  @extend %inputActive;
+}
+
+.textareaClass {
+  margin-bottom: 16px;
+}
+
+.textareaClass {
+  resize: none;
+  min-height: 96px;
+}
+
+.buttonClass {
+  display: flex;
+  justify-content: center;
+}

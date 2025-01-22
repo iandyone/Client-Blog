@@ -1,0 +1,27 @@
+.wrapper {
+  @extend %flex-column;
+
+  row-gap: 8px;
+
+  @media (max-width: $MOBILE) {
+    row-gap: 4px;
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.head {
+  @extend %title;
+
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.text {
+  @extend %text;
+
+  color: $mediumGray;
+}

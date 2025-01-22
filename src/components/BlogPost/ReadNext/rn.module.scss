@@ -1,0 +1,21 @@
+$width: 850px;
+
+.wrapper {
+  @extend %wrapper;
+}
+
+.container {
+  @extend %container;
+
+  @extend %flex-column;
+
+  row-gap: 64px;
+
+  @media (max-width: $TABLET) {
+    row-gap: 20px;
+  }
+}
+
+.digestClass {
+  flex-direction: row;
+}

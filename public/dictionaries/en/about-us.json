@@ -1,0 +1,39 @@
+{
+  "about": {
+    "label": "ABOUT US",
+    "header": "We are a team of content writers who share their learnings",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "banner": {
+      "blogsCounter": "12+",
+      "blogsText": "Blogs Published",
+      "viewsCounter": "18K+",
+      "viewsText": "Views on Finsweet",
+      "usersCounter": "30K+",
+      "usersText": "Total active Users"
+    },
+    "content": {
+      "label1": "Our mision",
+      "label2": "Our Vision",
+      "title1": "Creating valuable content for creatives all around the world",
+      "title2": "A platform that empowers individuals to improve",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+    }
+  },
+  "team": {
+    "title1": "Our team of creatives",
+    "title2": "Why we started this Blog",
+    "subtitle1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "subtitle2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "content1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+    "content2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+  },
+  "authors": {
+    "title": "List of Authors"
+  },
+  "joinUs": {
+    "title": "Join our team to be a part of our story",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "buttonText": "Join Now"
+  }
+}

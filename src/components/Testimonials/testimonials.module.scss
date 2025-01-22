@@ -1,0 +1,79 @@
+.wrapper {
+  @extend %wrapper;
+
+  background-color: $lightYellow;
+
+  @media (max-width: $TABLET_MEDIUM) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  @extend %container;
+
+  @extend %flex-between;
+
+  align-items: flex-start;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.testimonialsClass {
+  @extend %flex-center;
+
+  flex: 1 1 50%;
+  justify-content: flex-start;
+  padding: 80px;
+  align-self: center;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    padding: 0 80px;
+    align-self: auto;
+  }
+  @media (max-width: $TABLET) {
+    padding: 0;
+  }
+}
+.previewWrapper {
+  row-gap: 12px;
+}
+
+.previewTitle {
+  font-size: 36px;
+  max-width: 350px;
+
+  @media (max-width: $TABLET) {
+    max-width: none;
+  }
+}
+
+.previewBody {
+  max-width: 350px;
+}
+
+.slider {
+  @extend %flex-center;
+
+  justify-content: flex-start;
+  flex: 1 1 50%;
+  border-left: 1px solid rgba($color: $mediumGray, $alpha: 0.4);
+  width: 100%;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    border: none;
+  }
+}
+.carousel {
+  padding: 80px;
+
+  @media (max-width: $DESKTOP_MEDIUM) {
+    padding: 0 80px;
+  }
+
+  @media (max-width: $TABLET) {
+    padding: 0;
+  }
+}

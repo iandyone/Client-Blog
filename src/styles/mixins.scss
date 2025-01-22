@@ -1,0 +1,7 @@
+@mixin hoverCard($hoverBG) {
+  &:hover {
+    cursor: pointer;
+    transition: $transition;
+    background-color: $hoverBG;
+  }
+}
